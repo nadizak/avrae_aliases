@@ -1,0 +1,3 @@
+!servalias push c athletics
+-title "<name> makes an Athletics check! (Push)"
+-phrase "The target must make an opposed Strength (Athletics) or Dexterity (Acrobatics) check. If you succeed, the target is pushed 5 feet away from you."

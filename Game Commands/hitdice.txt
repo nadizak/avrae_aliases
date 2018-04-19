@@ -1,0 +1,13 @@
+!servalias hitdice embed 
+{{mod_cc("Hit Dice (%1%)", -%2%, True)}} 
+{{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} 
+{{set_hp(min(hp, heal.total + currentHp))}} 
+-title "<name> takes a Short Rest!" 
+-desc "A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. 
+
+For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total." 
+-f "Healing Recieved|{{heal}}" 
+-f "Hit Points|{{get_hp()}} / {{hp}}" 
+-f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" 
+-footer "Adventuring | PHB 186" 
+-color <color>

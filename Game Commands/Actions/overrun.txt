@@ -1,0 +1,3 @@
+!servalias overrun c athletics
+-title "<name> makes an Athletics check! (Overrun)"
+-phrase "The target must make an opposed Strength (Athletics) check. If you succeed, you can move through the hostile creature's space once this turn."

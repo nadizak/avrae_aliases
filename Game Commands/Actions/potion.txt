@@ -1,0 +1,9 @@
+!servalias potion embed
+{{set("potion", "Supreme " if "%1%" == "supreme" else "Superior " if "%1%" == "superior" else "Greater " if "%1%" == "greater" else "")}}
+{{set("rol", "10d4+20" if "%1%" == "supreme" else "8d4+8" if "%1%" == "superior" else "4d4+4" if "%1%" == "greater" else "2d4+2")}}
+{{set("heal", vroll(rol))}}
+{{set_hp(min(hp, heal.total + currentHp))}}
+-title "<name> drinks a Potion of {{potion}}Healing!"
+-desc "<name> drank a Potion of {{potion}}Healing and heals for {{rol}} hit points."
+-f "Healing Done | {{str(heal)}}"
+-f "Hit Points | {{get_hp()}}/{{hp}}"

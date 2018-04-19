@@ -1,0 +1,19 @@
+!snippet bless -b 1d4[Bless]
+
+!snippet bracers -d "2[Bracers of Archery]"
+
+!snippet guidance -b "1d4 [Guidance]"
+
+!snippet gwm -b "-5" -d "10 [Great Weapon Master]"
+
+!snippet hex -d "1d6[Necrotic]"
+
+!snippet mark -d "1d6 [Hunter's Mark]"
+
+!snippet pwt -b "10[Pass Without Trace]"
+
+!snippet resist -b "1d4 [Resistance]"
+
+!snippet sharp -b "-5" -d "10 [Sharpshooter]"
+
+!snippet sneak -d1 "{{ceil((level)/2)}}d6 [Sneak Attack]"

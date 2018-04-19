@@ -1,0 +1,28 @@
+!servalias hitdicer embed
+{{set('die', '%1%' if '%1'+'%'!='%1%' else 'd')}}
+{{set('dieStr', "Hit Dice (" + ('d'+die if die[0]!='d' else die) + ")")}}
+{{set('dieDelta', '%2%' if '%2'+'%'!='%2%' else 0)}}
+{{set('error', die == 'd')}}
+{{error or mod_cc(dieStr, int(dieDelta))}}
+{{set('currentDie', 0 if error else get_cc(dieStr))}}
+{{set('maxDie', 0 if error else get_cc_max(dieStr))}}
+
+{{
+'''
+-title "<name> regains spent Hit Dice!" 
+-desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." 
+-f "$d|$c / $m"
+-footer "Adventuring | PHB 186" 
+-thumb "<image>"
+-color "<color>"
+'''.replace('$d', dieStr).replace('$c', str(currentDie)).replace('$m', str(maxDie)) if not error else '''
+-title "Incorrect usage of *hitdicer*"
+-desc "
+**Examples of correct usage:**
+!hitdicer d6 +1
+!hitdicer d8 2
+!hitdicer d8
+!hitdicer d12 -2
+!hitdicer 10 +3"
+'''
+}}

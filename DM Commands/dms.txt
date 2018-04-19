@@ -1,0 +1,5 @@
+!servalias dms embed
+{{set("save","a Strength" if "%1%" == "str" else "a Dexterity" if "%1%" == "dex" else "a Constitution" if "%1%" == "con" else "an Intelligence" if "%1%" == "int" else "a Wisdom" if "%1%" == "wis" else "a Charisma" if "%1%" == "cha" else "a WRONG F'ING")}}
+-title "The DM makes {{save}} Save!"
+{{set("mod","%2%")}}
+-desc "{{(vroll("2d20kh1+"+str(mod))) if "%3%" == "adv" else (vroll("2d20kl1+"+str(mod))) if "%3%" == "dis" else (vroll("1d20+"+str(mod)))}}"

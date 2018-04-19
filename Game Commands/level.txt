@@ -1,0 +1,12 @@
+!servalias level embed
+{{set("clas", "%1%".capitalize())}}
+{{set("newLevel", int("%2%") if "%2"+"%"!="%2%" else 0)}}
+{{set("classList", ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])}}
+{{set("classCvar", clas + "Level")}}
+{{set("error", clas not in classList or newLevel>20 or newLevel<0)}}
+{{error or (set_cvar(classCvar, newLevel) if newLevel else delete_cvar(classCvar))}}
+
+-title "Level Summary for CWM Aliases"
+-desc "{{('Barbarian: '+str(BarbarianLevel)+"\n") if exists("BarbarianLevel") else ''}}{{('Bard: '+str(BardLevel)+"\n") if exists("BardLevel") else ''}}{{('Cleric: '+str(ClericLevel)+"\n") if exists("ClericLevel") else ''}}{{('Druid: '+str(DruidLevel)+"\n") if exists("DruidLevel") else ''}}{{('Fighter: '+str(FighterLevel)+"\n") if exists("FighterLevel") else ''}}{{('Monk: '+str(MonkLevel)+"\n") if exists("MonkLevel") else ''}}{{('Paladin: '+str(PaladinLevel)+"\n") if exists("PaladinLevel") else ''}}{{('Ranger: '+str(RangerLevel)+"\n") if exists("RangerLevel") else ''}}{{('Rogue: '+str(RogueLevel)+"\n") if exists("RogueLevel") else ''}}{{('Sorcerer: '+str(SorcererLevel)+"\n") if exists("SorcererLevel") else ''}}{{('Warlock: '+str(WarlockLevel)+"\n") if exists("WarlockLevel") else ''}}{{('Wizard: '+str(WizardLevel)+"\n") if exists("WizardLevel") else ''}}"
+-color <color>
+-thumb "<image>"
