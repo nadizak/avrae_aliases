@@ -1,7 +1,7 @@
 !servalias weather embed
 {{set("x","&1&")}}
 {{set("v",x not in "biomeslist")}}
-{{set("weather",get_gvar("a5987999-b1d1-42ae-b6a8-01e14543c425"))}}
+{{set("weather",get_gvar("aeacdc18-e443-49cd-ac92-70e3692720b3"))}}
 {{set("f",weather.lower().find(x.lower()) if x!="%1"+"%" else -1)}}
 {{set("f2",-1 if f<0 else 0 if f==0 else f if weather[f]=="\n" else 1+weather.rfind("\n",0,f) if f>0 else -1)}}
 {{set("dl",weather[f2:-1] if f!=-1 else weather)}}
