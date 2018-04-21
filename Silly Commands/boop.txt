@@ -1,0 +1,7 @@
+!servalias boop embed 
+{{set("attack", vroll("1d20+"+str(strengthMod+proficiencyBonus)))}}
+-title "*Boop*!" 
+-desc "*This attack deals no damage, and automatically hits if the target allows it.*" 
+-f "Attack|**To Hit:** {{attack}}" 
+-thumb <image> 
+-color <color>

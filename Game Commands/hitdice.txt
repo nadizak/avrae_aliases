@@ -1,4 +1,4 @@
-!servalias hitdice embed 
+!servalias hitdice embed
 {{mod_cc("Hit Dice (%1%)", -%2%, True)}} 
 {{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} 
 {{set_hp(min(hp, heal.total + currentHp))}} 

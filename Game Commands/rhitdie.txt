@@ -1,4 +1,4 @@
-!servalias hitdicer embed
+!servalias rhitdie embed
 {{set('die', '%1%' if '%1'+'%'!='%1%' else 'd')}}
 {{set('dieStr', "Hit Dice (" + ('d'+die if die[0]!='d' else die) + ")")}}
 {{set('dieDelta', '%2%' if '%2'+'%'!='%2%' else 0)}}
@@ -16,13 +16,13 @@
 -thumb "<image>"
 -color "<color>"
 '''.replace('$d', dieStr).replace('$c', str(currentDie)).replace('$m', str(maxDie)) if not error else '''
--title "Incorrect usage of *hitdicer*"
+-title "Incorrect usage of *rhitdie*"
 -desc "
 **Examples of correct usage:**
-!hitdicer d6 +1
-!hitdicer d8 2
-!hitdicer d8
-!hitdicer d12 -2
-!hitdicer 10 +3"
+!rhitdie d6 +1
+!rhitdie d8 2
+!rhitdie d8
+!rhitdie d12 -2
+!rhitdie 10 +3"
 '''
 }}
