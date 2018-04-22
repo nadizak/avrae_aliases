@@ -1,0 +1,1 @@
+!servalias alias_list embed -title "List of server aliases and snippets:" -desc "https://github.com/nadizak/avrae_aliases"
