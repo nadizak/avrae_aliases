@@ -4,7 +4,8 @@
 {{set("index", classList.index(clas) if clas in classList else -1)}}
 {{set("classRollList", ["2d4*10", "5d4*10", "5d4*10", "2d4*10", "5d4*10", "5d4", "5d4*10", "5d4*10", "4d4*10", "3d4*10", "4d4*10", "4d4*10"])}}
 {{set("classRoll", classRollList[index] if index >=0 else "0")}}
-{{set("tier", int("%2%")-1 if "%2%"!="%"+"2%" else 0)}}
+{{set("level", int("%2%") if "%2%"!="%"+"2%" else 0)}}
+{{set("tier", 4 if level>15 else 3 if level>11 else 2 if level>7 else 1 if level>3 else 0)}}
 {{set("tierRolls", ["1d4*10", "100+1d4*10", "1000+1d10*100", "5000+1d10*250", "10000+1d10*500"])}}
 {{set("tierRoll", tierRolls[tier] if tier >=0 and tier <5 else "0")}}
 
@@ -16,14 +17,15 @@
 -title "Rolling gold for $0!"
 -desc "**Starting Equipment**
 When you create your character, you receive equipment based on a combination of your class and background. Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook."
--f "Starting gold for tier $3 | $1"
+-f "Starting gold for Tier $3 | $1"
 -f "Additional $0 starting gold if no starting equipment. | $2"
 
 '''.replace('$0', clas).replace('$1', str(servergold)).replace('$2', str(classgold)).replace('$3', str(tier+1)) if index >=0 else '''
 -title "sgold Command Usage"
 -desc "Please use the command by typing **!sgold class** (e.g. !sgold Monk) to roll for starting gold.
 
-You may also use **!sgold class tier** (e.g. !sgold Druid 3) to roll for starting gold at a different level tier.
+You may also use **!sgold class level** (e.g. !sgold Druid 12) to roll for starting gold at a different starting level.
+Starting levels are dictated in the CWM guide.
 "
 '''
 }}
