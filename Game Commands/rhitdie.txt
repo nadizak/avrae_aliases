@@ -7,22 +7,4 @@
 {{set('currentDie', 0 if error else get_cc(dieStr))}}
 {{set('maxDie', 0 if error else get_cc_max(dieStr))}}
 
-{{
-'''
--title "<name> regains spent Hit Dice!" 
--desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." 
--f "$d|$c / $m"
--footer "Adventuring | PHB 186" 
--thumb "<image>"
--color "<color>"
-'''.replace('$d', dieStr).replace('$c', str(currentDie)).replace('$m', str(maxDie)) if not error else '''
--title "Incorrect usage of *rhitdie*"
--desc "
-**Examples of correct usage:**
-!rhitdie d6 +1
-!rhitdie d8 2
-!rhitdie d8
-!rhitdie d12 -2
-!rhitdie 10 +3"
-'''
-}}
+{{'''-title "<name> regains spent Hit Dice!" \n-desc "At the end of a long rest, you regain spent Hit Dice, up to a number of dice equal to half your total number of them." \n-f "$d|$c / $m"\n-footer "Adventuring | PHB 186" \n-thumb "<image>"\n-color "<color>"\n'''.replace('$d', dieStr).replace('$c', str(currentDie)).replace('$m', str(maxDie)) if not error else '''-title "Incorrect usage of *rhitdie*"\n-desc "\n**Examples of correct usage:**\n!rhitdie d6 +1\n!rhitdie d8 2\n!rhitdie d8\n!rhitdie d12 -2\n!rhitdie 10 +3"'''}}

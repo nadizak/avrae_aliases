@@ -12,21 +12,5 @@
 {{set("classgold", vroll(classRoll))}}
 {{set("servergold", vroll(tierRoll))}}
 
-{{
-'''
--title "Rolling gold for $0!"
--desc "**Starting Equipment**
-When you create your character, you receive equipment based on a combination of your class and background. Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook."
--f "Starting gold for Tier $3 | $1"
--f "Additional $0 starting gold if no starting equipment. | $2"
-
-'''.replace('$0', clas).replace('$1', str(servergold)).replace('$2', str(classgold)).replace('$3', str(tier+1)) if index >=0 else '''
--title "sgold Command Usage"
--desc "Please use the command by typing **!sgold class** (e.g. !sgold Monk) to roll for starting gold.
-
-You may also use **!sgold class level** (e.g. !sgold Druid 12) to roll for starting gold at a different starting level.
-Starting levels are dictated in the CWM guide.
-"
-'''
-}}
+{{'''-title "Rolling gold for $0!"\n-desc "**Starting Equipment**\nWhen you create your character, you receive equipment based on a combination of your class and background. Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook."\n-f "Starting gold for Tier $3 | $1"\n-f "Additional $0 starting gold if no starting equipment. | $2"'''.replace('$0', clas).replace('$1', str(servergold)).replace('$2', str(classgold)).replace('$3', str(tier+1)) if index >=0 else '''-title "sgold Command Usage"\n-desc "Please use the command by typing **!sgold class** (e.g. !sgold Monk) to roll for starting gold.\n\nYou may also use **!sgold class level** (e.g. !sgold Druid 12) to roll for starting gold at a different starting level.\nStarting levels are dictated in the CWM guide.\n"'''}}
 -footer "Starting Equipment | PHB 143"

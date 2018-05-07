@@ -1,4 +1,0 @@
-!servalias dmc embed
--title "The DM makes %1% check!"
-{{set("mod","%2%")}}
--desc "{{(vroll("2d20kh1+"+str(mod))) if "%3%" == "adv" else (vroll("2d20kl1+"+str(mod))) if "%3%" == "dis" else (vroll("1d20+"+str(mod)))}}"

@@ -5,9 +5,4 @@
 {{set("out", (inV-32)*5/9 if type=="f" else (inV*9/5)+32 if type=="c" else inV*1.609344 if type=="mph" else inV*0.6213712 if type=="kph" else 0)}}
 {{set("inUnit", "°F" if type=="f" else "°C" if type=="c" else type)}}
 {{set("outUnit", "°C" if type=="f" else "°F" if type=="c" else "kph" if type=="mph" else "mph" if type=="kph" else '')}}
-{{'''
--title "Unsupported input"
--desc "Accepted value and units are C (Celcius), F (Fahrenheit), mph, kph"
-''' if error else '''
--title "$1 $2 is equal to $3 $4"
-'''.replace('$1',str(inV)).replace('$2',inUnit).replace('$3',str(round(out,2))).replace('$4',outUnit)}}
+{{'''-title "Unsupported input"\n-desc "Accepted value and units are C (Celcius), F (Fahrenheit), mph, kph"''' if error else '''-title "$1 $2 is equal to $3 $4"\n'''.replace('$1',str(inV)).replace('$2',inUnit).replace('$3',str(round(out,2))).replace('$4',outUnit)}}
