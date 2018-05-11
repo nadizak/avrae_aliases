@@ -23,6 +23,9 @@ Collection of snippets that are used in CWM. Snippets work as a shortcut to typi
 * **bless** - adds the Bless spell to your to-hit and saves
 * **boom** - adds the effect of Booming Blade to an attack and displays the additional damage(scales with level)
 * **bracers** - adds the damage of the Bracers of Archery to your attack
+* **d6** - rolls another d6 with the attack but doesn't add it to damage
+* **d8** - rolls another d8 with the attack but doesn't add it to damage
+* **d10** - rolls another d10 with the attack but doesn't add it to damage
 * **gfb** - adds Green Flame Blade to an attack and displays the additional damage (scales with level and adds highest of int or chr for the spellcasting mod)
 * **guidance** - add Guidance to a skill check
 * **gwm** - adds the Greater Weapon Master feat's effect to an attack

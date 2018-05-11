@@ -18,7 +18,7 @@
 {{set_cvar_nx("WizardLevel",0)}}
 {{error or set_cvar(clas+"Level",newLevel)}}
 
--title "Level Summary for CWM Aliases"
+-title "<name> Level Summary for CWM Aliases"
 -f "Character Level | {{level}}"
 -f "Class Levels | {{('Barbarian: '+str(BarbarianLevel)+"\n") if BarbarianLevel!=z else ''}}{{('Bard: '+str(BardLevel)+"\n") if BardLevel!=z else ''}}{{('Cleric: '+str(ClericLevel)+"\n") if ClericLevel!=z else ''}}{{('Druid: '+str(DruidLevel)+"\n") if DruidLevel!=z else ''}}{{('Fighter: '+str(FighterLevel)+"\n") if FighterLevel!=z else ''}}{{('Monk: '+str(MonkLevel)+"\n") if MonkLevel!=z else ''}}{{('Paladin: '+str(PaladinLevel)+"\n") if PaladinLevel!=z else ''}}{{('Ranger: '+str(RangerLevel)+"\n") if RangerLevel!=z else ''}}{{('Rogue: '+str(RogueLevel)+"\n") if RogueLevel!=z else ''}}{{('Sorcerer: '+str(SorcererLevel)+"\n") if SorcererLevel!=z else ''}}{{('Warlock: '+str(WarlockLevel)+"\n") if WarlockLevel!=z else ''}}{{('Wizard: '+str(WizardLevel)+"\n") if WizardLevel!=z else ''}}"
 -color <color>
