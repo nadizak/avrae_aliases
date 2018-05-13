@@ -1,4 +1,12 @@
-# Whoops!
-This folder currently doesn't have any aliases or does not have a ReadMe written up yet.
+# DM Commands
 
-If you would like us to work on this folder next send a suggestion at https://goo.gl/forms/tSsKgR8BbOpTbfMg2
+Contains common commands used by dungeon masters
+
+**dmfeedback** - `dmfeedback**`
+Prints out the dungeon master feedback form link.
+
+**gold** - `!gold 100pp20gp 2` `!gold 200gp20sp 4`
+Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.
+
+**weather** - `!weather [biome] [season]` `!weather [list/biomes]`
+Prints out a randomly generated weather status. 
