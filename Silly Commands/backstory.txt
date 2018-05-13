@@ -1,5 +1,5 @@
 !servalias backstory embed
-{{set("source",get_gvar("5b19e30e-ee09-4a3a-93c3-90ecf8a332a3").split("\n\n"))}}
+{{set("source",get_gvar("04903e90-1996-4ac3-b7ad-9270256b181c").split("\n\n"))}}
 {{set("p0", source[0].split("\n"))}}
 {{set("p1", source[1].split("\n"))}}
 {{set("p2", source[2].split("\n"))}}
