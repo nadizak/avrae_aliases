@@ -11,6 +11,12 @@
 
 !servsnippet bracers -d "2[Bracers of Archery]"
 
+!snippet d6 -f "d6 Damage|{{vroll("1d6")}}"
+
+!snippet d8 -f "d8 Damage|{{vroll("1d8")}}"
+
+!snippet d10 -f "d10 Damage|{{vroll("1d10")}}"
+
 **Credit to Toothless#7854**
 !servsnippet gfb
 {{set("mod", str(max(charismaMod, intelligenceMod)))}}
@@ -30,8 +36,10 @@
 
 !servsnippet pwt -b "10[Pass Without Trace]"
 
+!servsnippet rage -d "{{2 if BarbarianLevel<8 else (3 if BarbarianLevel<15 else 4)}} [Rage]"
+
 !servsnippet resist -b "1d4 [Resistance]"
 
 !servsnippet sharp -b "-5" -d "10 [Sharpshooter]"
 
-!servsnippet sneak -d1 "{{ceil(int(RogueLevel if exists("RogueLevel") else level)/2)}}d6 [Sneak Attack]"
+!servsnippet sneak -d1 "{{ceil(int(RogueLevel)/2)}}d6 [Sneak Attack]"

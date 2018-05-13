@@ -32,6 +32,7 @@ Collection of snippets that are used in CWM. Snippets work as a shortcut to typi
 * **hex** - adds the Hex effect to an attack
 * **mark** - adds the Hunter's Mark effect to an attack
 * **pwt** - adds the Pass Without Trace effect to a stealth check
+* **rage** - adds Rage damage to an attack (requires !level setup)
 * **resist** - adds the Resistance cantrip effect to a saving throw
 * **sharp** - add the Sharpshooter feat's effect to an attack
 * **sneak** - add sneak attack damage to an attack (utilizes !level for multiclass)
