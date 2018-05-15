@@ -36,10 +36,10 @@
 
 !servsnippet pwt -b "10[Pass Without Trace]"
 
-!servsnippet rage -d "{{2 if BarbarianLevel<8 else (3 if BarbarianLevel<15 else 4)}} [Rage]"
+!servsnippet rage -d "{{2 if int(Barbarian)<8 else (3 if int(Barbarian)<15 else 4)}} [Rage]"
 
 !servsnippet resist -b "1d4 [Resistance]"
 
 !servsnippet sharp -b "-5" -d "10 [Sharpshooter]"
 
-!servsnippet sneak -d1 "{{ceil(int(RogueLevel)/2)}}d6 [Sneak Attack]"
+!servsnippet sneak -d1 "{{ceil(int(Rogue)/2)}}d6 [Sneak Attack]"

@@ -1,12 +1,12 @@
 !servalias create_hitdice embed
-{{set("d12", int(BarbarianLevel))}}
-{{create_cc_nx("Hit Dice (d12)", 0, "BarbarianLevel", "none") if d12 else 0}}
-{{set("d10", int(FighterLevel) + int(PaladinLevel) + int(RangerLevel))}}
-{{create_cc_nx("Hit Dice (d10)", 0, "FighterLevel+PaladinLevel+RangerLevel", "none") if d10 else 0}}
-{{set("d8", int(BardLevel) + int(ClericLevel) + int(DruidLevel) + int(MonkLevel) + int(RogueLevel) + int(WarlockLevel))}}
-{{create_cc_nx("Hit Dice (d8)", 0, "BardLevel+ClericLevel+DruidLevel+MonkLevel+RogueLevel+WarlockLevel",  "none") if d8 else 0}}
-{{set("d6", int(SorcererLevel) + int(WizardLevel))}}
-{{create_cc_nx("Hit Dice (d6)", 0, "SorcererLevel+WizardLevel", "none") if d6 else 0}}
+{{set("d12", int(Barbarian))}}
+{{create_cc_nx("Hit Dice (d12)", 0, "Barbarian", "none") if d12 else 0}}
+{{set("d10", int(Fighter) + int(Paladin) + int(Ranger))}}
+{{create_cc_nx("Hit Dice (d10)", 0, "Fighter+Paladin+Ranger", "none") if d10 else 0}}
+{{set("d8", int(Bard) + int(Cleric) + int(Druid) + int(Monk) + int(Rogue) + int(Warlock))}}
+{{create_cc_nx("Hit Dice (d8)", 0, "Bard+Cleric+Druid+Monk+Rogue+Warlock",  "none") if d8 else 0}}
+{{set("d6", int(Sorcerer) + int(Wizard))}}
+{{create_cc_nx("Hit Dice (d6)", 0, "Sorcerer+Wizard", "none") if d6 else 0}}
 -title "Hit Dice Created"
 {{('-f "Hit Dice (d6)|' + str(get_cc("Hit Dice (d6)")) + ' / ' + str(get_cc_max("Hit Dice (d6)")) + '"') if d6 else ''}}
 {{('-f "Hit Dice (d8)|' + str(get_cc("Hit Dice (d8)")) + ' / ' + str(get_cc_max("Hit Dice (d8)")) + '"') if d8 else ''}} 
