@@ -11,9 +11,20 @@ These involve tools used for rules within the CWM Server
 
 ## Other Server Commands
 
+**alias_form** - `!alias_form`
+    Prints the link to the suggestions form
+
+**alias_list** - `!alias_list`
+    Prints the link to the the documentation website on GitHub.
+
 **convert** - `!convert 0 c` `!convert 12 mph` `!convert 70 f`
 	This command takes in a number and a unit and converts it from metric to imperial and vice-versa.
 	It is used with the !weather command to convert units.
 	Will currently only convert between Celcius and Fahrenheit, or mph and jph.
 	`!convert number (c | f | mph | kph)`
 
+**newchar** - `!newchar`
+    Rolls a new character just like the !randchar command. Prints out whether or not the stat line is valid.
+
+**newchar2** - `!newchar2`
+    Rolls a new character but uses the new validity rules.
