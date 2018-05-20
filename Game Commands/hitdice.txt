@@ -1,13 +1,25 @@
 !servalias hitdice embed
-{{mod_cc("Hit Dice (%1%)", -%2%, True)}} 
-{{set("heal", vroll("%2%%1%+"+str(constitutionMod*%2%)))}} 
-{{set_hp(min(hp, heal.total + currentHp))}} 
--title "<name> takes a Short Rest!" 
--desc "A character can spend one or more Hit Dice at the end of a short rest, up to the character's maximum number of Hit Dice, which is equal to the character's level. 
-
-For each Hit Die spent in this way, the player rolls the die and adds the character's Constitution modifier to it. The character regains hit points equal to the total." 
--f "Healing Recieved|{{heal}}" 
--f "Hit Points|{{get_hp()}} / {{hp}}" 
--f "Hit Dice (%1%)|{{get_cc("Hit Dice (%1%)")}} / {{get_cc_max("Hit Dice (%1%)")}}" 
+{{set("d12", int(Barbarian))}}
+{{set("d10", int(Fighter) + int(Paladin) + int(Ranger))}}
+{{set("d8", int(Bard) + int(Cleric) + int(Druid) + int(Monk) + int(Rogue) + int(Warlock))}}
+{{set("d6", int(Sorcerer) + int(Wizard))}}
+{{create_cc_nx("Hit Dice (d12)", 0, "Barbarian") if d12 else 0}}
+{{create_cc_nx("Hit Dice (d10)", 0, "Fighter+Paladin+Ranger") if d10 else 0}}
+{{create_cc_nx("Hit Dice (d8)", 0, "Bard+Cleric+Druid+Monk+Rogue+Warlock") if d8 else 0}}
+{{create_cc_nx("Hit Dice (d6)", 0, "Sorcerer+Wizard") if d6 else 0}}
+{{set('die', '' if "%1"+"%"=="%1%" else 'd%1%' if '%1%'[0] != 'd' else '%1%')}}
+{{set('used', '%2%' if '%2'+'%'!='%2%' else '1')}}
+{{set('dieStr', "Hit Dice (" + die + ")")}}
+{{mod_cc(dieStr, -1*int(used), True) if die else 0}}
+{{set("heal", vroll(used+die+"+"+str(constitutionMod*int(used))))}}
+{{set_hp(min(hp, heal.total + currentHp)) if die else 0}}
+-title "{{(name + 'takes a Short Rest!') if die else 'Hit Dice'}}" 
+-desc "{{get_gvar("8e7251ab-1596-48b0-976d-fdc1ecbbab94")}}"
+{{('-f "Healing Received|' + str(heal) + '"') if die else ''}} 
+{{('-f "Hit Points|' + str(get_hp()) + ' / ' + str(hp) + '"') if die else ''}} 
+{{('-f "Hit Dice (d6)|' + str(get_cc("Hit Dice (d6)")) + ' / ' + str(get_cc_max("Hit Dice (d6)")) + '"') if d6 else ''}}
+{{('-f "Hit Dice (d8)|' + str(get_cc("Hit Dice (d8)")) + ' / ' + str(get_cc_max("Hit Dice (d8)")) + '"') if d8 else ''}} 
+{{('-f "Hit Dice (d10)|' + str(get_cc("Hit Dice (d10)")) + ' / ' + str(get_cc_max("Hit Dice (d10)")) + '"') if d10 else ''}} 
+{{('-f "Hit Dice (d12)|' + str(get_cc("Hit Dice (d12)")) + ' / ' + str(get_cc_max("Hit Dice (d12)")) + '"') if d12 else ''}}
 -footer "Adventuring | PHB 186" 
 -color <color>

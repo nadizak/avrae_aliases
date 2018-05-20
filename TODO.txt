@@ -1,0 +1,4 @@
+Fix the hitdice alias
+Do a temphp alias
+do a maxhp modding alias
+class abrev's in the aliases
