@@ -13,8 +13,8 @@
 ```GN
 !servalias rage embed
 {{set("lvl", int(Barbarian))}}
-{{create_cc_nx("Rage", 0, "60", "long") if lvl else 0}}
 {{set("counter", "Rage")}}
+{{create_cc_nx(counter, 0, "60", "long") if lvl else 0}}
 {{set("rageTotal", 6 if lvl>16 else 5 if lvl>12 else 4 if lvl>5 else 3 if lvl>2 else 2)}}
 {{set("bonus", 4 if lvl>15 else 3 if lvl>8 else 2)}}
 {{mod_cc(counter, int(-60/rageTotal), True) if lvl<20 else 0}}
@@ -30,5 +30,5 @@ Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if
 Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again."
 -f "Rage Damage|{{bonus}}"
 -f "{{counter}}|{{'◉'*current + '〇'*(rageTotal-current)}}"
--footer "Barbarian {{current}} {{rageTotal}} | PHB 48" -color <color>
+-footer "Barbarian | PHB 48" -color <color>
 ```
