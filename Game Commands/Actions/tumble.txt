@@ -1,3 +1,0 @@
-!servalias tumble c acrobatics
--title "<name> makes an Acrobatics check! (Tumble)"
--phrase "The target must make an opposed Dexterity (Acrobatics) check. If you succeed, you can move through the hostile creature's space once this turn."

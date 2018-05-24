@@ -1,3 +1,0 @@
-!servalias shove c athletics
--title "<name> makes an Athletics check! (Shove)"
--phrase "The target must make an opposed Strength (Athletics) or Dexterity (Acrobatics) check. If you succeed, the target is knocked prone or pushed 5 feet away from you."

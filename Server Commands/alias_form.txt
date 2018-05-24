@@ -1,1 +1,0 @@
-!servalias alias_form embed -title "Suggestions for server alias?" -desc "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"

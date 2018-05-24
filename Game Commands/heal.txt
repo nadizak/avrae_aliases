@@ -1,9 +1,0 @@
-!servalias heal embed
-{{set("input", "%1%" if "%1"+"%"!="%1%" else "1")}}
-{{set("heal", vroll(input))}}
-{{set_hp(min(hp, heal.total + currentHp))}}
--title "<name> regains HP!"
--desc "You are healed for {{input}} hit points."
--f "Hit Points|{{get_hp()}} / {{hp}}"
--f "Healing Done|{{str(heal)}}"
--thumb <image>

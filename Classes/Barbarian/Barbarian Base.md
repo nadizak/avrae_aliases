@@ -1,3 +1,16 @@
+## Brutal Critical
+```GN
+!servalias brutal embed
+{{set("lvl", int(Barbarian))}}
+{{set('die', 'd10' if "%1"+"%"=="%1%" else 'd%1%' if '%1%'[0] != 'd' else '%1%')}}
+{{set('numDice', 3 if lvl>=17 else 2 if lvl>=13 else 1)}}
+-title "<name> scores a brutal critical!"
+-desc "You can roll {{numDice}} additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
+-f "Damage|{{vroll(str(numDice) + die)}}"
+```
+
+## Rage
+```GN
 !servalias rage embed
 {{set("lvl", int(Barbarian))}}
 {{create_cc_nx("Rage", 0, "60", "long") if lvl else 0}}
@@ -18,3 +31,4 @@ Once you have raged the maximum number of times for your barbarian level, you mu
 -f "Rage Damage|{{bonus}}"
 -f "{{counter}}|{{'◉'*current + '〇'*(rageTotal-current)}}"
 -footer "Barbarian {{current}} {{rageTotal}} | PHB 48" -color <color>
+```

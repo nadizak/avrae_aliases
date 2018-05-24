@@ -2,6 +2,7 @@
 ```GN
 !servsnippet bless -b 1d4[Bless]
 ```
+
 ## Booming Blade
 **Credit to Toothless#7854**
 ```GN

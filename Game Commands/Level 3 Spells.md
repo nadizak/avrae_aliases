@@ -1,3 +1,5 @@
+## Counterspell
+```GN
 !servalias counterspell embed
 {{set("level", int("%1%") if "%1"+"%"!="%1%" else 0)}}
 {{set("dc", str(10+level))}}
@@ -9,3 +11,4 @@
 {{('-f "DC|' + dc + '"') if level else ''}}
 {{('-f "Ability Check|' + str(result) + '"') if level else ''}}
 {{('-f "Result|' + ("Success" if success else "Failure") + '"') if level else ''}}
+```
