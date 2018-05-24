@@ -40,7 +40,7 @@
 -color <color>
 ```
 
-## Roll Level Up HP
+## HP Roll (For level up hp)
 ```GN
 !servalias hproll embed
 {{set("dice", "%2%" if "%2"+"%"!="%2%" else "1")}}
@@ -54,7 +54,7 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 {{('-f "Hit Points Roll | ' + str(vroll(dice+"d"+str(dieSize)+"+"+str(constitutionMod))) + '"') if dieSize else ''}}
 ```
 
-## Set Level
+## Level Set
 ```GN
 !servalias level embed
 {{set("z","0")}}

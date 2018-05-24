@@ -53,7 +53,7 @@
 -footer "{{'You may re-roll for another stat line because you do not have at least one 15+ stat with another stat at 13+' if not valid else 'This is a valid stat line. Re-roll until you have 2 valid stat lines and then choose one. Make sure an organizer approves your rolls.'}}"
 ```
 
-## Split Gold
+## Starting Gold
 ```GN
 !servalias sgold embed
 {{set("clas", "%1%".capitalize())}}
