@@ -21,7 +21,7 @@ Once you use this feature, you must finish a short or long rest before you can u
 {{set("counter", "Second Wind")}}
 {{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl else 0}}
 {{mod_cc(counter, -1, True) if lvl else 0}}
-{{set("healed", vroll("1d10+" + str(level-int(Fighter)))) if lvl else 0}}
+{{set("healed", vroll("1d10+" + Fighter)) if lvl else 0}}
 {{set_hp(min(hp, get_hp()+healed.total))}}
 -title "<name> Takes a Breath and Regains Stamina!"
 -desc "You have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level.
