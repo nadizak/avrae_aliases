@@ -11,7 +11,7 @@
 -desc "You can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action on top of your regular action and a possible bonus action.
 Once you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn."
 -f "{{counter}}|{{'◉'*current + '〇'*(total-current)}}"
--footer "Fighter | PHB 70" -color <color>
+-footer "Fighter | PHB 70" -color <color> -thumb <image>
 ```
 
 ## Second Wind
@@ -29,5 +29,5 @@ Once you use this feature, you must finish a short or long rest before you can u
 -f "Regained|{{str(healed)}}"
 -f "Current HP|{{get_hp()}}/{{hp}}"
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
--footer "Fighter | PHB 70" -color <color>
+-footer "Fighter | PHB 70" -color <color> -thumb <image>
 ```

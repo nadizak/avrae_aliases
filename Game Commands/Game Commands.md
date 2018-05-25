@@ -9,6 +9,7 @@
 -f "Hit Points|{{get_hp()}} / {{hp}}"
 -f "Healing Done|{{str(heal)}}"
 -thumb <image>
+-color <color>
 ```
 
 ## Hit Dice
@@ -37,7 +38,7 @@
 {{('-f "Hit Dice (d10)|' + str(get_cc("Hit Dice (d10)")) + ' / ' + str(get_cc_max("Hit Dice (d10)")) + '"') if d10 else ''}} 
 {{('-f "Hit Dice (d12)|' + str(get_cc("Hit Dice (d12)")) + ' / ' + str(get_cc_max("Hit Dice (d12)")) + '"') if d12 else ''}}
 -footer "Adventuring | PHB 186" 
--color <color>
+-color <color> -thumb <image>
 ```
 
 ## HP Roll (For level up hp)
@@ -52,6 +53,7 @@
 `!hproll (class) (optional number of levels)`
 E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 {{('-f "Hit Points Roll | ' + str(vroll(dice+"d"+str(dieSize)+"+"+str(constitutionMod))) + '"') if dieSize else ''}}
+-color <color> -thumb <image>
 ```
 
 ## Level Set

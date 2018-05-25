@@ -12,5 +12,5 @@
 You can use this feature three times, and you regain all expended uses of it when you finish a long rest."
 -f "Current HP|{{get_hp()}}/{{hp}} ({{get_temphp()}} temp)"
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
--footer "Samurai | XGTE 31" -color <color>
+-footer "Samurai | XGTE 31" -color <color> -thumb <image>
 ```

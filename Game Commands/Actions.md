@@ -24,6 +24,7 @@
 -desc "<name> drank a Potion of {{potion}}Healing and heals for {{rol}} hit points."
 -f "Healing Done | {{str(heal)}}"
 -f "Hit Points | {{get_hp()}}/{{hp}}"
+-color <color> -thumb <image>
 ```
 
 ## Prone
@@ -48,7 +49,7 @@
 ## Scroll
 ```GN
 !servalias scroll multiline
-!embed {{set("level", int("%1%") if "%1"+"%"!="%1%" else 0)}} {{set("dc", str(10+level))}} {{set("mod", str(max(charismaMod, intelligenceMod, wisdomMod)))}} {{set("result", vroll("1d20+" + mod))}} {{set("success", (result.total>=int(dc)))}} {{'-t "<name> attempts to use a level %1% scroll"' if level else '-t "Spell Scrolls"'}} -desc "If the spell is of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level." {{('-f "DC|' + dc + '"') if level else ''}} {{('-f "Ability Check|' + str(result) + '"') if level else ''}} {{('-f "Result|' + ("Success" if success else "Failure") + '"') if level else ''}}
+!embed {{set("level", int("%1%") if "%1"+"%"!="%1%" else 0)}} {{set("dc", str(10+level))}} {{set("mod", str(max(charismaMod, intelligenceMod, wisdomMod)))}} {{set("result", vroll("1d20+" + mod))}} {{set("success", (result.total>=int(dc)))}} {{'-t "<name> attempts to use a level %1% scroll"' if level else '-t "Spell Scrolls"'}} -desc "If the spell is of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level." {{('-f "DC|' + dc + '"') if level else ''}} {{('-f "Ability Check|' + str(result) + '"') if level else ''}} {{('-f "Result|' + ("Success" if success else "Failure") + '"') if level else ''}} -color <color> -thumb <image>
 !cast %2% %3% %4% %5% %6% %7% %8% %9% %0%
 ```
 

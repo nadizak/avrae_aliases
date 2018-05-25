@@ -11,4 +11,5 @@
 {{('-f "DC|' + dc + '"') if level else ''}}
 {{('-f "Ability Check|' + str(result) + '"') if level else ''}}
 {{('-f "Result|' + ("Success" if success else "Failure") + '"') if level else ''}}
+-color <color> -thumb <image>
 ```

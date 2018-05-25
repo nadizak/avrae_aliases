@@ -7,6 +7,7 @@
 -title "<name> scores a brutal critical!"
 -desc "You can roll {{numDice}} additional weapon damage die when determining the extra damage for a critical hit with a melee attack."
 -f "Damage|{{vroll(str(numDice) + die)}}"
+-footer "Barbarian | PHB 48" -color <color> -thumb <image>
 ```
 
 ## Rage
@@ -30,5 +31,5 @@ Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if
 Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again."
 -f "Rage Damage|{{bonus}}"
 -f "{{counter}}|{{'◉'*current + '〇'*(rageTotal-current)}}"
--footer "Barbarian | PHB 48" -color <color>
+-footer "Barbarian | PHB 48" -color <color> -thumb <image>
 ```
