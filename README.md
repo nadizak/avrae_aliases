@@ -77,7 +77,6 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 	* alias_list
 	* convert
 	* newchar
-	* newchar2
 	
 * Silly Commands
 	* backstory
