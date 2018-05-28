@@ -16,42 +16,42 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 
 # Master List
 
-Classes
-	Barbarian
+* Classes
+	* Barbarian
 		* brutal
 		* rage
-	Bard
-	Cleric
-	Druid
-	Fighter
+	* Bard
+	* Cleric
+	* Druid
+	* Fighter
 		* action
 		* secondwind
-		Samurai
+		* **Samurai**
 			* spirit
-	Monk
-	Paladin
+	* Monk
+	* Paladin
 		* divinesense
 		* layonhands
 		* smite
 		* channel
 		* pld_aura
-	Ranger
-	Rogue
-	Sorcerer
-	Warlock
+	* Ranger
+	* Rogue
+	* Sorcerer
+	* Warlock
 		* eldritchmaster
-		Hexblade
+		* **Hexblade**
 			* hexcurse
-	Wizard
+	* Wizard
 
-Game Commands
+* Game Commands
 	* heal
 	* hitdice
 	* hproll
 	* level
 	* rhitdie
 	* surprise
-	Actions
+	* **Actions**
 		* grapple
 		* overrun
 		* potion
@@ -61,17 +61,17 @@ Game Commands
 		* scroll
 		* shove
 		* tumble
-	Cantrips
+	* **Cantrips**
 		* toll
-	Level 3 Spells
+	* **Level 3 Spells**
 		* counterspell
 
-DM Commands
+* DM Commands
 	* dmfeedback
 	* gold
 	* weather
 
-Server Commands
+* Server Commands
 	* sgold
 	* alias_form
 	* alias_list
@@ -79,7 +79,7 @@ Server Commands
 	* newchar
 	* newchar2
 	
-Silly Commands
+* Silly Commands
 	* backstory
 	* banhammer
 	* banhammer2
