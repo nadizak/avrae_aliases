@@ -61,6 +61,8 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 		* scroll
 		* shove
 		* tumble
+		
+* Spells
 	* **Cantrips**
 		* toll
 	* **Level 3 Spells**
