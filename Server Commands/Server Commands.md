@@ -20,25 +20,9 @@
 {{'''-title "Unsupported input"\n-desc "Accepted value and units are C (Celcius), F (Fahrenheit), mph, kph"''' if error else '''-title "$1 $2 is equal to roughly $3 $4"\n'''.replace('$1',str(inV)).replace('$2',inUnit).replace('$3',str(int(round(out,0)))).replace('$4',outUnit)}}
 ```
 
-## New Character: 2@>15
+## New Character: 1@>15;1@>13
 ```GN
 !servalias newchar embed
-{{set("stats", [vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3")])}}
-{{set("statTotals", [stats[0].total, stats[1].total, stats[2].total, stats[3].total, stats[4].total, stats[5].total])}}
-{{statTotals.sort()}}
-{{set("valid", statTotals[4] >= 15)}}
--desc "`STR`: {{stats[0]}} {{'\:white_check_mark:' if stats[0].total>14 else ''}}
-`DEX`: {{stats[1]}} {{'\:white_check_mark:' if stats[1].total>14 else ''}}
-`CON`: {{stats[2]}} {{'\:white_check_mark:' if stats[2].total>14 else ''}}
-`INT`: {{stats[3]}} {{'\:white_check_mark:' if stats[3].total>14 else ''}}
-`WIS`: {{stats[4]}} {{'\:white_check_mark:' if stats[4].total>14 else ''}}
-`CHR`: {{stats[5]}} {{'\:white_check_mark:' if stats[5].total>14 else ''}}"
--footer "{{'You may re-roll for another stat line because you do not have two 15 or higher stats.' if not valid else 'This is a valid stat line and must be kept. Make sure an organizer approves your rolls.'}}"
-```
-
-## New Character 2: 1@>15;1@>13
-```GN
-!servalias newchar2 embed
 {{set("stats", [vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3")])}}
 {{set("statTotals", [stats[0].total, stats[1].total, stats[2].total, stats[3].total, stats[4].total, stats[5].total])}}
 {{statTotals.sort()}}

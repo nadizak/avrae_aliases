@@ -24,7 +24,4 @@ These involve tools used for rules within the CWM Server
 	`!convert number (c | f | mph | kph)`
 
 **newchar** - `!newchar`
-    Rolls a new character just like the !randchar command. Prints out whether or not the stat line is valid.
-
-**newchar2** - `!newchar2`
-    Rolls a new character but uses the new validity rules.
+    Rolls a new character just like the !randchar command. Prints out whether or not the stat line is valid. Uses the new rolling rolls from 28 May 2018.
