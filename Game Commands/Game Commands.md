@@ -79,7 +79,7 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 {{set_cvar_nx("Wizard",0)}}
 {{error or set_cvar(clas,newLevel)}}
 
--title "<name> Level Summary for CWM Aliases"
+-title "<name> Level Summary for <name>"
 -f "Character Level | {{level}}"
 -f "Class Levels | {{('Barbarian: '+str(Barbarian)+"\n") if Barbarian!=z else ''}}{{('Bard: '+str(Bard)+"\n") if Bard!=z else ''}}{{('Cleric: '+str(Cleric)+"\n") if Cleric!=z else ''}}{{('Druid: '+str(Druid)+"\n") if Druid!=z else ''}}{{('Fighter: '+str(Fighter)+"\n") if Fighter!=z else ''}}{{('Epic Levels: '+str(Epic)+"\n") if Epic!=z else ''}}{{('Monk: '+str(Monk)+"\n") if Monk!=z else ''}}{{('Paladin: '+str(Paladin)+"\n") if Paladin!=z else ''}}{{('Ranger: '+str(Ranger)+"\n") if Ranger!=z else ''}}{{('Rogue: '+str(Rogue)+"\n") if Rogue!=z else ''}}{{('Sorcerer: '+str(Sorcerer)+"\n") if Sorcerer!=z else ''}}{{('Warlock: '+str(Warlock)+"\n") if Warlock!=z else ''}}{{('Wizard: '+str(Wizard)+"\n") if Wizard!=z else ''}}{{"" if (int(Barbarian)+int(Bard)+int(Cleric)+int(Druid)+int(Fighter)+int(Monk)+int(Paladin)+int(Ranger)+int(Rogue)+int(Sorcerer)+int(Warlock)+int(Wizard)) else "None"}}"
 -color <color>

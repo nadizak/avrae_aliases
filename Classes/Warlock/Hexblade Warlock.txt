@@ -1,0 +1,16 @@
+## Hexblade's Curse
+```GN
+!servalias hexcurse embed
+{{set("lvl", int(Warlock))}}
+{{set("counter", "Hexblade's Curse")}}
+{{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl else 0}}
+{{mod_cc(counter, -1, True) if lvl else 0}}
+-title "<name> Releases Dark Energy from Their Weapon!"
+-desc "You gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits:
+- You gain a bonus to damage rolls against the cursed target. The bonus equals your proficiency bonus.
+- Any attack roll you make against the cursed target is a critical hit on a roll of 19 or 20 on the d20.
+- If the cursed target dies, you regain {{max(1, lvl+charismaMod)}} hit points.
+You can't use this feature again until you finish a short or long rest."
+-f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
+-footer "Hexblade Warlock | XGTE 55" -color <color> -thumb <image>
+```

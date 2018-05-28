@@ -59,6 +59,11 @@
 !servsnippet hex -d "1d6[Necrotic]"
 ```
 
+## Holy Weapon
+```GN
+!servsnippet holy -d "2d8[Radiant]"
+```
+
 ## Hunter's Mark
 ```GN
 !servsnippet mark -d "1d6 [Mark]"

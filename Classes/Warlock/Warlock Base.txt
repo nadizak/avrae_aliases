@@ -1,0 +1,14 @@
+## Eldritch Master
+```GN
+!servalias eldritchmaster embed
+{{set("lvl", int(Warlock))}}
+{{set("counter", "Eldritch Master")}}
+{{create_cc_nx(counter, 0, "1", "long", "bubble") if lvl>=20 else 0}}
+{{mod_cc(counter, -1, True)}}
+{{set_slots(5, get_slots_max(5))}}
+-title "<name> Receives Aid from Their Patron."
+-desc "At 20th level, you can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
+-f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
+-f "Spell Slots|{{'◉'*get_slots(5) + '〇'*(get_slots_max(5)-get_slots(5))}}"
+-footer "Warlock | PHB 108" -color <color> -thumb <image>
+```
