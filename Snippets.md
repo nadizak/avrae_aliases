@@ -1,6 +1,6 @@
 # Snippets
 
-Collection of snippets that are used in CWM. Snippets work as a shortcut to typing out bonuses, so instead of typing out `!a Longsword -b 1d4 -d 1d6` for bless and hunter's mark you can just type `!a bless mark`.
+Collection of snippets that are used in CWM. Snippets work as a shortcut to typing out bonuses, so instead of typing out `!a Longsword -b 1d4 -d 1d6` for bless and hunter's mark you can just type `!a Longsword bless mark`.
 
 ## List of current snippets on CWM
 * bless - adds the Bless spell to your to-hit and saves
