@@ -95,6 +95,11 @@ Collection of snippets that are used in CWM. Snippets work as a shortcut to typi
 !servsnippet mark -d "1d6 [Mark]"
 ```
 
+## Jack of All Trades
+```GN
+!servsnippet jack -b "{{int(proficiencyBonus/2)}}[Jack of All Trades]"
+```
+
 ## Pass Without Trace
 ```GN
 !servsnippet pwt -b "10[Pass Without Trace]"

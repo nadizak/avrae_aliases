@@ -4,7 +4,7 @@
 {{set("lvl", int(Fighter))}}
 {{set("counter", "Action Surge")}}
 {{create_cc_nx(counter, 0, "2", "short", "bubble") if lvl else 0}}
-{{mod_cc(counter, -2 if lvl<17 else 1, True) if lvl else 0}}
+{{mod_cc(counter, -2 if lvl<17 else -1, True)}}
 {{set("total", 1 if lvl<17 else 2)}}
 {{set("current", 0 if lvl<17 else get_cc(counter))}}
 -title "<name> Goes Beyond Their Limits!"
@@ -20,7 +20,7 @@ Once you use this feature, you must finish a short or long rest before you can u
 {{set("lvl", int(Fighter))}}
 {{set("counter", "Second Wind")}}
 {{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl else 0}}
-{{mod_cc(counter, -1, True) if lvl else 0}}
+{{mod_cc(counter, -1, True)}}
 {{set("healed", vroll("1d10+" + Fighter)) if lvl else 0}}
 {{set_hp(min(hp, get_hp()+healed.total))}}
 -title "<name> Takes a Breath and Regains Stamina!"

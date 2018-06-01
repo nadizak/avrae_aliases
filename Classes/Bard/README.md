@@ -1,4 +1,11 @@
-# Whoops!
-This folder currently doesn't have any aliases or does not have a ReadMe written up yet.
+# Bard Commands
 
-If you would like us to work on this folder next send a suggestion at https://goo.gl/forms/tSsKgR8BbOpTbfMg2
+Contains commands used by Bards
+
+## Game Commands
+
+**inspire** - `!inspire` `!inspire Person`
+Expends a use of Bardic Inspiration. Auto scales the die used and creates counters is needed. Will need to delete the counter upon reaching Bard level five so that the short rest feature of Font of Inspiration is applied.
+
+**songofrest** - `songofrest**`
+Prints out the Song of Rest ability and displays the die used.
