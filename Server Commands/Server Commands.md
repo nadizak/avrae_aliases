@@ -40,19 +40,29 @@
 ## Starting Gold
 ```GN
 !servalias sgold embed
-{{set("clas", "%1%".capitalize())}}
-{{set("classList", ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer", "Warlock", "Wizard"])}}
-{{set("index", classList.index(clas) if clas in classList else -1)}}
-{{set("classRollList", ["2d4*10", "5d4*10", "5d4*10", "2d4*10", "5d4*10", "5d4", "5d4*10", "5d4*10", "4d4*10", "3d4*10", "4d4*10", "4d4*10"])}}
-{{set("classRoll", classRollList[index] if index >=0 else "0")}}
-{{set("level", int("%2%") if "%2%"!="%"+"2%" else 0)}}
-{{set("tier", 4 if level>15 else 3 if level>11 else 2 if level>7 else 1 if level>3 else 0)}}
-{{set("tierRolls", ["1d4*10", "100+1d4*10", "1000+1d10*100", "5000+1d10*250", "10000+1d10*500"])}}
-{{set("tierRoll", tierRolls[tier] if tier >=0 and tier <5 else "0")}}
+{{classList=load_json(get_gvar("6bbbd645-9002-41af-9915-0948a2e7ec6c"))}}
+{{classRollList=load_json(get_gvar("b1fa8f4a-41a5-4085-a4e4-58a3513e4690"))}}
+{{tierRolls=load_json(get_gvar("75a8dd6b-4d91-45c6-9790-5293e25738cf"))}}
+{{args="%1%%2%%3%%"}}
+{{args=args[:args.index('%')]}}
+{{clas=''.join([i for i in args if i.isalpha()])[:4].capitalize()}}
+{{lvl=''.join([i for i in args if i.isdigit()])}}
+{{lvl=int(lvl) if lvl else 3}}
+{{clas=[i for i in classList if clas in i][0] if clas else ""}}
+{{index=classList.index(clas) if clas in classList else -1}}
+{{classRoll=classRollList[index] if index >=0 else "0"}}
+{{tier=4 if lvl>15 else 3 if lvl>11 else 2 if lvl>7 else 1 if lvl>3 else 0}}
+{{tierRoll=tierRolls[tier] if tier >=0 and tier <5 else "0"}}
+{{classgold=vroll(classRoll)}}
+{{servergold=vroll(tierRoll)}}
+-title "Rolling Starting Wealth{{f" For {clas}" if clas else ""}}!"
+-desc "**Starting Equipment**
+When you create your character, you receive equipment based on a combination of your class and background.
 
-{{set("classgold", vroll(classRoll))}}
-{{set("servergold", vroll(tierRoll))}}
+Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook. (Add your class to the sgold command to do this, e.g. `!sgold barb` or `!sgold Druid`)
 
-{{'''-title "Rolling gold for $0!"\n-desc "**Starting Equipment**\nWhen you create your character, you receive equipment based on a combination of your class and background. Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook."\n-f "Starting gold for Tier $3 | $1"\n-f "Additional $0 starting gold if no starting equipment. | $2"'''.replace('$0', clas).replace('$1', str(servergold)).replace('$2', str(classgold)).replace('$3', str(tier+1)) if index >=0 else '''-title "sgold Command Usage"\n-desc "Please use the command by typing **!sgold class** (e.g. !sgold Monk) to roll for starting gold.\n\nYou may also use **!sgold class level** (e.g. !sgold Druid 12) to roll for starting gold at a different starting level.\nStarting levels are dictated in the CWM guide.\n"'''}}
--footer "Starting Equipment | PHB 143"
+You can also roll for a higher CWM level tier by giving a level as well, e.g. `!sgold 12`, `!sgold 16 Wiz`, or `!sgold monk 12`"
+{{f"-f \"Starting Gold for Level {lvl} (Tier {tier+1}) | {servergold}\""}}
+{{f"-f \"Additional {clas} starting gold if no starting equipment. | {classgold}\"" if clas else ""}}
+-footer "Starting Equipment args={{args}} clas={{clas}} lvl={{lvl}} index={{index}} tier={{tier}} | PHB 143"
 ```

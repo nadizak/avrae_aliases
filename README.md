@@ -21,6 +21,8 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 		* brutal
 		* rage
 	* Bard
+		* inspire
+		* songofrest
 	* Cleric
 	* Druid
 	* Fighter
@@ -71,6 +73,7 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 * DM Commands
 	* dmfeedback
 	* gold
+	* loot
 	* weather
 
 * Server Commands

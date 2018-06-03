@@ -3,10 +3,11 @@
 These involve tools used for rules within the CWM Server
 
 ## The sgold Command
-**sgold** - `!sgold fighter` `!sgold Wizard 2` `!sgold Barbarian 1`
-	This command is used for rolling your starter gold for the server. Starting gold depends on what tier you are rolling your character at but for new players it is always tier 1. If you don't supply a tier then it will assume you are rolling at tier 1. The class name is not case sensitive but does need to be spelled correctly.
-	The command will also roll the gold you would start with if you choose to not take the starting equipment listed in the PHB.
-	`!sgold class [tier]`
+**sgold** - `!sgold` `!sgold Wizard` `!sgold barb 12` `!sgold 16` `!sgold 4 Monk`
+	This command is used for rolling your starter gold for the server. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3, tier 1. If you don't supply a starting level then it will assume you are rolling at level 3.
+	
+	The command will also roll starting gold for if you choose to take no starting equipment. You just need to give it a class name.
+	`!sgold class [tier] [class]`
 	
 
 ## Other Server Commands
