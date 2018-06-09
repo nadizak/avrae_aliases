@@ -52,7 +52,8 @@
 
 `!hproll (class) (optional number of levels)`
 E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
-{{('-f "Hit Points Roll | ' + str(vroll(dice+"d"+str(dieSize)+"+"+str(constitutionMod))) + '"') if dieSize else ''}}
+{{('-f "Hit Points Roll | ' + str(vroll(dice+"d"+str(dieSize))) + '"') if dieSize else ''}}
+{{f"-f \"Constitution | Don't forget to add you CON modifier * {dice}\""}}
 -color <color> -thumb <image>
 ```
 

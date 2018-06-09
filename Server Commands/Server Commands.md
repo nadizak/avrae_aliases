@@ -64,5 +64,5 @@ Alternatively, you can start with a number of gold pieces based on your class an
 You can also roll for a higher CWM level tier by giving a level as well, e.g. `!sgold 12`, `!sgold 16 Wiz`, or `!sgold monk 12`"
 {{f"-f \"Starting Gold for Level {lvl} (Tier {tier+1}) | {servergold}\""}}
 {{f"-f \"Additional {clas} starting gold if no starting equipment. | {classgold}\"" if clas else ""}}
--footer "Starting Equipment args={{args}} clas={{clas}} lvl={{lvl}} index={{index}} tier={{tier}} | PHB 143"
+-footer "Starting Equipment | PHB 143"
 ```
