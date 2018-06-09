@@ -70,6 +70,9 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 	* **Level 3 Spells**
 		* counterspell
 
+* Races
+	* Eladrin Fey Step
+		
 * DM Commands
 	* dmfeedback
 	* gold
