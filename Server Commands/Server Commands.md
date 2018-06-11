@@ -57,11 +57,11 @@
 {{servergold=vroll(tierRoll)}}
 -title "Rolling Starting Wealth{{f" For {clas}" if clas else ""}}!"
 -desc "**Starting Equipment**
-When you create your character, you receive equipment based on a combination of your class and background.
+When you create your character, you receive **starting equipment** based on a combination of your **class** and **background** as listed in the PHB. Everyone also receives **additional gold** depending on their starting level. 
 
-Alternatively, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook. (Add your class to the sgold command to do this, e.g. `!sgold barb` or `!sgold Druid`)
+Instead of **starting equipment**, you can start with a number of gold pieces based on your class and spend them on items listed in the Player's Handbook. (Add your class to the sgold command to do this, e.g. `!sgold barb` or `!sgold Druid`)
 
-You can also roll for a higher CWM level tier by giving a level as well, e.g. `!sgold 12`, `!sgold 16 Wiz`, or `!sgold monk 12`"
+You can also roll for a higher CWM level tier as per the player guide. (Add the level you are starting at to the command to do this, e.g. `!sgold 12`, `!sgold 16 Wiz`, or `!sgold monk 12`)"
 {{f"-f \"Starting Gold for Level {lvl} (Tier {tier+1}) | {servergold}\""}}
 {{f"-f \"Additional {clas} starting gold if no starting equipment. | {classgold}\"" if clas else ""}}
 -footer "Starting Equipment | PHB 143"
