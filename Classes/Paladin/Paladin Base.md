@@ -23,7 +23,7 @@ You can use this feature {{1+charismaMod}} times. When you finish a long rest, y
 {{set("counter", "Lay on Hands")}}
 {{create_cc_nx(counter, 0, "Paladin*5", "long") if lvl else 0}}
 {{mod_cc(counter, -1*spent, True) if lvl else 0}}
-{{set_hp(min(hp, get_hp()+spent))}}
+{{set_hp(min(hp, get_hp()+spent)) if selfHeal else 0}}
 -title "<name> Draws Healing Power from the Divine."
 -desc "You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level x 5. As an action, you can touch a creature and draw power from the pool to restore a number of hit points to that creature, up to the maximum amount remaining in your pool.
 
