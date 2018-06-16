@@ -48,9 +48,16 @@
 
 ## Scroll
 ```GN
-!servalias scroll multiline
-!embed {{set("level", int("%1%") if "%1"+"%"!="%1%" else 0)}} {{set("dc", str(10+level))}} {{set("mod", str(max(charismaMod, intelligenceMod, wisdomMod)))}} {{set("result", vroll("1d20+" + mod))}} {{set("success", (result.total>=int(dc)))}} {{'-t "<name> attempts to use a level %1% scroll"' if level else '-t "Spell Scrolls"'}} -desc "If the spell is of a higher level than you can normally cast, you must make an ability check using your spellcasting ability to determine whether you cast it successfully. The DC equals 10 + the spell's level." {{('-f "DC|' + dc + '"') if level else ''}} {{('-f "Ability Check|' + str(result) + '"') if level else ''}} {{('-f "Result|' + ("Success" if success else "Failure") + '"') if level else ''}} -color <color> -thumb <image>
-!cast %2% %3% %4% %5% %6% %7% %8% %9% %0%
+!servalias scroll !multiline
+{{args="%1%%2%%"}}{{args=args[:args.index("%")]}}
+{{wizCopy="copy" in args or "book" in args or "wiz" in args}}
+{{args=''.join([i for i in args if i.isdigit()])}}
+{{spellLvl=int(args) if args.isdigit() else 5}}
+{{dc=spellLvl+10}}
+{{stats=[charismaMod, intelligenceMod, wisdomMod]}}
+{{check="arc" if wizCopy else ["char", "int", "wis"][stats.index(max(stats))]}}
+{{title=f"Copy a level {spellLvl} Spell." if wizCopy else f"Cast a level {spellLvl} Spell!"}}
+!check {{check}} -title "<name> Attempts to {{title}}" -dc {{dc}} &*&
 ```
 
 ## Shove

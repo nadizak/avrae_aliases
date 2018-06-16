@@ -34,7 +34,7 @@
 `INT`: {{stats[3]}} {{'\:white_check_mark:' if stats[3].total>14 else '\:ballot_box_with_check:' if stats[3].total>12 else ''}}
 `WIS`: {{stats[4]}} {{'\:white_check_mark:' if stats[4].total>14 else '\:ballot_box_with_check:' if stats[4].total>12 else ''}}
 `CHR`: {{stats[5]}} {{'\:white_check_mark:' if stats[5].total>14 else '\:ballot_box_with_check:' if stats[5].total>12 else ''}}"
--footer "{{'You may re-roll for another stat line because you do not have at least one 15+ stat with another stat at 13+' if not valid else 'This is a valid stat line. Re-roll until you have 2 valid stat lines and then choose one. Make sure an organizer approves your rolls.'}}"
+-footer "{{'You may re-roll for another stat line because you do not have at least one 15+ stat with another stat at 13+' if not valid else 'This is a valid stat line. Re-roll until you have 2 valid stat lines and then choose one. Make sure a helper approves your rolls.'}}"
 ```
 
 ## Starting Gold

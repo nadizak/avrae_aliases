@@ -52,7 +52,8 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 	* hproll
 	* level
 	* rhitdie
-	* surprise
+	* money
+	* inv
 	* **Actions**
 		* grapple
 		* overrun

@@ -61,3 +61,13 @@ Lastly they must make a Wisdom save (DC 25) or be paralyzed for 1 min. Nothing m
 -color <color>
 ```
 
+## Bap
+```GN
+!servalias bap embed 
+{{set("attack", vroll("1d20+"+str(strengthMod+proficiencyBonus)))}}
+-title "*Bap*!" 
+-desc "*This attack deals no damage, and automatically hits if the target allows it.*" 
+-f "Attack|**To Hit:** {{attack}}" 
+-thumb <image> 
+-color <color>
+```
