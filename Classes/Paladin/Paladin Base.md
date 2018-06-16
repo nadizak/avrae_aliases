@@ -57,18 +57,7 @@ This feature has no effect on undead and constructs."
 ```
 
 ## Channel Divinity
-```GN
-!servalias channel embed
-{{set("lvl", int(Paladin))}}
-{{set("counter", "Channel Divinity")}}
-{{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl else 0}}
-{{mod_cc(counter, -1, True) if lvl else 0}}
--title "<name> Uses {{counter}}."
--desc "Your oath allows you to channel divine energy to fuel magical effects. Each Channel Divinity option provided by your oath explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again. Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your paladin spell save DC."
--f "DC|{{8+proficiencyBonus+charismaMod}}"
--f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
--footer "Paladin | PHB 85" -color <color> -thumb <image>
-```
+**See the Cleric Base aliases**
 
 ## Aura of Protection
 ```GN
