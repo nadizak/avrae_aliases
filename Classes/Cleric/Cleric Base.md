@@ -4,7 +4,7 @@
 {{useCleric=int(Paladin)<=int(Cleric)}}
 {{lvl=int(Cleric) if useCleric else int(Paladin)}}
 {{counter="Channel Divinity"}}
-{{create_cc_nx(counter, 0, "6", "short") if lvl else 0}}
+{{create_cc_nx(counter, 0, "6", "short") if (lvl>=3 or (useCleric and lvl>=2)) else 0}}
 {{totalUses=1 if (not useCleric or lvl<6) else 2 if lvl<18 else 3}}
 {{mod_cc(counter, -6/totalUses, True) if lvl else 0}}
 {{set("current", int(get_cc(counter)*totalUses/6))}}
