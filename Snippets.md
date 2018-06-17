@@ -110,6 +110,11 @@ Collection of snippets that are used in CWM. Snippets work as a shortcut to typi
 !servsnippet rage -d "{{2 if int(Barbarian)<8 else (3 if int(Barbarian)<15 else 4)}} [Rage]"
 ```
 
+## Reliable Talent
+```GN
+!servsnippet talent -mc 10
+```
+
 ## Resist
 ```GN
 !servsnippet resist -b "1d4 [Resistance]"
