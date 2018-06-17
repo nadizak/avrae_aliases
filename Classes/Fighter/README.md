@@ -11,6 +11,9 @@ Uses the Fighter action surge ability to gain an action. Creates and modifies co
 
 Uses the Fighter Second Wind ability and automatically rolls and applies healing. Creates and modifies counters for the ability.
 
+**Indomitable** - `!indomitable`
+
+Uses the Fighter Indomitable ability. Creates and modifies counters for the ability.
 
 # Samurai Archetype
 

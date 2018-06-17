@@ -29,5 +29,24 @@ Once you use this feature, you must finish a short or long rest before you can u
 -f "Regained|{{str(healed)}}"
 -f "Current HP|{{get_hp()}}/{{hp}}"
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
--footer "Fighter | PHB 70" -color <color> -thumb <image>
+-footer "Fighter | PHB 72" -color <color> -thumb <image>
+```
+
+9 13 17
+1 5  9
+
+## Indomitable
+```GN
+!servalias indom embed
+{{lvl=int(Fighter)}}
+{{counter="Indomitable"}}
+{{ccMax=3*2}}
+{{create_cc_nx(counter, 0, str(ccMax), "long") if lvl>=9 else 0}}
+{{totalUses=3 if lvl>=17 else 2 if lvl>=13 else 1}}
+{{mod_cc(counter, int(-1*ccMax/totalUses), True)}}
+{{current=int(get_cc(counter)*totalUses/ccMax)}}
+-title "<name> is Indomitable!"
+-desc "Beginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can't use this feature again until you finish a long rest. You can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level."
+-f "{{counter}}|{{'◉'*current + '〇'*(totalUses-current)}}"
+-footer "Fighter | PHB 72" -color <color> -thumb <image>
 ```
