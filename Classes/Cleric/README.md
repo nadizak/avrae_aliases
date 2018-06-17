@@ -1,4 +1,8 @@
-# Whoops!
-This folder currently doesn't have any aliases or does not have a ReadMe written up yet.
+# Cleric Commands
 
-If you would like us to work on this folder next send a suggestion at https://goo.gl/forms/tSsKgR8BbOpTbfMg2
+Common commands used by Clerics that will auto create and update counters and roll dice for you.
+Most aliases will require `!level` to be set up correctly beforehand.
+
+**Channel Divinity** - `!channel`
+
+Uses the Channel Divinity ability. Creates and modifies counters for the ability. Will check for both Cleric and Paladin levels and use the correct total uses. Doesn't display any specific effects for the Cleric or Paladin subtype.

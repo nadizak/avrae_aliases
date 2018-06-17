@@ -60,10 +60,12 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 ## Level Set
 ```GN
 !servalias level embed
+{{classList=load_json(get_gvar("6bbbd645-9002-41af-9915-0948a2e7ec6c"))}}
 {{set("z","0")}}
-{{set("clas","%1%".capitalize())}}
+{{clas="%1%"[:4].capitalize()}}
+{{clas=[i for i in classList if clas in i]}}
+{{clas=clas[0] if len(clas) else ""}}
 {{set("newLevel",int("%2%") if "%2"+"%"!="%2%" else 0)}}
-{{set("classList",["Barbarian","Bard","Cleric","Druid","Fighter","Epic","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"])}}
 {{set("error",clas not in classList or newLevel>20 or newLevel<0)}}
 {{set_cvar_nx("Barbarian",0)}}
 {{set_cvar_nx("Bard",0)}}
