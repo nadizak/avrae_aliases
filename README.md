@@ -24,13 +24,21 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 		* inspire
 		* songofrest
 	* Cleric
+		* channel
 	* Druid
 	* Fighter
 		* action
 		* secondwind
+		* indom
 		* **Samurai**
 			* spirit
 	* Monk
+		* ki
+		* flurry
+		* patient
+		* windstep
+		* deflect
+		* empty
 	* Paladin
 		* divinesense
 		* layonhands
@@ -39,6 +47,7 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 		* pld_aura
 	* Ranger
 	* Rogue
+		* strokeofluck
 	* Sorcerer
 	* Warlock
 		* eldritchmaster
@@ -64,15 +73,19 @@ If you have any suggestions please make them at https://goo.gl/forms/tSsKgR8BbOp
 		* scroll
 		* shove
 		* tumble
+		* jump
 		
 * Spells
 	* **Cantrips**
 		* toll
 	* **Level 3 Spells**
 		* counterspell
+	* **Level 5 Spells**
+		* bigby
 
 * Races
-	* Eladrin Fey Step
+	* Eladrin
+		* feystep
 		
 * DM Commands
 	* dmfeedback
