@@ -108,10 +108,20 @@
     },
     "dm": {
       "type": "list",
-        "dmfeedback":{},
-        "gold":{},
-        "loot":{},
-        "weather":{}
+        "gold":{
+          "desc": "Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.",
+          "usage": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
+        },
+        "loot":{
+          "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
+          "usage": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
+          "footer": "Credit to @silverbass#2407"
+        },
+        "weather":{
+          "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
+          "usage": ["!weather [biome] [season]` `!weather [list/biomes]"],
+          "footer": "Credit to @silverbass#2407 and @newtim#1227"
+        }
     },
     "server": {
       "type": "list",
@@ -156,7 +166,8 @@
     "type": "list",
     "bless": {
       "desc": "Adds the Bless spell to your attacks rolls and saves.",
-      "usage": ["!a Dagger bless", "!s wis bless"]
+      "usage": ["!a Dagger bless", "!s wis bless"],
+      "footer": "Credit to Toothless#7854"
     },
     "boom": {
       "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
@@ -176,7 +187,8 @@
     },
     "gfb": {
       "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
-      "usage": ["!a Dagger gfb"]
+      "usage": ["!a Dagger gfb"],
+      "footer": "Credit to Toothless#7854"
     },
     "guidance": {
       "desc": "Add Guidance to a skill check.",

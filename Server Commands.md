@@ -9,7 +9,7 @@
 {{query=" ".join([q for q in query if "&" not in q])}}
 {{type=output.type if "type" in output else ""}}
 {{list=[key for key in output.keys() if key not in attrs] if "list" in type else 0}}
-{{list.sort() if ("sort" not in output or "none" not in output.sort) else 0}}
+{{list.sort() if list and ("sort" not in output or "none" not in output.sort) else 0}}
 {{timeout="" if "notime" in query else output.t if "t" in output else "10" if list else ""}}
 {{examples="\n".join(output.usage) if "usage" in output else ""}}
 -title "{{output.title if "title" in output else f"!cwm {query}"}}"
