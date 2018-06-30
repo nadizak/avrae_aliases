@@ -103,3 +103,25 @@
 ```GN
 !servsnippet sneak -d1 "{{ceil(int(Rogue)/2)}}d6 [Sneak Attack]"
 ```
+
+## Hexblade's Curse
+```GN
+!servsnippet hexcurse -criton 19 -d {{proficiencyBonus}}[Hexblade]
+```
+
+## Jack of All Trades
+```GN
+!servsnippet jack -b "{{int(proficiencyBonus/2)}}[Jack of All Trades]"
+```
+
+## Radiant Soul
+```GN
+!servsnippet soul -d "{{level}}[Radiant Soul]"
+```
+
+## Remarkable Talent
+```GN
+!servsnippet talent -mc 10
+```
+
+

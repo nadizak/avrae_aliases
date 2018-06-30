@@ -229,7 +229,23 @@
     "sneak": {
       "desc": "Add sneak attack damage to an attack. Uses the !level alias to work.",
       "usage": ["!a Dagger sneak"]
-    }
+    },
+    "hexcurse": {
+      "desc": "Add damage from your Hexblade's Curse to an attack.",
+      "usage": ["!a Dagger hexcurse"]
+    },
+    "jack": {
+      "desc": "Adds half your proficiency to a check.",
+      "usage": ["!c dex jack"]
+    },
+    "soul": {
+      "desc": "Adds damage from the Aasimar's Radiant Soul ability.",
+      "usage": ["!a Longsword soul"]
+    },
+    "talent": {
+      "desc": "Uses the Rogue's Remarkable Talent to set a minimum roll value on a check.",
+      "usage": ["!c stealth talent"]
+    },
   },
   "help": {
     "type": "list",
