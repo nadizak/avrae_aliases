@@ -3,7 +3,7 @@
 !servalias cwm embed
 {{output=load_json(get_gvar("b1f652c5-221d-4f2e-97a5-6adc595d9b50")[1:])}}
 {{autoAttrs=["image", "thumb", "color"]}}
-{{attrs=autoAttrs + ['footer', 'type', 'desc', 'title', 't', 'usage']}}
+{{attrs=autoAttrs + ['footer', 'type', 'desc', 'title', 't', 'snippetEx', 'aliasEx']}}
 {{query="&*&".split(" ")}}
 {{[set("output",(output[q.lower()] if q.lower() in output else output)) for q in query]}}
 {{query=" ".join([q for q in query if "&" not in q])}}
@@ -11,12 +11,14 @@
 {{list=[key for key in output.keys() if key not in attrs] if "list" in type else 0}}
 {{list.sort() if list and ("sort" not in output or "none" not in output.sort) else 0}}
 {{timeout="" if "notime" in query else output.t if "t" in output else "10" if list else ""}}
-{{examples="\n".join(output.usage) if "usage" in output else ""}}
+{{snippetEx="\n".join(output.snippetEx) if "snippetEx" in output else ""}}
+{{aliasEx="\n".join(output.aliasEx) if "aliasEx" in output else ""}}
 -title "{{output.title if "title" in output else f"!cwm {query}"}}"
 -desc "{{output.desc if "desc" in output else "\n".join(list) if list else ""}}"
--footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing." if list else "'<>': substitute '[]': optional '<x|y>': x or y '...': repeatable" if ("<" in examples or "[" in examples) else ""}}"
+-footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing." if list else "'<>': substitute '[]': optional '<x|y>': x or y '...': repeatable" if ("<" in snippetEx or "[" in snippetEx+aliasEx) else ""}}"
 {{f'-t {timeout}' if timeout else ''}}
-{{f'-f "Examples | {examples}"' if examples else ""}}
+{{f'-f "Snippet Usage | {snippetEx}"' if snippetEx else ""}}
+{{f'-f "Alias Usage | {aliasEx}"' if aliasEx else ""}}
 {{"\n".join([(f'-{a} "{output[a]}"' if a in output else "") for a in autoAttrs])}}
 ```
 

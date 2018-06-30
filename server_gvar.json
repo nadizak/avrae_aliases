@@ -7,7 +7,7 @@
       "type": "list",
       "rage": {
         "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
-        "usage": ["!a Greataxe rage"]
+        "snippetEx": ["!a Greataxe rage"]
       },
       "brutal":{}
     },
@@ -15,7 +15,7 @@
       "type": "list",
       "jack": {
         "desc": "Adds half your proficiency to a check.",
-        "usage": ["!c dex jack"]
+        "snippetEx": ["!c dex jack"]
       },
       "inspire":{},
       "songofrest":{}
@@ -57,12 +57,12 @@
       "type": "list",
       "sneak": {
         "desc": "A snippet to add sneak attack damage to an attack. Uses the !level alias to work.",
-        "usage": ["!a Dagger sneak"]
+        "snippetEx": ["!a Dagger sneak"]
       },
       "strokeofluck":{},
       "talent": {
         "desc": "A snippet to use the Rogue's Remarkable Talent to set a minimum roll value on a check.",
-        "usage": ["!c stealth talent"]
+        "snippetEx": ["!c stealth talent"]
       }
     },
     "sorcerer": {},
@@ -73,7 +73,7 @@
         "type": "list",
         "hexcurse": {
           "desc": "Add damage from your Hexblade's Curse to an attack.",
-          "usage": ["!a Dagger hexcurse"]
+          "snippetEx": ["!a Dagger hexcurse"]
         }
       }
     },
@@ -108,20 +108,20 @@
       "type": "list",
       "boom": {
         "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
-        "usage": ["!a Whip boom"]
+        "snippetEx": ["!a Whip boom"]
       },
       "gfb": {
         "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
-        "usage": ["!a Dagger gfb"],
+        "snippetEx": ["!a Dagger gfb"],
         "footer": "Credit to Toothless#7854"
       },
       "guidance": {
         "desc": "Add Guidance to a skill check.",
-        "usage": ["!c dexterity guidance"]
+        "snippetEx": ["!c dexterity guidance"]
       },
       "resist": {
         "desc": "Adds the Resistance cantrip effect to a saving throw.",
-        "usage": ["!s wis resist"]
+        "snippetEx": ["!s wis resist"]
       },
       "toll":{}
     },
@@ -129,23 +129,23 @@
       "type": "list",
       "bless": {
         "desc": "Adds the Bless spell to your attacks rolls and saves.",
-        "usage": ["!a Dagger bless", "!s wis bless"],
+        "snippetEx": ["!a Dagger bless", "!s wis bless"],
         "footer": "Credit to Toothless#7854"
       },
       "hex": {
         "desc": "Adds the Hex effect to an attack.",
-        "usage": ["!a Eldritch Blast hex"]
+        "snippetEx": ["!a Eldritch Blast hex"]
       },
       "mark": {
         "desc": "Adds the Hunter's Mark effect to an attack.",
-        "usage": ["!a Longbow mark"]
+        "snippetEx": ["!a Longbow mark"]
       }
     },
     "level2": {
       "type": "list",
       "pwt": {
         "desc": "Adds the Pass Without Trace effect to a stealth check.",
-        "usage": ["!c sneak pwt"]
+        "snippetEx": ["!c sneak pwt"]
       }
     },
     "level3": {
@@ -156,7 +156,7 @@
       "type": "list",
       "holy": {
         "desc": "Adds the damage from the Holy Weapon spell to an attack.",
-        "usage": ["!a Longsword holy"]
+        "snippetEx": ["!a Longsword holy"]
       },
       "bigby":{}
     }
@@ -165,11 +165,11 @@
     "type": "list",
     "gwm": {
       "desc": "Adds the Greater Weapon Master feat's effect to an attack.",
-      "usage": ["!a Greatsword gwm"]
+      "snippetEx": ["!a Greatsword gwm"]
     },
     "sharp": {
       "desc": "Add the Sharpshooter feat's effect to an attack.",
-      "usage": ["!a Shortbow sharp"]
+      "snippetEx": ["!a Shortbow sharp"]
     }
   },
   "races": {
@@ -178,14 +178,14 @@
       "type": "list",
       "feystep":{
         "desc": "Uses the Fey Step ability. Will create and modify the counter for it.",
-        "usage": ["!feystep"]
+        "aliasEx": ["!feystep"]
       }
     },
     "aasimar": {
       "type": "list",
       "soul": {
         "desc": "Snippet to add damage from the Aasimar Protector's Radiant Soul ability.",
-        "usage": ["!a Longsword soul"]
+        "snippetEx": ["!a Longsword soul"]
       }
     }
   },
@@ -193,16 +193,16 @@
     "type": "list",
     "gold":{
       "desc": "Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.",
-      "usage": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
+      "aliasEx": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
     },
     "loot":{
       "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
-      "usage": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
+      "aliasEx": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
       "footer": "Credit to @silverbass#2407"
     },
     "weather":{
       "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
-      "usage": ["!weather [biome] [season]` `!weather [list/biomes]"],
+      "aliasEx": ["!weather [biome] [season]` `!weather [list/biomes]"],
       "footer": "Credit to @silverbass#2407 and @newtim#1227"
     }
   },
@@ -210,38 +210,38 @@
     "type": "list",
     "cwm": {
       "desc": "A search tool for displaying information on different facets of the server. You're probably using it right now.",
-      "usage": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
+      "aliasEx": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
     },
     "sgold": {
       "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
-      "usage": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
+      "aliasEx": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
     },
     "convert": {
       "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
-      "usage": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
+      "aliasEx": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
     },
     "newchar": {
       "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
-      "usage": ["!newchar"]
+      "aliasEx": ["!newchar"]
     }
   },
   "silly": {
     "type": "list",
     "banhammer": {
       "desc": "Makes a truly destructive attack, may cause rocks to fall and you dieing.",
-      "usage": ["!banhammer"]
+      "aliasEx": ["!banhammer"]
     },
     "banhammer2": {
       "desc": "An even more destructive attack that could one shot a god, maybe.",
-      "usage": ["!banhammer2"]
+      "aliasEx": ["!banhammer2"]
     },
     "boop": {
       "desc": "Boops the target.",
-      "usage": ["!boop"]
+      "aliasEx": ["!boop"]
     },
     "bap": {
       "desc": "Baps the target. Completely different from a boop.",
-      "usage": ["!bap"]
+      "aliasEx": ["!bap"]
     }
   }
 },
