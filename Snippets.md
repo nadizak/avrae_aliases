@@ -1,29 +1,3 @@
-# Snippets
-
-Collection of snippets that are used in CWM. Snippets work as a shortcut to typing out bonuses, so instead of typing out `!a Longsword -b 1d4 -d 1d6` for bless and hunter's mark you can just type `!a Longsword bless mark`.
-
-## List of current snippets on CWM
-* bless - adds the Bless spell to your to-hit and saves
-* boom - adds the effect of Booming Blade to an attack and displays the additional damage(scales with level)
-* bracers - adds the damage of the Bracers of Archery to your attack
-* d6 - rolls another d6 with the attack but doesn't add it to damage
-* d8 - rolls another d8 with the attack but doesn't add it to damage
-* d10 - rolls another d10 with the attack but doesn't add it to damage
-* gfb - adds Green Flame Blade to an attack and displays the additional damage (scales with level and adds highest of int or chr for the spellcasting mod)
-* guidance - add Guidance to a skill check
-* gwm - adds the Greater Weapon Master feat's effect to an attack
-* hex - adds the Hex effect to an attack
-* holy - adds Holy Weapon damage to an attack
-* mark - adds the Hunter's Mark effect to an attack
-* pwt - adds the Pass Without Trace effect to a stealth check
-* rage - adds Rage damage to an attack (requires !level setup)
-* resist - adds the Resistance cantrip effect to a saving throw
-* sharp - add the Sharpshooter feat's effect to an attack
-* sneak - add sneak attack damage to an attack (utilizes !level for multiclass)
-
-
-
-
 ## Bless
 ```GN
 !servsnippet bless -b 1d4[Bless]

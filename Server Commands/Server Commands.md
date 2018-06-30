@@ -1,11 +1,22 @@
-## Alias Form
+## CWM Search
 ```GN
-!servalias alias_form embed -title "Suggestions for server alias?" -desc "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
-```
-
-## Alias List
-```GN
-!servalias alias_list embed -title "List of server aliases and snippets:" -desc "https://github.com/nadizak/avrae_aliases"
+!servalias cwm embed
+{{output=load_json(get_gvar("b1f652c5-221d-4f2e-97a5-6adc595d9b50")[1:])}}
+{{autoAttrs=["image", "thumb", "color"]}}
+{{attrs=autoAttrs + ['footer', 'type', 'desc', 'title', 't', 'usage']}}
+{{query="&*&".split(" ")}}
+{{[set("output",(output[q.lower()] if q.lower() in output else output)) for q in query]}}
+{{query=" ".join([q for q in query if "&" not in q])}}
+{{type=output.type if "type" in output else ""}}
+{{list=[key for key in output.keys() if key not in attrs] if type == "list" else 0}}
+{{timeout="" if "notime" in query else output.t if "t" in output else "10" if list else ""}}
+{{examples="\n".join(output.usage) if "usage" in output else 0}}
+-title "{{output.title if "title" in output else f"!cwm {query}"}}"
+-desc "{{output.desc if "desc" in output else "\n".join(list) if list else ""}}"
+-footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category." if list else ""}}"
+{{f'-t {timeout}' if timeout else ''}}
+{{f'-f "Examples | {examples}"' if examples else ""}}
+{{"\n".join([(f'-{a} "{output[a]}"' if a in output else "") for a in autoAttrs])}}
 ```
 
 ## Convert

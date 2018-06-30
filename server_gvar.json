@@ -1,0 +1,251 @@
+~{
+  "welcome": {
+    "title": "Hey welcome to the Colvilian West Marches server!",
+    "desc": "Please check the #links and #welcome channels on the left, when you're ready, @ a helper and ask for the player tag!",
+    "image": "<image>"
+	},
+  "alias": {
+    "type": "list",
+    "class": {
+      "type": "list",
+        "barbarian": {
+        "type": "list",
+            "brutal":{},
+            "rage":{}
+        },
+        "bard": {
+        "type": "list",
+            "inspire":{},
+            "songofrest":{}
+        },
+        "cleric": {
+        "type": "list",
+            "channel":{}
+        },
+        "druid": {},
+        "fighter": {
+        "type": "list",
+            "action":{},
+            "secondwind":{},
+            "indom":{},
+            "samurai": {
+              "type": "list",
+                "spirit":{}
+            }
+        },
+        "monk": {
+        "type": "list",
+            "ki":{},
+            "flurry":{},
+            "patient":{},
+            "windstep":{},
+            "deflect":{},
+            "empty":{}
+        },
+        "paladin": {
+        "type": "list",
+            "divinesense":{},
+            "layonhands":{},
+            "smite":{},
+            "channel":{},
+            "pld_aura":{}
+        },
+        "ranger": {},
+        "rogue": {
+        "type": "list",
+            "strokeofluck":{}
+        },
+        "sorcerer": {},
+        "warlock": {
+        "type": "list",
+            "eldritchmaster":{},
+            "hexblade": {
+              "type": "list",
+                "hexcurse":{}
+            }
+        },
+        "wizard": {}
+    },
+    "game": {
+      "type": "list",
+        "heal":{},
+        "hitdice":{},
+        "hproll":{},
+        "level":{},
+        "rhitdie":{},
+        "money":{},
+        "inv":{},
+        "action": {
+        "type": "list",
+            "grapple":{},
+            "overrun":{},
+            "potion":{},
+            "prone":{},
+            "push":{},
+            "ram":{},
+            "scroll":{},
+            "shove":{},
+            "tumble":{},
+            "jump":{}
+        }
+    },
+    "spell": {
+      "type": "list",
+        "cantrip": {
+        "type": "list",
+            "toll":{}
+        },
+        "level3": {
+        "type": "list",
+            "counterspell":{}
+        },
+        "level5": {
+        "type": "list",
+            "bigby":{}
+        }
+    },
+    "races": {
+      "type": "list",
+        "eladrin": {
+        "type": "list",
+            "feystep":{}
+        }
+    },
+    "dm": {
+      "type": "list",
+        "dmfeedback":{},
+        "gold":{},
+        "loot":{},
+        "weather":{}
+    },
+    "server": {
+      "type": "list",
+        "sgold":{},
+        "alias_form":{},
+        "alias_list":{},
+        "convert":{},
+        "newchar":{}
+    },
+    "silly": {
+      "type": "list",
+        "backstory":{},
+        "banhammer":{},
+        "banhammer2":{},
+        "boop":{}
+    }
+  },
+  "snippet": {
+    "type": "list",
+    "bless": {
+      "desc": "Adds the Bless spell to your attacks rolls and saves.",
+      "usage": ["!a Dagger bless", "!s wis bless"]
+    },
+    "boom": {
+      "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
+      "usage": ["!a Whip boom"]
+    },
+    "d6": {
+      "desc": "Rolls a separate d6 with the attack but doesn't add it to damage. For miscellaneous items.",
+      "usage": ["!a Dagger d6"]
+    },
+    "d8": {
+      "desc": "Rolls a separate d8 with the attack but doesn't add it to damage. For miscellaneous items.",
+      "usage": ["!a Dagger d8"]
+    },
+    "d10": {
+      "desc": "Rolls a separate d10 with the attack but doesn't add it to damage. For miscellaneous items.",
+      "usage": ["!a Dagger d10"]
+    },
+    "gfb": {
+      "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
+      "usage": ["!a Dagger gfb"]
+    },
+    "guidance": {
+      "desc": "Add Guidance to a skill check.",
+      "usage": ["!c dexterity guidance"]
+    },
+    "gwm": {
+      "desc": "Adds the Greater Weapon Master feat's effect to an attack.",
+      "usage": ["!a Greatsword gwm"]
+    },
+    "hex": {
+      "desc": "Adds the Hex effect to an attack.",
+      "usage": ["!a Eldritch Blast hex"]
+    },
+    "holy": {
+      "desc": "Adds the damage from the Holy Weapon spell to an attack.",
+      "usage": ["!a Longsword holy"]
+    },
+    "mark": {
+      "desc": "Adds the Hunter's Mark effect to an attack.",
+      "usage": ["!a Longbow mark"]
+    },
+    "pwt": {
+      "desc": "Adds the Pass Without Trace effect to a stealth check.",
+      "usage": ["!c sneak pwt"]
+    },
+    "rage": {
+      "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
+      "usage": ["!a Greataxe rage"]
+    },
+    "resist": {
+      "desc": "Adds the Resistance cantrip effect to a saving throw.",
+      "usage": ["!s wis resist"]
+    },
+    "sharp": {
+      "desc": "Add the Sharpshooter feat's effect to an attack.",
+      "usage": ["!a Shortbow sharp"]
+    },
+    "sneak": {
+      "desc": "Add sneak attack damage to an attack. Uses the !level alias to work.",
+      "usage": ["!a Dagger sneak"]
+    }
+  },
+  "help": {
+    "type": "list",
+    "avrae": {
+      "title": "Avrae General Use Guide",
+      "desc": "https://docs.google.com/document/d/1TWWL6Wy-jxQCLsqf_2ttFR6UuLDswWuL41zcX5MHhoE/mobilebasic"
+    },
+    "feedback": {
+      "title": "How did the DM do?",
+      "desc": "Tell us here: https://docs.google.com/forms/d/e/1FAIpQLScpzi_CiLqG7hljj5NU3aIJ58N6SzGzfx8N0OVLe7ZLlJqNnw/viewform"
+    },
+    "aliasform": {
+      "title": "Suggestions for server alias?",
+      "desc": "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
+    },
+    "aliaslist": {
+      "title": "List of server aliases and snippets:",
+      "desc": "https://github.com/nadizak/avrae_aliases"
+    }
+  },
+  "meme": {
+    "type": "list",
+    "nari": {
+      "title": "Why is Nari so mean?",
+      "desc": "No one knows but legend has it that when the CWM has died out and not a single player remains.... Nari will still be there... Berating and just generally being super mean.",
+      "thumb": "https://cdn.discordapp.com/attachments/407991677291200513/462298389497905152/3805b4c6deaa0837fb178593a8789c09.jpg",
+      "footer": "This message brought to you by Newt"
+    },
+    "arios": {
+      "title": "Arios does some Ridiculous Homebrew Things Stacked on Top of Some Paladin Crap!",
+      "desc": "And of course this is probably the only time he crit this whole game.",
+      "image": "https://images-ext-2.discordapp.net/external/MeRsoYU7l0N1Mk5_GvxhqiKjkv0s4uVQbKkxoHQBGxo/https/thumbs.gfycat.com/FancyFamiliarBaldeagle-max-1mb.gif?width=1202&height=677"
+    },
+    "doit": {
+      "title": "",
+      "image": "https://media.tenor.co/images/03b1fb9c28a7e8de281700661e688f51/tenor.gif"
+    },
+    "chump": {
+      "title": "Shoulda been a Champion, Scrub",
+      "desc": "Lizzard wants you to know that some unfortunate event befell you that could've been avoided if you were a Champion Fighter. Sucks to be you.",
+      "image": "https://media.giphy.com/media/TdmTcdoN3egaQ/giphy.gif"
+    },
+    "pussy": {
+      "title": "",
+      "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
+    }
+  },
+  "type": "list"
+}
