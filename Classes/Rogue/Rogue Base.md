@@ -1,3 +1,13 @@
+## Reliable Talent
+```GN
+!servsnippet talent -mc 10
+```
+
+## Sneak Attack
+```GN
+!servsnippet sneak -d1 "{{ceil(int(Rogue)/2)}}d6 [Sneak Attack]"
+```
+
 ## Stroke of Luck
 ```GN
 !servalias luck embed

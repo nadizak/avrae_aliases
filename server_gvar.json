@@ -1,297 +1,295 @@
 ~{
-  "alias": {
+"alias": {
+  "type": "list",
+  "class": {
     "type": "list",
-    "class": {
+    "barbarian": {
       "type": "list",
-        "barbarian": {
-        "type": "list",
-            "brutal":{},
-            "rage":{}
-        },
-        "bard": {
-        "type": "list",
-            "inspire":{},
-            "songofrest":{}
-        },
-        "cleric": {
-        "type": "list",
-            "channel":{}
-        },
-        "druid": {},
-        "fighter": {
-        "type": "list",
-            "action":{},
-            "secondwind":{},
-            "indom":{},
-            "samurai": {
-              "type": "list",
-                "spirit":{}
-            }
-        },
-        "monk": {
-        "type": "list",
-            "ki":{},
-            "flurry":{},
-            "patient":{},
-            "windstep":{},
-            "deflect":{},
-            "empty":{}
-        },
-        "paladin": {
-        "type": "list",
-            "divinesense":{},
-            "layonhands":{},
-            "smite":{},
-            "channel":{},
-            "pld_aura":{}
-        },
-        "ranger": {},
-        "rogue": {
-        "type": "list",
-            "strokeofluck":{}
-        },
-        "sorcerer": {},
-        "warlock": {
-        "type": "list",
-            "eldritchmaster":{},
-            "hexblade": {
-              "type": "list",
-                "hexcurse":{}
-            }
-        },
-        "wizard": {}
+      "rage": {
+        "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
+        "usage": ["!a Greataxe rage"]
+      },
+      "brutal":{}
     },
-    "game": {
+    "bard": {
       "type": "list",
-        "heal":{},
-        "hitdice":{},
-        "hproll":{},
-        "level":{},
-        "rhitdie":{},
-        "money":{},
-        "inv":{},
-        "action": {
-        "type": "list",
-            "grapple":{},
-            "overrun":{},
-            "potion":{},
-            "prone":{},
-            "push":{},
-            "ram":{},
-            "scroll":{},
-            "shove":{},
-            "tumble":{},
-            "jump":{}
-        }
+      "jack": {
+        "desc": "Adds half your proficiency to a check.",
+        "usage": ["!c dex jack"]
+      },
+      "inspire":{},
+      "songofrest":{}
     },
-    "spell": {
+    "cleric": {
       "type": "list",
-        "cantrip": {
-        "type": "list",
-            "toll":{}
-        },
-        "level3": {
-        "type": "list",
-            "counterspell":{}
-        },
-        "level5": {
-        "type": "list",
-            "bigby":{}
-        }
+      "channel":{}
     },
-    "races": {
+    "druid": {},
+    "fighter": {
       "type": "list",
-        "eladrin": {
+      "action":{},
+      "secondwind":{},
+      "indom":{},
+      "samurai": {
         "type": "list",
-            "feystep":{}
-        }
+        "spirit":{}
+      }
     },
-    "dm": {
+    "monk": {
       "type": "list",
-        "gold":{
-          "desc": "Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.",
-          "usage": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
-        },
-        "loot":{
-          "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
-          "usage": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
-          "footer": "Credit to @silverbass#2407"
-        },
-        "weather":{
-          "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
-          "usage": ["!weather [biome] [season]` `!weather [list/biomes]"],
-          "footer": "Credit to @silverbass#2407 and @newtim#1227"
-        }
+      "ki":{},
+      "flurry":{},
+      "patient":{},
+      "windstep":{},
+      "deflect":{},
+      "empty":{}
     },
-    "server": {
+    "paladin": {
       "type": "list",
-        "cwm": {
-          "desc": "A search tool for displaying information on different facets of the server. You're probably using it right now.",
-          "usage": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
-        },
-        "sgold": {
-          "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
-          "usage": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
-        },
-        "convert": {
-          "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
-          "usage": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
-        },
-        "newchar": {
-          "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
-          "usage": ["!newchar"]
-        }
+      "divinesense":{},
+      "layonhands":{},
+      "smite":{},
+      "channel":{},
+      "pld_aura":{}
     },
-    "silly": {
+    "ranger": {},
+    "rogue": {
       "type": "list",
-        "banhammer": {
-          "desc": "Makes a truly destructive attack, may cause rocks to fall and you dieing.",
-          "usage": ["!banhammer"]
-        },
-        "banhammer2": {
-          "desc": "An even more destructive attack that could one shot a god, maybe.",
-          "usage": ["!banhammer2"]
-        },
-        "boop": {
-          "desc": "Boops the target.",
-          "usage": ["!boop"]
-        },
-        "bap": {
-          "desc": "Baps the target. Completely different from a boop.",
-          "usage": ["!bap"]
+      "sneak": {
+        "desc": "A snippet to add sneak attack damage to an attack. Uses the !level alias to work.",
+        "usage": ["!a Dagger sneak"]
+      },
+      "strokeofluck":{},
+      "talent": {
+        "desc": "A snippet to use the Rogue's Remarkable Talent to set a minimum roll value on a check.",
+        "usage": ["!c stealth talent"]
+      }
+    },
+    "sorcerer": {},
+    "warlock": {
+      "type": "list",
+      "eldritchmaster":{},
+      "hexblade": {
+        "type": "list",
+        "hexcurse": {
+          "desc": "Add damage from your Hexblade's Curse to an attack.",
+          "usage": ["!a Dagger hexcurse"]
         }
+      }
+    },
+    "wizard": {}
+  },
+  "game": {
+    "type": "list",
+    "heal":{},
+    "hitdice":{},
+    "hproll":{},
+    "level":{},
+    "rhitdie":{},
+    "money":{},
+    "inv":{},
+    "action": {
+      "type": "list",
+      "grapple":{},
+      "overrun":{},
+      "potion":{},
+      "prone":{},
+      "push":{},
+      "ram":{},
+      "scroll":{},
+      "shove":{},
+      "tumble":{},
+      "jump":{}
     }
   },
-  "snippet": {
+  "spell": {
     "type": "list",
-    "bless": {
-      "desc": "Adds the Bless spell to your attacks rolls and saves.",
-      "usage": ["!a Dagger bless", "!s wis bless"],
-      "footer": "Credit to Toothless#7854"
+    "cantrip": {
+      "type": "list",
+      "boom": {
+        "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
+        "usage": ["!a Whip boom"]
+      },
+      "gfb": {
+        "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
+        "usage": ["!a Dagger gfb"],
+        "footer": "Credit to Toothless#7854"
+      },
+      "guidance": {
+        "desc": "Add Guidance to a skill check.",
+        "usage": ["!c dexterity guidance"]
+      },
+      "resist": {
+        "desc": "Adds the Resistance cantrip effect to a saving throw.",
+        "usage": ["!s wis resist"]
+      },
+      "toll":{}
     },
-    "boom": {
-      "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
-      "usage": ["!a Whip boom"]
+    "level1": {
+      "type": "list",
+      "bless": {
+        "desc": "Adds the Bless spell to your attacks rolls and saves.",
+        "usage": ["!a Dagger bless", "!s wis bless"],
+        "footer": "Credit to Toothless#7854"
+      },
+      "hex": {
+        "desc": "Adds the Hex effect to an attack.",
+        "usage": ["!a Eldritch Blast hex"]
+      },
+      "mark": {
+        "desc": "Adds the Hunter's Mark effect to an attack.",
+        "usage": ["!a Longbow mark"]
+      }
     },
-    "d6": {
-      "desc": "Rolls a separate d6 with the attack but doesn't add it to damage. For miscellaneous items.",
-      "usage": ["!a Dagger d6"]
+    "level2": {
+      "type": "list",
+      "pwt": {
+        "desc": "Adds the Pass Without Trace effect to a stealth check.",
+        "usage": ["!c sneak pwt"]
+      }
     },
-    "d8": {
-      "desc": "Rolls a separate d8 with the attack but doesn't add it to damage. For miscellaneous items.",
-      "usage": ["!a Dagger d8"]
+    "level3": {
+      "type": "list",
+      "counterspell":{}
     },
-    "d10": {
-      "desc": "Rolls a separate d10 with the attack but doesn't add it to damage. For miscellaneous items.",
-      "usage": ["!a Dagger d10"]
-    },
-    "gfb": {
-      "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
-      "usage": ["!a Dagger gfb"],
-      "footer": "Credit to Toothless#7854"
-    },
-    "guidance": {
-      "desc": "Add Guidance to a skill check.",
-      "usage": ["!c dexterity guidance"]
-    },
+    "level5": {
+      "type": "list",
+      "holy": {
+        "desc": "Adds the damage from the Holy Weapon spell to an attack.",
+        "usage": ["!a Longsword holy"]
+      },
+      "bigby":{}
+    }
+  },
+  "feat": {
+    "type": "list",
     "gwm": {
       "desc": "Adds the Greater Weapon Master feat's effect to an attack.",
       "usage": ["!a Greatsword gwm"]
     },
-    "hex": {
-      "desc": "Adds the Hex effect to an attack.",
-      "usage": ["!a Eldritch Blast hex"]
-    },
-    "holy": {
-      "desc": "Adds the damage from the Holy Weapon spell to an attack.",
-      "usage": ["!a Longsword holy"]
-    },
-    "mark": {
-      "desc": "Adds the Hunter's Mark effect to an attack.",
-      "usage": ["!a Longbow mark"]
-    },
-    "pwt": {
-      "desc": "Adds the Pass Without Trace effect to a stealth check.",
-      "usage": ["!c sneak pwt"]
-    },
-    "rage": {
-      "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
-      "usage": ["!a Greataxe rage"]
-    },
-    "resist": {
-      "desc": "Adds the Resistance cantrip effect to a saving throw.",
-      "usage": ["!s wis resist"]
-    },
     "sharp": {
       "desc": "Add the Sharpshooter feat's effect to an attack.",
       "usage": ["!a Shortbow sharp"]
-    },
-    "sneak": {
-      "desc": "Add sneak attack damage to an attack. Uses the !level alias to work.",
-      "usage": ["!a Dagger sneak"]
-    },
-    "hexcurse": {
-      "desc": "Add damage from your Hexblade's Curse to an attack.",
-      "usage": ["!a Dagger hexcurse"]
-    },
-    "jack": {
-      "desc": "Adds half your proficiency to a check.",
-      "usage": ["!c dex jack"]
-    },
-    "soul": {
-      "desc": "Adds damage from the Aasimar's Radiant Soul ability.",
-      "usage": ["!a Longsword soul"]
-    },
-    "talent": {
-      "desc": "Uses the Rogue's Remarkable Talent to set a minimum roll value on a check.",
-      "usage": ["!c stealth talent"]
-    },
-  },
-  "help": {
-    "type": "list",
-    "avrae": {
-      "title": "Avrae General Use Guide",
-      "desc": "https://docs.google.com/document/d/1TWWL6Wy-jxQCLsqf_2ttFR6UuLDswWuL41zcX5MHhoE/mobilebasic"
-    },
-    "feedback": {
-      "title": "How did the DM do?",
-      "desc": "Tell us here: https://docs.google.com/forms/d/e/1FAIpQLScpzi_CiLqG7hljj5NU3aIJ58N6SzGzfx8N0OVLe7ZLlJqNnw/viewform"
-    },
-    "aliasform": {
-      "title": "Suggestions for server alias?",
-      "desc": "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
-    },
-    "aliaslist": {
-      "title": "List of server aliases and snippets:",
-      "desc": "https://github.com/nadizak/avrae_aliases"
     }
   },
-  "meme": {
+  "races": {
     "type": "list",
-    "nari": {
-      "title": "Why is Nari so mean?",
-      "desc": "No one knows but legend has it that when the CWM has died out and not a single player remains.... Nari will still be there... Berating and just generally being super mean.",
-      "thumb": "https://cdn.discordapp.com/attachments/407991677291200513/462298389497905152/3805b4c6deaa0837fb178593a8789c09.jpg",
-      "footer": "This message brought to you by Newt"
+    "eladrin": {
+      "type": "list",
+      "feystep":{
+        "desc": "Uses the Fey Step ability. Will create and modify the counter for it.",
+        "usage": ["!feystep"]
+      }
     },
-    "arios": {
-      "title": "Arios does some Ridiculous Homebrew Things Stacked on Top of Some Paladin Crap!",
-      "desc": "And of course this is probably the only time he crit this whole game.",
-      "image": "https://images-ext-2.discordapp.net/external/MeRsoYU7l0N1Mk5_GvxhqiKjkv0s4uVQbKkxoHQBGxo/https/thumbs.gfycat.com/FancyFamiliarBaldeagle-max-1mb.gif?width=1202&height=677"
-    },
-    "doit": {
-      "title": "",
-      "image": "https://media.tenor.co/images/03b1fb9c28a7e8de281700661e688f51/tenor.gif"
-    },
-    "chump": {
-      "title": "Shoulda been a Champion, Scrub",
-      "desc": "Lizzard wants you to know that some unfortunate event befell you that could've been avoided if you were a Champion Fighter. Sucks to be you.",
-      "image": "https://media.giphy.com/media/TdmTcdoN3egaQ/giphy.gif"
-    },
-    "pussy": {
-      "title": "",
-      "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
+    "aasimar": {
+      "type": "list",
+      "soul": {
+        "desc": "Snippet to add damage from the Aasimar Protector's Radiant Soul ability.",
+        "usage": ["!a Longsword soul"]
+      }
     }
   },
-  "type": "list"
+  "dm": {
+    "type": "list",
+    "gold":{
+      "desc": "Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.",
+      "usage": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
+    },
+    "loot":{
+      "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
+      "usage": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
+      "footer": "Credit to @silverbass#2407"
+    },
+    "weather":{
+      "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
+      "usage": ["!weather [biome] [season]` `!weather [list/biomes]"],
+      "footer": "Credit to @silverbass#2407 and @newtim#1227"
+    }
+  },
+  "server": {
+    "type": "list",
+    "cwm": {
+      "desc": "A search tool for displaying information on different facets of the server. You're probably using it right now.",
+      "usage": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
+    },
+    "sgold": {
+      "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
+      "usage": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
+    },
+    "convert": {
+      "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
+      "usage": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
+    },
+    "newchar": {
+      "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
+      "usage": ["!newchar"]
+    }
+  },
+  "silly": {
+    "type": "list",
+    "banhammer": {
+      "desc": "Makes a truly destructive attack, may cause rocks to fall and you dieing.",
+      "usage": ["!banhammer"]
+    },
+    "banhammer2": {
+      "desc": "An even more destructive attack that could one shot a god, maybe.",
+      "usage": ["!banhammer2"]
+    },
+    "boop": {
+      "desc": "Boops the target.",
+      "usage": ["!boop"]
+    },
+    "bap": {
+      "desc": "Baps the target. Completely different from a boop.",
+      "usage": ["!bap"]
+    }
+  }
+},
+"help": {
+  "type": "list",
+  "avrae": {
+    "title": "Avrae General Use Guide",
+    "desc": "https://docs.google.com/document/d/1TWWL6Wy-jxQCLsqf_2ttFR6UuLDswWuL41zcX5MHhoE/mobilebasic"
+  },
+  "feedback": {
+    "title": "How did the DM do?",
+    "desc": "Tell us here: https://docs.google.com/forms/d/e/1FAIpQLScpzi_CiLqG7hljj5NU3aIJ58N6SzGzfx8N0OVLe7ZLlJqNnw/viewform"
+  },
+  "aliasform": {
+    "title": "Suggestions for server alias?",
+    "desc": "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
+  },
+  "aliaslist": {
+    "title": "List of server aliases and snippets:",
+    "desc": "https://github.com/nadizak/avrae_aliases"
+  }
+},
+"meme": {
+  "type": "list",
+  "nari": {
+    "title": "Why is Nari so mean?",
+    "desc": "No one knows but legend has it that when the CWM has died out and not a single player remains.... Nari will still be there... Berating and just generally being super mean.",
+    "thumb": "https://cdn.discordapp.com/attachments/407991677291200513/462298389497905152/3805b4c6deaa0837fb178593a8789c09.jpg",
+    "footer": "This message brought to you by Newt"
+  },
+  "arios": {
+    "title": "Arios does some Ridiculous Homebrew Things Stacked on Top of Some Paladin Crap!",
+    "desc": "And of course this is probably the only time he crit this whole game.",
+    "image": "https://images-ext-2.discordapp.net/external/MeRsoYU7l0N1Mk5_GvxhqiKjkv0s4uVQbKkxoHQBGxo/https/thumbs.gfycat.com/FancyFamiliarBaldeagle-max-1mb.gif?width=1202&height=677"
+  },
+  "doit": {
+    "title": "",
+    "image": "https://media.tenor.co/images/03b1fb9c28a7e8de281700661e688f51/tenor.gif"
+  },
+  "chump": {
+    "title": "Shoulda been a Champion, Scrub",
+    "desc": "Lizzard wants you to know that some unfortunate event befell you that could've been avoided if you were a Champion Fighter. Sucks to be you.",
+    "image": "https://media.giphy.com/media/TdmTcdoN3egaQ/giphy.gif"
+  },
+  "pussy": {
+    "title": "",
+    "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
+  }
+},
+"type": "list"
 }

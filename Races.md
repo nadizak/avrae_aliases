@@ -1,4 +1,9 @@
-## Eladrin's Fey Step
+## Aasimar(Protector) Radiant Soul Snippet
+```GN
+!servsnippet soul -d "{{level}}[Radiant Soul]"
+```
+
+## Eladrin Fey Step
 ```GN
 !servalias feystep embed
 {{set("counter", "Fey Step")}}

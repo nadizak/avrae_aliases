@@ -15,3 +15,8 @@
 -f "To Hit|{{"(***CRIT!***)" if crit else ""}}{{tohit}}"
 -f "Damage | {{"(***CRIT!***)" if crit else ""}} {{damage}}"
 ```
+
+## Holy Weapon
+```GN
+!servsnippet holy -d "2d8[Radiant]"
+```

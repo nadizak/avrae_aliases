@@ -1,20 +1,31 @@
 ## Booming Blade
+**Credit to Toothless#7854**
 ```GN
-!servalias boom embed
+!servsnippet boom
 {{set("dice", 1 if level < 5 else 2 if level < 11 else 3 if level < 17 else 4)}}
 {{set("dmg", vroll(str(dice) + "d8 [thunder]"))}}
 {{"" if level < 5 else "-d \"" + str(dice - 1) + "d8 [thunder, boom]\""}}
--f "Booming Blade | On a hit, if the target willingly moves before then, it immediately takes {{str(dmg)}} thunder damage." 
-```
+-f "Booming Blade | On a hit, if the target willingly moves before then, it immediately takes {{str(dmg)}} thunder damage."
 
-## Green-Flame Blade
+## Green Flame Blade
+**Credit to Toothless#7854**
 ```GN
-!servalias gfb embed
+!servsnippet gfb
 {{set("mod", str(max(charismaMod, intelligenceMod)))}}
 {{set("dice", " " if level < 5 else "1d8" if level < 11 else "2d8" if level < 17 else "3d8")}}
 {{set("dmg", vroll(dice + (" + " if level >= 5 else "") + mod + " [fire]"))}}
 {{"" if level < 5 else "-d \"" + dice + " [fire, gfb]\""}}
--f "Green-Flame Blade | On a hit, a different creature of your choice you can see within 5 feet of your target takes {{str(dmg)}} damage." 
+-f "Green-Flame Blade | On a hit, a different creature of your choice you can see within 5 feet of your target takes {{str(dmg)}} damage."
+```
+
+## Guidance
+```GN
+!servsnippet guidance -b "1d4 [Guidance]"
+```
+
+## Resist
+```GN
+!servsnippet resist -b "1d4 [Resistance]"
 ```
 
 ## Toll the Dead

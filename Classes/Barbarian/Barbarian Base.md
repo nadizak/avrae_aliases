@@ -10,7 +10,7 @@
 -footer "Barbarian | PHB 48" -color <color> -thumb <image>
 ```
 
-## Rage
+## Rage Alias
 ```GN
 !servalias rage embed
 {{set("lvl", int(Barbarian))}}
@@ -32,4 +32,9 @@ Once you have raged the maximum number of times for your barbarian level, you mu
 -f "Rage Damage|{{bonus}}"
 -f "{{counter}}|{{'◉'*current + '〇'*(rageTotal-current)}}"
 -footer "Barbarian | PHB 48" -color <color> -thumb <image>
+```
+
+## Rage Snippet
+```GN
+!servsnippet rage -d "{{2 if int(Barbarian)<8 else (3 if int(Barbarian)<15 else 4)}} [Rage]"
 ```

@@ -1,4 +1,4 @@
-## Hexblade's Curse
+## Hexblade's Curse Alias
 ```GN
 !servalias hexcurse embed
 {{set("lvl", int(Warlock))}}
@@ -13,4 +13,9 @@
 You can't use this feature again until you finish a short or long rest."
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
 -footer "Hexblade Warlock | XGTE 55" -color <color> -thumb <image>
+```
+
+## Hexblade's Curse Snippet
+```GN
+!servsnippet hexcurse -criton 19 -d {{proficiencyBonus}}[Hexblade]
 ```

@@ -20,6 +20,11 @@ You can use this feature {{get_cc_max(counter)}} times. You regain any expended 
 -color <color> -thumb <image>
 ```
 
+## Jack of All Trades
+```GN
+!servsnippet jack -b "{{int(proficiencyBonus/2)}}[Jack of All Trades]"
+```
+
 ## Song of Rest
 ```GN
 !servalias songofrest embed
