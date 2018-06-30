@@ -8,12 +8,13 @@
 {{[set("output",(output[q.lower()] if q.lower() in output else output)) for q in query]}}
 {{query=" ".join([q for q in query if "&" not in q])}}
 {{type=output.type if "type" in output else ""}}
-{{list=[key for key in output.keys() if key not in attrs] if type == "list" else 0}}
+{{list=[key for key in output.keys() if key not in attrs] if "list" in type else 0}}
+{{list.sort() if ("sort" not in output or "none" not in output.sort) else 0}}
 {{timeout="" if "notime" in query else output.t if "t" in output else "10" if list else ""}}
-{{examples="\n".join(output.usage) if "usage" in output else 0}}
+{{examples="\n".join(output.usage) if "usage" in output else ""}}
 -title "{{output.title if "title" in output else f"!cwm {query}"}}"
 -desc "{{output.desc if "desc" in output else "\n".join(list) if list else ""}}"
--footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing." if list else ""}}"
+-footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing." if list else "'<>': substitute '[]': optional '<x|y>': x or y '...': repeatable" if ("<" in examples or "[" in examples) else ""}}"
 {{f'-t {timeout}' if timeout else ''}}
 {{f'-f "Examples | {examples}"' if examples else ""}}
 {{"\n".join([(f'-{a} "{output[a]}"' if a in output else "") for a in autoAttrs])}}
@@ -31,7 +32,7 @@
 {{'''-title "Unsupported input"\n-desc "Accepted value and units are C (Celcius), F (Fahrenheit), mph, kph"''' if error else '''-title "$1 $2 is equal to roughly $3 $4"\n'''.replace('$1',str(inV)).replace('$2',inUnit).replace('$3',str(int(round(out,0)))).replace('$4',outUnit)}}
 ```
 
-## New Character: 1@>15;1@>13
+## New Character
 ```GN
 !servalias newchar embed
 {{set("stats", [vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3"), vroll("4d6kh3")])}}

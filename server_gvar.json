@@ -1,9 +1,4 @@
 ~{
-  "welcome": {
-    "title": "Hey welcome to the Colvilian West Marches server!",
-    "desc": "Please check the #links and #welcome channels on the left, when you're ready, @ a helper and ask for the player tag!",
-    "image": "<image>"
-	},
   "alias": {
     "type": "list",
     "class": {
@@ -120,11 +115,22 @@
     },
     "server": {
       "type": "list",
-        "sgold":{},
-        "alias_form":{},
-        "alias_list":{},
-        "convert":{},
-        "newchar":{}
+        "cwm": {
+          "desc": "A search tool for displaying information on different facets of the server. You're probably using it right now.",
+          "usage": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
+        },
+        "sgold": {
+          "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
+          "usage": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
+        },
+        "convert": {
+          "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
+          "usage": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
+        },
+        "newchar": {
+          "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
+          "usage": ["!newchar"]
+        }
     },
     "silly": {
       "type": "list",
