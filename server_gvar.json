@@ -7,7 +7,8 @@
       "type": "list",
       "rage": {
         "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
-        "snippetEx": ["!a Greataxe rage"]
+        "snippetEx": ["!a Greataxe rage"],
+        "aliasEx": ["!rage"]
       },
       "brutal":{}
     },
@@ -123,7 +124,10 @@
         "desc": "Adds the Resistance cantrip effect to a saving throw.",
         "snippetEx": ["!s wis resist"]
       },
-      "toll":{}
+      "toll": {
+        "desc": "Casts the Toll the Dead spell and rolls for damage for both cases. Will scale to your level and will use the your highest spell casting stat.",
+        "aliasEx": ["!toll"]
+      }
     },
     "level1": {
       "type": "list",
@@ -150,7 +154,10 @@
     },
     "level3": {
       "type": "list",
-      "counterspell":{}
+      "counterspell":{
+        "desc": "Performs a spell casting ability check to counter a spell of a certain level. If the spell slot used automatically cancels the other spell there is no need to run this alias. Does not subtract spell slots and only uses your spell mod for now (no adv or jack of all trades).",
+        "aliasEx": ["!counterspell <level>", "!counterspell 9"]
+      }
     },
     "level5": {
       "type": "list",
@@ -158,7 +165,11 @@
         "desc": "Adds the damage from the Holy Weapon spell to an attack.",
         "snippetEx": ["!a Longsword holy"]
       },
-      "bigby":{}
+      "bigby": {
+        "desc": "Makes an attack using the Bigby's Hand spell. Supply a spell level to attack with a higher level casting. Accepts crit, adv, and dis.",
+        "aliasEx": ["!bigby", "!bigby 8", "!bigby 6 adv", "!bigby crit"],
+        "footer": "Credit to Hoff#0504"
+      }
     }
   },
   "feat": {
