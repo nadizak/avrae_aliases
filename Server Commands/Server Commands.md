@@ -13,7 +13,7 @@
 {{examples="\n".join(output.usage) if "usage" in output else 0}}
 -title "{{output.title if "title" in output else f"!cwm {query}"}}"
 -desc "{{output.desc if "desc" in output else "\n".join(list) if list else ""}}"
--footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category." if list else ""}}"
+-footer "{{output.footer if "footer" in output else "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing." if list else ""}}"
 {{f'-t {timeout}' if timeout else ''}}
 {{f'-f "Examples | {examples}"' if examples else ""}}
 {{"\n".join([(f'-{a} "{output[a]}"' if a in output else "") for a in autoAttrs])}}

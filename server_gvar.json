@@ -128,10 +128,22 @@
     },
     "silly": {
       "type": "list",
-        "backstory":{},
-        "banhammer":{},
-        "banhammer2":{},
-        "boop":{}
+        "banhammer": {
+          "desc": "Makes a truly destructive attack, may cause rocks to fall and you dieing.",
+          "usage": ["!banhammer"]
+        },
+        "banhammer2": {
+          "desc": "An even more destructive attack that could one shot a god, maybe.",
+          "usage": ["!banhammer2"]
+        },
+        "boop": {
+          "desc": "Boops the target.",
+          "usage": ["!boop"]
+        },
+        "bap": {
+          "desc": "Baps the target. Completely different from a boop.",
+          "usage": ["!bap"]
+        }
     }
   },
   "snippet": {
