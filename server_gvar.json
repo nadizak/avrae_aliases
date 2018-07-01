@@ -6,11 +6,14 @@
     "barbarian": {
       "type": "list",
       "rage": {
-        "desc": "Adds Rage damage to an attack. Uses the !level alias to work.",
+        "desc": "Creates a custom counter and uses your current Barbarian level (according to `!level`) to modify it accordingly. Will print the rage description and number of rages available. \nNote: If you view your Rage counter using !cc it is not the same as what is displayed when calling `!rage` due to the fact that counters can only scale linearly. \n\n You can use it as a snippet to add Rage damage to an attack.",
         "snippetEx": ["!a Greataxe rage"],
         "aliasEx": ["!rage"]
       },
-      "brutal":{}
+      "brutal": {
+        "desc": "Rolls damage for a Brutal Critical. Auto scales the number of dice. Defaults to a d10 weapon die.",
+        "aliasEx": ["!brutal", "!brutal d12", "!brutal 10"]
+      }
     },
     "bard": {
       "type": "list",
@@ -18,40 +21,101 @@
         "desc": "Adds half your proficiency to a check.",
         "snippetEx": ["!c dex jack"]
       },
-      "inspire":{},
-      "songofrest":{}
+      "inspire": {
+        "desc": "Expends a use of Bardic Inspiration. Auto scales the die used and creates counters as needed. Will need to delete the counter upon reaching Bard level five so that the short rest feature of Font of Inspiration is applied.",
+        "aliasEx": ["!inspire", "!inspire Person"]
+      },
+      "songofrest": {
+        "desc": "Prints out the Song of Rest ability and displays the die used.",
+        "aliasEx": ["!songofrest"]
+      },
+      "glamour": {
+        "type": "list",
+        "glaminspire": {
+          "desc": "Expends a use of Glamour Bard Inspiration. Auto scales the temp hp given and creates counters as needed. Will need to delete the counter upon reaching Bard level five so that the short rest feature of Font of Inspiration is applied.",
+          "aliasEx": ["!glaminspire", "!glaminspire Person", "!glaminspire Me, You, That Other Guy"]
+        }
+      }
     },
     "cleric": {
       "type": "list",
-      "channel":{}
+      "channel": {
+        "desc": "Uses the Channel Divinity ability. Creates and modifies counters for the ability. Will check for both Cleric and Paladin levels and use the correct total uses. Doesn't display any specific effects for the Cleric or Paladin subtype.",
+        "aliasEx": ["!channel"]
+      }
     },
     "druid": {},
     "fighter": {
       "type": "list",
-      "action":{},
-      "secondwind":{},
-      "indom":{},
+      "action": {
+        "desc": "Uses the Fighter action surge ability to gain an action. Creates and modifies counters for the ability.",
+        "aliasEx": ["!action"]
+      },
+      "secondwind": {
+        "desc": "Uses the Fighter Second Wind ability and automatically rolls and applies healing. Creates and modifies counters for the ability.",
+        "aliasEx": ["!secondwind"]
+      },
+      "indom": {
+        "desc": "Uses the Fighter Indomitable ability. Creates and modifies counters for the ability.",
+        "aliasEx": ["!indomitable"]
+      },
       "samurai": {
         "type": "list",
-        "spirit":{}
+        "spirit": {
+          "desc": "Uses the Fighting Spirit ability. Creates and modifies counters for the ability.",
+          "aliasEx": ["!spirit"]
+        }
       }
     },
     "monk": {
       "type": "list",
-      "ki":{},
-      "flurry":{},
-      "patient":{},
-      "windstep":{},
-      "deflect":{},
-      "empty":{}
+      "ki": {
+        "desc": "Modifies your ki point counter. Auto creates the counter for you. If no sign is given it assumes you are spending the ki.",
+        "aliasEx": ["!ki", "!ki 1", "!ki -1", "!ki +2"]
+      },
+      "flurry": {
+        "desc": "Expends a ki point to use Flurry of Blows. Does not actually perform the attacks.",
+        "aliasEx": ["!flurry"]
+      },
+      "patient": {
+        "desc": "Expends a ki point to use Patient Defense.",
+        "aliasEx": ["!patient"]
+      },
+      "windstep": {
+        "desc": "Expends a ki point to use Step of the Wind.",
+        "aliasEx": ["!windstep"]
+      },
+      "deflect": {
+        "desc": "Uses the Deflect Missiles ability. If you give it any input it will expend a ki point to catch and throw the projectile.",
+        "aliasEx": ["!deflect", "!deflect catch", "!deflect 1"]
+      },
+      "empty": {
+        "desc": "Expends a ki point to use Empty Body.",
+        "aliasEx": ["!empty"]
+      }
     },
     "paladin": {
       "type": "list",
-      "divinesense":{},
-      "layonhands":{},
-      "smite":{},
-      "channel":{},
-      "pld_aura":{}
+      "divinesense": {
+        "desc": "Common commands used by Paladins that will auto create and update counters and roll dice for you.\nWill require `!level` to be set up correctly beforehand.",
+        "aliasEx": ["!divinesense"]
+      },
+      "layonhands": {
+        "desc": "Uses the Lay on Hands ability to heal yourself or a target. If \"me\" or \"self\" is in the arguments it will restore your own HP automatically. Will create a self-updating counter if it doesn't already exist.",
+        "aliasEx": ["!layonhands me 20", "!layonhands 20 self", "!layonhands me 30"]
+      },
+      "smite": {
+        "desc": "Uses the Divine Smite ability. Must pass a spell slot level or it will assume first level slot. If crit is passed it will double the dice rolled. Will decrement your spell slot as well.",
+        "aliasEx": ["!smite 1", "!smite crit 3", "!smite 2 critical"]
+      },
+      "channel": {
+        "desc": "Uses the Channel Divinity ability. Creates and modifies counters for the ability. Currently does not do anything specific to the paladin subclass. Will work with Cleric levels as well.",
+        "aliasEx": ["!channel"]
+      },
+      "pld_aura": {
+        "desc": "Prints out the effects of your current paladin aura. Currently does not do anything for any paladin subclass auras.",
+        "aliasEx": ["!pld_aura"]
+      }
     },
     "ranger": {},
     "rogue": {
@@ -60,21 +124,28 @@
         "desc": "A snippet to add sneak attack damage to an attack. Uses the !level alias to work.",
         "snippetEx": ["!a Dagger sneak"]
       },
-      "strokeofluck":{},
+      "strokeofluck":{
+        "desc": "Uses the Rogue Stroke of Luck ability to succeed on an attack or ability check. Creates and modifies counters for the ability.",
+        "aliasEx": ["!strokeofluck"]
+      },
       "talent": {
-        "desc": "A snippet to use the Rogue's Remarkable Talent to set a minimum roll value on a check.",
+        "desc": "A snippet to use the Rogue's Reliable Talent to set a minimum roll value on a check.",
         "snippetEx": ["!c stealth talent"]
       }
     },
     "sorcerer": {},
     "warlock": {
       "type": "list",
-      "eldritchmaster":{},
+      "eldritchmaster":{
+        "desc": "Uses the Warlock Capstone to recover all of your spell slots. Creates and modifies counters for the ability.",
+        "aliasEx": ["!eldritchmaster"]
+      },
       "hexblade": {
         "type": "list",
         "hexcurse": {
-          "desc": "Add damage from your Hexblade's Curse to an attack.",
-          "snippetEx": ["!a Dagger hexcurse"]
+          "desc": "Use as an alias to expend the use of your HexBlade's Curse.\n\nUse as a snippet to add the damage to an attack.",
+          "snippetEx": ["!a Dagger hexcurse"],
+          "aliasEx": ["!hexcurse"]
         }
       }
     },
@@ -82,25 +153,78 @@
   },
   "game": {
     "type": "list",
-    "heal":{},
-    "hitdice":{},
-    "hproll":{},
-    "level":{},
-    "rhitdie":{},
-    "money":{},
-    "inv":{},
+    "heal": {
+      "desc": "This command will heal your character by the amount provided. It is nearly the same as `!g hp +12` but will not allow overhealing. If no string is provided it will just heal 1 hp.",
+      "aliasEx": ["!heal 12", "!heal 2d8+2", "!heal"]
+    },
+    "hitdice": {
+      "desc": "This command will roll the specified hit die and heal you for that amount plus your CON modifier per die. \nThis command does require you to set up your level using `!level` beforehand. Custom counters will automatically be generated.",
+      "aliasEx": ["!hitdice d6 1", "!hitdice 8 2", "!hitdice d12 4", "!hitdice"]
+    },
+    "hproll": {
+      "desc": "Rolls for your hp using the class you supply. Won't roll anything if you do not give it a class. Give it a number at the end to roll multiple levels.",
+      "aliasEx": ["!hproll wiz", "!hproll barb 2"]
+    },
+    "level": {
+      "desc": "Sets character variables for use in the CWM aliases. Multiclass characters will need to call the command once for each class. Upon level up be sure to update your level using this command. DiceCloud users should not need to use this command.",
+      "aliasEx": ["!level fighter 3", "!level Wizard 12"]
+    },
+    "rhitdie": {
+      "desc": "This command restores your hit specified hit dice count by the amount given. Requires counters to be set up.",
+      "aliasEx": ["!rhitdice d6 2", "!rhitdie 12 4"]
+    },
+    "money": {
+      "desc": "Keeps track of currency. See `!money help` for more details. \nIf no coin is provided it will assume gp.",
+      "aliasEx": ["!money [+/-] [amount] [coin]"],
+      "footer": "Credit to @silverbass#2407"
+    },
+    "inv": {
+      "desc": "Keeps track of inventory for a character. See `!inv help` for more details.",
+      "aliasEx": ["!inv [+/-/?/help/delete] [item] [quantity]"],
+      "footer": "Credit to @silverbass#2407"
+    },
     "action": {
       "type": "list",
-      "grapple":{},
-      "overrun":{},
-      "potion":{},
-      "prone":{},
-      "push":{},
-      "ram":{},
-      "scroll":{},
-      "shove":{},
-      "tumble":{},
-      "jump":{}
+      "grapple": {
+        "desc": "Performs an Athletics Grapple check.",
+        "aliasEx": ["!grapple", "!grapple adv"]
+      },
+      "overrun": {
+        "desc": "Performs an Athletics Overrun check.",
+        "aliasEx": ["!overrun", "!overrun adv"]
+      },
+      "potion": {
+        "desc": "Drinks a potion and restores hp. Valid potions options are: Supreme, Superior, and Greater, Lesser. Anything else will default to the lowest level potion.",
+        "aliasEx": ["!potion", "!potion greater", "!potion Supreme"]
+      },
+      "prone": {
+        "desc": "Performs an Athletics check to knock a target Prone.",
+        "aliasEx": ["!prone", "!prone adv"]
+      },
+      "push": {
+        "desc": "Performs an Athletics check to shove a target.",
+        "aliasEx": ["!push", "!push adv"]
+      },
+      "ram": {
+        "desc": "Performs an Athletics check to break down a door with a portable battering ram. The +4 Strength bonus is already added.",
+        "aliasEx": ["!ram", "!ram adv"]
+      },
+      "scroll": {
+        "desc": "Performs a spell casting ability check to cast a spell from a scroll or to copy it as a Wizard. Add 'Copy' to the command to perform an arcana check instead of a spell casting check.",
+        "aliasEx": ["!scroll 6", "!scroll copy 7"]
+      },
+      "shove": {
+        "desc": "Performs an Athletics check to shove a target.",
+        "aliasEx": ["!shove", "!shove adv"]
+      },
+      "tumble": {
+        "desc": "Performs an Acrobatics Tumble check.",
+        "aliasEx": ["!tumble", "!tumble adv"]
+      },
+      "jump": {
+        "desc": "Prints the rules on jumping and calculates your jump distances. If you add high or long it will filter the output to the specified jump.",
+        "aliasEx": ["!jump", "!jump high", "!jump long"]
+      }
     }
   },
   "spell": {
@@ -208,12 +332,12 @@
     },
     "loot":{
       "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
-      "aliasEx": ["`!loot common` `!loot uncommon` `!loot rare` `!loot very rare` `!loot legendary`"],
+      "aliasEx": ["`!loot common", "!loot uncommon", "!loot rare", "!loot very rare", "!loot legendary`"],
       "footer": "Credit to @silverbass#2407"
     },
     "weather":{
       "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
-      "aliasEx": ["!weather [biome] [season]` `!weather [list/biomes]"],
+      "aliasEx": ["!weather [biome] [season]", "!weather [list/biomes]"],
       "footer": "Credit to @silverbass#2407 and @newtim#1227"
     }
   },
@@ -229,7 +353,7 @@
     },
     "convert": {
       "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
-      "aliasEx": ["!convert <number> <c|f|mph|kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
+      "aliasEx": ["!convert <number> <c/f/mph/kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
     },
     "newchar": {
       "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
@@ -278,29 +402,39 @@
 "meme": {
   "type": "list",
   "nari": {
+    "type": "bare",
     "title": "Why is Nari so mean?",
     "desc": "No one knows but legend has it that when the CWM has died out and not a single player remains.... Nari will still be there... Berating and just generally being super mean.",
     "thumb": "https://cdn.discordapp.com/attachments/407991677291200513/462298389497905152/3805b4c6deaa0837fb178593a8789c09.jpg",
     "footer": "This message brought to you by Newt"
   },
   "arios": {
+    "type": "bare",
     "title": "Arios does some Ridiculous Homebrew Things Stacked on Top of Some Paladin Crap!",
     "desc": "And of course this is probably the only time he crit this whole game.",
     "image": "https://images-ext-2.discordapp.net/external/MeRsoYU7l0N1Mk5_GvxhqiKjkv0s4uVQbKkxoHQBGxo/https/thumbs.gfycat.com/FancyFamiliarBaldeagle-max-1mb.gif?width=1202&height=677"
   },
   "doit": {
-    "title": "",
+    "type": "bare",
     "image": "https://media.tenor.co/images/03b1fb9c28a7e8de281700661e688f51/tenor.gif"
   },
   "chump": {
+    "type": "bare",
     "title": "Shoulda been a Champion, Scrub",
     "desc": "Lizzard wants you to know that some unfortunate event befell you that could've been avoided if you were a Champion Fighter. Sucks to be you.",
     "image": "https://media.giphy.com/media/TdmTcdoN3egaQ/giphy.gif"
   },
   "pussy": {
+    "type": "bare",
     "title": "",
     "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
   }
 },
-"type": "list"
+"type": "list",
+"data": {
+  "t": "https://images-ext-1.discordapp.net/external/Xfd2k9-StjbIAyyk0t2Fgnm1EePA3ruwfftsuNpvjuo/%3Fsize%3D256/https/cdn.discordapp.com/icons/333715748994285569/05203aaed55fd66b747fd9ca1033adfe.png",
+  "a": ["image", "color", "footer", "type", "desc", "title", "data", "t", "snippetEx", "aliasEx", "thumb"],
+  "s": "'<>': substitute '[]': optional '<x/y>': x or y '...': repeatable",
+  "f": "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing."
+}
 }
