@@ -1,20 +1,3 @@
-## Backstory
-```GN
-!servalias backstory embed
-{{set("source",get_gvar("04903e90-1996-4ac3-b7ad-9270256b181c").split("\n\n"))}}
-{{set("p0", source[0].split("\n"))}}
-{{set("p1", source[1].split("\n"))}}
-{{set("p2", source[2].split("\n"))}}
-{{set("p3", source[3].split("\n"))}}
-{{set("p4", source[4].split("\n"))}}
-{{set("p5", source[5].split("\n"))}}
--title "The story of <name>..."
--desc "You grew up happily in a *{{p0[roll("1d6-1")]}}* until one day a **{{p1[roll("1d6-1")]}}** *{{p2[roll("1d6-1")]}}* your **{{p3[roll("1d6-1")]}}** 
-Now you *{{p4[roll("1d6-1")]}}* until you can **{{p5[roll("1d6-1")]}}**"
--thumb <image>
--color <color>
-```
-
 ## Banhammer
 ```GN
 !servalias banhammer embed 
