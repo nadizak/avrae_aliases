@@ -1,4 +1,26 @@
 ~{
+"item": {
+  "type": "list",
+  "nadizak": {
+    "type": "list",
+    "Rune Engraved Boar Tusk": {
+      "title": "Rune Engraved Boar Tusk",
+      "desc": "Club or Greatclub. Uncommon.\nThis boar tusk is engraved with Sylvan markings which glow slightly if viewed at night under the stars. Attacks with this club count as magical.\n\nIf the wielder moves 20 feet toward a creature and makes a melee attack using the point of the tusk the damage type changes to piercing and does an additional 1d8 damage. If this attack misses, the wielder has to continue running past the target or fall prone.\n\nOnce per day the wielder can speak a command word and cause the runes to glow bright. For 1 minute the wielder is granted the effects of Longstrider and all opportunity attacks on them are at disadvantage. The effect ends if the weapon is dropped or stowed.",
+      "image": "https://vignette.wikia.nocookie.net/forgottenrealms/images/7/7c/Boars_-_Jim_Nelson.jpg/revision/latest?cb=20090523061352"
+    }
+  }
+},
+"map": {
+  "type": "list",
+  "map1": {
+    "type": "bare",
+    "image": "https://cdn.discordapp.com/attachments/333717465811124226/373993908507639808/Capture.PNG"
+  },
+  "map2": {
+    "type": "bare",
+    "image": "https://cdn.discordapp.com/attachments/333717465811124226/374014991868624896/Farwaterandsurrounding.jpg"
+  }
+},
 "alias": {
   "type": "list",
   "class": {
@@ -394,6 +416,10 @@
     "title": "Suggestions for server alias?",
     "desc": "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
   },
+  "tiers": {
+    "title": "CWM Starting Level Tiers",
+    "desc": "Upon PC death, where Dead PC's level is X, a new PC may be made at the lowest level of the level tier X is in:\n`@Lvl 3-4`\n`@Lvl 5-7`\n`@Lvl 8-11`\n`@Lvl 12-15`\n`@Lvl 16-20`\n`@Lvl EPIC`\n\nNew PC can also be the lowest level of a lower tier.\nI.e.  Peggy dies at level 11, new character can be a maximum of level 8, but can start at level 3, 5, or 8."
+  },
   "aliaslist": {
     "title": "List of server aliases and snippets:",
     "desc": "https://github.com/nadizak/avrae_aliases"
@@ -426,8 +452,29 @@
   },
   "pussy": {
     "type": "bare",
-    "title": "",
     "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
+  },
+  "fine": {
+    "type": "bare",
+    "image": "https://media.giphy.com/media/3o6UBpHgaXFDNAuttm/giphy.gif"
+  },
+  "nod": {
+    "type": "bare",
+    "image": "https://media.giphy.com/media/S3Ot3hZ5bcy8o/giphy.gif"
+  },
+  "heal?": {
+    "type": "bare",
+    "title": "Can I get a heal?",
+    "image": "https://cdn.discordapp.com/attachments/404368678683934731/464807293306011658/TF2_reaction_face_Medic_no_Heavy_yes_Spy_no.gif"
+  },
+  "cant see me": {
+    "type": "bare",
+    "footer": "Who needs stealth checks?",
+    "image": "https://media.giphy.com/media/3o6ZtjDNG2UXy7B3xK/giphy.gif"
+  },
+  "nope": {
+    "type": "bare",
+    "image": "https://media.tenor.com/images/5442002c8081300e02cdb610e70a5460/tenor.gif"
   }
 },
 "type": "list",
