@@ -1,10 +1,10 @@
 ## CWM Search
 ```GN
 !servalias cwm embed
-{{output=load_json(get_gvar("b1f652c5-221d-4f2e-97a5-6adc595d9b50")[1:])}}
+{{output,key=load_json(get_gvar("b1f652c5-221d-4f2e-97a5-6adc595d9b50")[1:]),".."}}
 {{data=output.data}}
 {{query="&*&".split(" ")}}
-{{[set("output",(output[q.lower()] if q.lower() in output else output)) for q in query]}}
+{{[set("output",(output[key] if (q.lower() in output and not set("key", q.lower())) or ([set("key", k) for k in output.keys() if q and q.lower().replace(" ", "") in k.lower().replace(" ", "")]) else output)) for q in query]}}
 {{query=" ".join([q for q in query if "&" not in q])}}
 {{type=output.type if "type" in output else ""}}
 {{list=[key for key in output.keys() if key not in data.a] if "list" in type else 0}}
@@ -20,7 +20,6 @@
 {{f'-t {timeout}' if timeout else ''}}
 {{f'-f "Snippet Usage | {snippetEx}"' if snippetEx else ""}}
 {{f'-f "Alias Usage | {aliasEx}"' if aliasEx else ""}}
-{{f'-f "Debug | {str(output)}"' if "debug" in query else ""}}
 ```
 
 
