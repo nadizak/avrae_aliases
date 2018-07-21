@@ -1,12 +1,12 @@
 ~{
 "item": {
   "type": "list",
-  "nadizak": {
+  "Lizzard": {
     "type": "list",
-    "Rune Engraved Boar Tusk": {
-      "title": "Rune Engraved Boar Tusk",
-      "desc": "Club or Greatclub. Uncommon.\nThis boar tusk is engraved with Sylvan markings which glow slightly if viewed at night under the stars. Attacks with this club count as magical.\n\nIf the wielder moves 20 feet toward a creature and makes a melee attack using the point of the tusk the damage type changes to piercing and does an additional 1d8 damage. If this attack misses, the wielder has to continue running past the target or fall prone.\n\nOnce per day the wielder can speak a command word and cause the runes to glow bright. For 1 minute the wielder is granted the effects of Longstrider and all opportunity attacks on them are at disadvantage. The effect ends if the weapon is dropped or stowed.",
-      "image": "https://vignette.wikia.nocookie.net/forgottenrealms/images/7/7c/Boars_-_Jim_Nelson.jpg/revision/latest?cb=20090523061352"
+    "Rune Luck of the Nichny": {
+      "title": "Lucky Gems",
+      "desc": "When you claim one of these stones, it begins leaving stains on you that cannot be removed by any means, magical or nonmagical, until you have used the following boon. The stains spread to everything you touch, although if something you touch does not belong to you it washes off. As a bonus action, you can grant yourself a +4 bonus to all saving throws or attack rolls or ability checks (choose one) for one minute. At the end of that minute, you lose the bonus and instead have a -2 on all saving throws, attack rolls and ability checks until you have washed all the stains off. This requires spending at least half an hour scrubbing yourself with soap.\n\n**Amber**: Leaves slightly sticky stains, as if coated in a thin layer of honey.\n**Amethyst**: Leaves faint purple stains that glow slightly in the dark\n**Garnet**: Leaves rusty stains that look like old blood\n**Jade**: Leaves mossy green stains\n**Black Tourmaline**: Leaves dark, ink-like stains",
+      "footer": "Homebrew Item. @Lizzard7328"
     }
   }
 },
@@ -471,6 +471,12 @@
     "type": "bare",
     "footer": "Who needs stealth checks?",
     "image": "https://media.giphy.com/media/3o6ZtjDNG2UXy7B3xK/giphy.gif"
+  },
+  "balanced": {
+    "type": "bare",
+    "title": "Perfectly Balanced...",
+    "footer": "As all things should be...",
+    "image": "http://data.punkee.com.au/wp-content/uploads/2018/05/thanos-memes.001.jpeg"
   },
   "nope": {
     "type": "bare",

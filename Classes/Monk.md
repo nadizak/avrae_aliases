@@ -1,11 +1,10 @@
 ## Ki Points
-```GN
+```python
 !servalias ki embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
 {{mod=int("%1%") if "%1"+"%"!="%1%" else 0}}
 {{nosign="+" not in "&*&" and "-" not in "&*&"}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=2 else 0}}
 {{mod_cc(counter, mod * (-1 if nosign else 1), True) if "+" not in "&*&" else 0}}
 {{mod_cc(counter, mod) if "+" in "&*&" else 0}}
 -title "<name> Expends Their Ki!"
@@ -19,11 +18,10 @@ When you spend a ki point. it is unavailable until you finish a short or long re
 ```
 
 ## Flurry of Blows
-```GN
+```python
 !servalias flurry embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=2 else 0}}
 {{mod_cc(counter, -1)}}
 -title "<name> Unleashes a Flurry of Blows!"
 -desc "Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action."
@@ -32,11 +30,10 @@ When you spend a ki point. it is unavailable until you finish a short or long re
 ```
 
 ## Patient Defense
-```GN
+```python
 !servalias patient embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=2 else 0}}
 {{mod_cc(counter, -1)}}
 -title "<name> Enters a Defensive Stance!"
 -desc "You can spend 1 ki point to take the Dodge action as a bonus action on your turn."
@@ -45,11 +42,10 @@ When you spend a ki point. it is unavailable until you finish a short or long re
 ```
 
 ## Step of the Wind
-```GN
+```python
 !servalias windstep embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=2 else 0}}
 {{mod_cc(counter, -1)}}
 -title "<name> Moves With Ludicrous Speed!"
 -desc "You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn."
@@ -58,14 +54,13 @@ When you spend a ki point. it is unavailable until you finish a short or long re
 ```
 
 ## Deflect Missiles
-```GN
+```python
 !servalias deflect embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
 {{catch=("%1"+"%" != "%1%")}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=2 else 0}}
 {{mod_cc(counter, -1) if catch else 0}}
-{{reduce=vroll(f"1d10+{dexterityMod}+{Monk}")}}
+{{reduce=vroll(f"1d10+{dexterityMod}+{MonkLevel}")}}
 -title "<name> {{"Deflects" if not catch else "Catches"}} the Projectile!"
 -desc "Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier + your monk level.
 
@@ -76,11 +71,10 @@ If you reduce the damage to 0, you can catch the missile if it is small enough f
 ```
 
 ## Empty Body
-```GN
+```python
 !servalias empty embed
-{{lvl=int(Monk)}}
+{{lvl=int(MonkLevel)}}
 {{counter="Ki Points"}}
-{{create_cc_nx(counter, 0, "Monk", "short", "bubble") if lvl>=18 else 0}}
 {{mod_cc(counter, -4)}}
 -title "<name> Focuses and Vanishes from Sight!"
 -desc "Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.

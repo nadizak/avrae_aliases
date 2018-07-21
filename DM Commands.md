@@ -1,8 +1,3 @@
-## DM Feedback
-```GN
-!servalias DMfeedback embed -title "How did the DM do?" -desc "Tell us here: https://docs.google.com/forms/d/e/1FAIpQLScpzi_CiLqG7hljj5NU3aIJ58N6SzGzfx8N0OVLe7ZLlJqNnw/viewform"
-```
-
 ## Split Gold
 ```GN
 !servalias gold embed

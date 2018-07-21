@@ -1,0 +1,269 @@
+~{
+"L":[
+  "BarbarianLevel",
+  "BardLevel",
+  "ClericLevel",
+  "DruidLevel",
+  "FighterLevel",
+  "MonkLevel",
+  "PaladinLevel",
+  "RangerLevel",
+  "RogueLevel",
+  "SorcererLevel",
+  "WarlockLevel",
+  "WizardLevel"
+],
+"H":{
+  "d6":["SorcererLevel","WizardLevel"],
+  "d8":["BardLevel","ClericLevel","DruidLevel","MonkLevel","RogueLevel","WarlockLevel"],
+  "d10":["FighterLevel","PaladinLevel","RangerLevel"],
+  "d12":["BarbarianLevel"]
+},
+"h":["6","8","10","12"],
+"C":{
+  "BarbarianLevel":[
+    {"l":1,"n":"Rage","m":"ccMaxRage","r":"long","t":"bubble","c":{"1":2,"3":3,"6":4,"12":5,"17":6}}
+  ],
+  "BardLevel":[
+    {"l":1,"n":"Bardic Inspiration","m":"charismaMod","r":"long","t":"bubble"}
+  ],
+  "ClericLevel":[
+    {"l":2,"n":"Channel Divinity","m":"ccMaxChannel","r":"short","t":"bubble","c":{"2":1,"6":2,"18":3}},
+    {"l":10,"n":"Divine Intervention","m":"1","r":"long","t":"bubble"}
+  ],
+  "DruidLevel":[
+    {"l":2,"n":"Wild Shape","m":"2","r":"short","t":"bubble"}
+  ],
+  "FighterLevel":[
+    {"l":1,"n":"Second Wind","m":"1","r":"short","t":"bubble"},
+    {"l":2,"n":"Action Surge","m":"ccMaxAction","r":"short","t":"bubble","c":{"2":1,"17":2}},
+    {"l":9,"n":"Indomitable","m":"ccMaxIndom","r":"long","t":"bubble","c":{"9":1,"13":2,"17":3}}
+  ],
+  "MonkLevel":[
+    {"l":2,"n":"Ki Points","m":"MonkLevel","r":"short","t":"default"}
+  ],
+  "PaladinLevel":[
+    {"l":1,"n":"Lay on Hands","m":"5*PaladinLevel","r":"long","t":"default"},
+    {"l":2,"n":"Divine Sense","m":"1+charismaMod","r":"long","t":"bubble"},
+    {"l":3,"n":"Channel Divinity","m":"ccMaxChannel","r":"short","t":"bubble","c":{"3":1}},
+    {"l":14,"n":"Cleansing Touch","m":"charismaMod","r":"long","t":"bubble"}
+  ],
+  "RangerLevel":[],
+  "RogueLevel" :[
+    {"l":20,"n":"Stroke of Luck","m":"1","r":"short","t":"bubble"}
+  ],
+  "SorcererLevel":[
+    {"l":2,"n":"Sorcery Points","m":"SorcererLevel","r":"long","t":"default"}
+  ],
+  "WarlockLevel":[
+    {"l":20,"n":"Eldritch Master","m":"1","r":"long","t":"bubble"}
+  ],
+  "WizardLevel":[
+    {"l":1,"n":"Arcane Recovery","m":"(WizardLevel+1)*0.5","r":"long","t":"bubble"},
+    {"l":17,"n":"Signature Spells","m":"2","r":"short","t":"bubble"}
+  ]
+},
+"SC":{
+  "BarbarianLevel":{
+    "Ancestral Guardian":[{"l":10,"n":"Consult the Spirits","m":"1","r":"short","t":"bubble"}],
+    "Battlerager":[],
+    "Berserker":[],
+    "Storm Herald":[],
+    "Totem Warrior":[],
+    "Zealot":[
+      {"l":6,"n":"Fanatical Focus","m":"1","r":"none","t":"bubble"},
+      {"l":10,"n":"Zealous Presence","m":"1","r":"long","t":"bubble"}
+    ]
+  },
+  "BardLevel":{
+    "Glamour":[
+      {"l":3,"n":"Enthralling Performance","m":"1","r":"short","t":"bubble"},
+      {"l":6,"n":"Mantle of Majesty","m":"1","r":"long","t":"bubble"},
+      {"l":14,"n":"Unbreakable Majesty","m":"1","r":"short","t":"bubble"}
+    ],
+    "Lore":[],
+    "Swords":[],
+    "Valor":[],
+    "Whispers":[
+      {"l":3,"n":"Words of Terror","m":"1","r":"short","t":"bubble"},
+      {"l":6,"n":"Mantle of Whispers","m":"1","r":"short","t":"bubble"},
+      {"l":14,"n":"Shadow Lore","m":"1","r":"long","t":"bubble"}
+    ]
+  },
+  "ClericLevel":{
+    "Arcana":[],
+    "Death":[],
+    "Forge":[],
+    "Grave":[
+      {"l":1,"n":"Eyes of the Grave","m":"wisdomMod","r":"long","t":"bubble"},
+      {"l":6,"n":"Sentinel at Death's Door","m":"wisdomMod","r":"long","t":"bubble"}
+    ],
+    "Knowledge":[{"l":17,"n":"Visions of the Past","m":"1","r":"short","t":"bubble"}],
+    "Life":[],
+    "Light":[{"l":1,"n":"Warding Flare","m":"wisdomMod","r":"long","t":"bubble"}],
+    "Nature":[],
+    "Tempest":[{"l":1,"n":"Wrath of the Storm","m":"wisdomMod","r":"long","t":"bubble"}],
+    "Trickery":[],
+    "War":[{"l":1,"n":"War Priest","m":"wisdomMod","r":"long","t":"bubble"}]
+  },
+  "DruidLevel":{
+    "Dreams":[
+      {"l":2,"n":"Balm of the Summer Court","m":"DruidLevel","r":"long","t":"default"},
+      {"l":10,"n":"Hidden Paths","m":"wisdomMod","r":"long","t":"bubble"},
+      {"l":14,"n":"Walker in Dreams","m":"1","r":"long","t":"bubble"}
+    ],
+    "Land":[{"l":2,"n":"Natural Recovery","m":"1","r":"long","t":"bubble"}],
+    "Moon":[],
+    "Shepherd":[
+      {"l":2,"n":"Spirit Totem","m":"1","r":"short","t":"bubble"},
+      {"l":14,"n":"Faithful Summons","m":"1","r":"long","t":"bubble"}
+    ]
+  },
+  "FighterLevel":{
+    "Arcane Archer":[{"l":3,"n":"Arcane Shot","m":"2","r":"short","t":"bubble"}],
+    "Battle Master":[{"l":3,"n":"Superiority Dice","m":"ccMaxSuperiority","r":"short","t":"bubble","c":{"3":4,"7":5,"15":5}}],
+    "Cavalier":[
+      {"l":3,"n":"Unwavering Mark","m":"strengthMod","r":"long","t":"bubble"},
+      {"l":7,"n":"Warding Maneuver","m":"constitutionMod ","r":"long","t":"bubble"}
+    ],
+    "Champion":[],
+    "Eldritch Knight":[],
+    "Purple Dragon Knight":[],
+    "Samurai":[
+      {"l":3,"n":"Fighting Spirit","m":"3","r":"long","t":"bubble"},
+      {"l":18,"n":"Strength Before Death","m":"1","r":"long","t":"bubble"}
+    ]
+  },
+  "MonkLevel":{
+    "Drunken Master":[],
+    "Four Elements":[],
+    "Kensei":[],
+    "Long Death":[],
+    "Open Hand":[{"l":6,"n":"Wholeness of Body","m":"1","r":"long","t":"bubble"}],
+    "Shadow":[],
+    "Sun Soul":[]
+  },
+  "PaladinLevel":{
+    "Ancients":[
+      {"l":15,"n":"Undying Sentinel","m":"1","r":"long","t":"bubble"},
+      {"l":20,"n":"Elder Champion","m":"1","r":"long","t":"bubble"}
+    ],
+    "Conquest":[{"l":20,"n":"Invincible Conqueror","m":"1","r":"long","t":"bubble"}],
+    "Crown":[{"l":20,"n":"Exalted Champion","m":"1","r":"long","t":"bubble"}],
+    "Devotion":[{"l":20,"n":"Holy Nimbus","m":"1","r":"long","t":"bubble"}],
+    "Redemption":[],
+    "Oathbreaker": [{"l":20,"n":"Dread Lord","m":"1","r":"long","t":"bubble"}],
+    "Vengeance":[{"l":20,"n":"Avenging Angel","m":"1","r":"long","t":"bubble"}]
+  },
+  "RangerLevel":{
+    "Beast Master":[],
+    "Gloom Stalker":[],
+    "Horizon Walker":[
+      {"l":3,"n":"Detect Portal","m":"1","r":"short","t":"bubble"},
+      {"l":7,"n":"Ethereal Step","m":"1","r":"short","t":"bubble"}
+    ],
+    "Hunter":[],
+    "Monster Slayer":[
+      {"l":3,"n":"Hunter's Sense","m":"wisdomMod","r":"long","t":"bubble"},
+      {"l":3,"n":"Slayer's Prey","m":"1","r":"short","t":"bubble"}
+    ]
+  },
+  "RogueLevel" :{
+    "Arcane Trickster":[{"l":17,"n":"Spell Thief","m":"1","r":"long","t":"bubble"}],
+    "Assassin":[],
+    "Inquisitive":[{"l":13,"n":"Unerring Eye","m":"1","r":"long","t":"bubble"}],
+    "Mastermind":[],
+    "Scout":[],
+    "Swashbuckler":[{"l":17,"n":"Master Duelist","m":"1","r":"short","t":"bubble"}],
+    "Thief":[]
+  },
+  "SorcererLevel":{
+    "Divine Soul":[
+      {"l":1,"n":"Favored by the Gods","m":"1","r":"short","t":"bubble"},
+      {"l":18,"n":"Unearthly Recovery","m":"1","r":"long","t":"bubble"}
+    ],
+    "Draconic":[],
+    "Shadow":[{"l":1,"n":"Strength of the Grave","m":"1","r":"long","t":"bubble"}],
+    "Storm":[{"l":18,"n":"Wind Soul","m":"1","r":"short","t":"bubble"}],
+    "Wild":[{"l":1,"n":"Tides of Chaos","m":"1","r":"long","t":"bubble"}]
+  },
+  "WarlockLevel":{
+    "Archfey":[
+      {"l":1,"n":"Fey Presence","m":"1","r":"short","t":"bubble"},
+      {"l":6,"n":"Misty Escape","m":"1","r":"short","t":"bubble"},
+      {"l":14,"n":"Dark Delirium","m":"1","r":"short","t":"bubble"}
+    ],
+    "Celestial":[
+      {"l":1,"n":"Healing Light","m":"1+WarlockLevel","r":"long","t":"default"},
+      {"l":14,"n":"Searing Vengeance","m":"1","r":"long","t":"bubble"}
+    ],
+    "Fiend":[
+      {"l":6,"n":"Dark One's Own Luck","m":"1","r":"short","t":"bubble"},
+      {"l":14,"n":"Hurl Through Hell","m":"1","r":"long","t":"bubble"}
+    ],
+    "Great Old One":[{"l":6,"n":"Entropic Ward","m":"1","r":"short","t":"bubble"}],
+    "Hexblade": [
+      {"l":1,"n":"Hexblade's Curse","m":"1","r":"short","t":"bubble"},
+      {"l":6,"n":"Accursed Specter","m":"1","r":"long","t":"bubble"}
+    ],
+    "Undying":[
+      {"l":6,"n":"Defy Death","m":"1","r":"long","t":"bubble"},
+      {"l":14,"n":"Indestructible Life","m":"1","r":"long","t":"bubble"}
+    ]
+  },
+  "WizardLevel":{
+    "Bladesinger":[{"l":2,"n":"Bladesong","m":"2","r":"short","t":"bubble"}],
+    "Abjuration":[{"l":2,"n":"Arcane Ward","m":"1","r":"long","t":"bubble"}],
+    "Conjuration":[{"l":6,"n":"Benign Transposition","m":"1","r":"long","t":"bubble"}],
+    "Divination":[{"l":10,"n":"The Third Eye","m":"1","r":"short","t":"bubble"}],
+    "Enchantment":[],
+    "Evocation":[{"l":14,"n":"Overchannel","m":"1","r":"long","t":"bubble"}],
+    "Illusion":[{"l":10,"n":"Illusory Self","m":"1","r":"short","t":"bubble"}],
+    "Necromancy":[],
+    "Transmutation":[
+      {"l":10,"n":"Shapechanger","m":"1","r":"short","t":"bubble"},
+      {"l":14,"n":"Master Transmuter","m":"1","r":"long","t":"bubble"}
+    ],
+    "War":[]
+  }
+},
+"S":{
+  "BarbarianLevel":[
+    "Ancestral Guardian","Battlerager","Berserker","Storm Herald","Totem Warrior","Zealot"
+  ],
+  "BardLevel":[
+    "Glamour","Lore","Swords","Valor","Whispers"
+  ],
+  "ClericLevel":[
+    "Arcana","Death","Forge","Grave","Knowledge","Life","Light","Nature","Tempest","Trickery","War"
+  ],
+  "DruidLevel":[
+    "Dreams","Land","Moon","Shepherd"
+  ],
+  "FighterLevel":[
+    "Arcane Archer","Battle Master","Cavalier","Champion","Eldritch Knight","Purple Dragon Knight","Samurai"
+  ],
+  "MonkLevel":[
+    "Drunken Master","Four Elements","Kensei","Long Death","Open Hand","Shadow","Sun Soul"
+  ],
+  "PaladinLevel":[
+    "Ancients","Conquest","Crown","Devotion","Redemption","Oathbreaker","Vengeance"
+  ],
+  "RangerLevel":[
+    "Beast Master","Gloom Stalker","Horizon Walker","Hunter","Monster Slayer"
+  ],
+  "RogueLevel":[
+    "Arcane Trickster","Assassin","Inquisitive","Mastermind","Scout","Swashbuckler","Thief"
+  ],
+  "SorcererLevel":[
+    "Divine Soul","Draconic","Shadow","Storm","Wild"
+  ],
+  "WarlockLevel":[
+    "Archfey","Celestial","Fiend","Great Old One","Hexblade","Undying"
+  ],
+  "WizardLevel":[
+    "Bladesinger","Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation","War"
+  ]
+},
+"B":{"BarbarianLevel":"","BardLevel":"","ClericLevel":"","DruidLevel":"","FighterLevel":"","MonkLevel":"","PaladinLevel":"","RangerLevel":"","RogueLevel":"","SorcererLevel":"","WarlockLevel":"","WizardLevel":""}
+}

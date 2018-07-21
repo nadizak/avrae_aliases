@@ -1,19 +1,18 @@
 ## Reliable Talent
-```GN
+```python
 !servsnippet talent -mc 10
 ```
 
 ## Sneak Attack
-```GN
-!servsnippet sneak -d1 "{{ceil(int(Rogue)/2)}}d6 [Sneak Attack]"
+```python
+!servsnippet sneak -d1 "{{ceil(int(RogueLevel)/2)}}d6 [Sneak Attack]"
 ```
 
 ## Stroke of Luck
-```GN
+```python
 !servalias luck embed
-{{set("lvl", int(Rogue))}}
+{{set("lvl", int(RogueLevel))}}
 {{set("counter", "Stroke of Luck")}}
-{{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl>=20 else 0}}
 {{mod_cc(counter, -1, True)}}
 -title "<name> Has a Stroke of Luck!"
 -desc "At 20th level, if your attack misses a target within range, you can turn the miss into a hit. Alternatively, if you fail an ability check, you can treat the d20 roll as a 20.

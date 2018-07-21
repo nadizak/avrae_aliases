@@ -11,7 +11,7 @@
 **Credit to Toothless#7854**
 ```GN
 !servsnippet gfb
-{{set("mod", str(max(charismaMod, intelligenceMod)))}}
+{{set("mod", str(max(charismaMod, intelligenceMod, wisdomMod)))}}
 {{set("dice", " " if level < 5 else "1d8" if level < 11 else "2d8" if level < 17 else "3d8")}}
 {{set("dmg", vroll(dice + (" + " if level >= 5 else "") + mod + " [fire]"))}}
 {{"" if level < 5 else "-d \"" + dice + " [fire, gfb]\""}}
@@ -31,13 +31,15 @@
 ## Toll the Dead
 ```GN
 !servalias toll embed
-{{set("mod", max(charismaMod, wisdomMod, intelligenceMod))}}
+{{sb=get_raw().spellbook}}
+{{v=1 if "Toll the Dead" in sb.spells or "-i" in "&*&" else 0}}
+{{set("mod", sb.attackBonus)}}
 {{set("y", 4 if level > 16 else 3 if level > 10 else 2 if level > 4 else 1)}}
 {{set("z", vroll(str(y)+"d8"))}}
 {{set("Z", vroll(str(y)+"d12"))}}
--title "<name> casts Toll the Dead!"
--desc "<name> points at one creature they can see within range (60ft), and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a DC{{mod+8+proficiencyBonus}} Wisdom saving throw or take {{y}}d8 necrotic damage. If the target is missing any of its hit points, it instead takes {{y}}d12 necrotic damage."
--f "Undamaged | {{z}} if they fail"
--f "Damaged | {{Z}} if they fail"
+-title "<name> {{"casts" if v else "tries to cast"}} Toll the Dead!"
+-desc "{{f'{name} points at one creature they can see within range (60ft), and the sound of a dolorous bell fills the air around it for a moment. The target must succeed on a DC{mod} Wisdom saving throw or take {y}d8 necrotic damage. If the target is missing any of its hit points, it instead takes {y}d12 necrotic damage.' if v else f'But {name} does not know that spell...'}}"
+{{f'-f "Undamaged | {z} if they fail"' if v else ''}}
+{{f'-f "Damaged | {Z} if they fail"' if v else ''}}
 -color <color> -thumb <image>
 ```

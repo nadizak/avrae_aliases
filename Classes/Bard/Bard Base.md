@@ -1,12 +1,11 @@
 ## Bardic Inspiration
-```GN
+```python
 !servalias inspire embed
-{{lvl=int(Bard)}}
+{{lvl=int(BardLevel)}}
 {{counter="Bardic Inspiration"}}
 {{die="d12" if lvl>=15 else "d10" if lvl>=10 else "d8" if lvl>=5 else "d6"}}
 {{target="%1%" if "%1"+"%"!="%1%" else ""}}
 {{total="charismaMod" if charismaMod>=1 else "1"}}
-{{create_cc_nx(counter, 0, total, "long" if lvl<5 else "short", "bubble") if lvl else 0}}
 {{mod_cc(counter, -1, True)}}
 -title "<name> Grants Inspiration{{f" To {target}" if target else ""}}!"
 -desc "You can use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Bardic Inspiration die, a {{die}}.
@@ -16,19 +15,20 @@ Once within the next 10 minutes, the creature can roll the die and add the numbe
 You can use this feature {{get_cc_max(counter)}} times. You regain any expended uses when you finish a long rest. Your Bardic Inspiration die changes when you reach certain levels in this class. The die becomes a d8 at 5th level, a d10 at 10th level, and a d12 at 15th level."
 -f "Inspiration Die|{{die}}"
 -f "{{counter}}|{{'◉'*get_cc(counter) + '〇'*(get_cc_max(counter)-get_cc(counter))}}"
+{{f'-f "Targets|{target}"' if target else ""}}
 -footer "Bard | PHB 53-54"
 -color <color> -thumb <image>
 ```
 
 ## Jack of All Trades
-```GN
+```python
 !servsnippet jack -b "{{int(proficiencyBonus/2)}}[Jack of All Trades]"
 ```
 
 ## Song of Rest
-```GN
+```python
 !servalias songofrest embed
-{{lvl=int(Bard)}}
+{{lvl=int(BardLevel)}}
 {{die="d12" if lvl>=17 else "d10" if lvl>=13 else "d8" if lvl>=9 else "d6"}}
 {{mod_cc("n/a", -1, True) if not lvl else 0}}
 -title "<name> Performs a Song of Rest."

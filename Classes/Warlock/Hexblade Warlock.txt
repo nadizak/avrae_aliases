@@ -1,9 +1,8 @@
 ## Hexblade's Curse Alias
-```GN
+```python
 !servalias hexcurse embed
-{{set("lvl", int(Warlock))}}
+{{set("lvl", int(WarlockLevel))}}
 {{set("counter", "Hexblade's Curse")}}
-{{create_cc_nx(counter, 0, "1", "short", "bubble") if lvl else 0}}
 {{mod_cc(counter, -1, True) if lvl else 0}}
 -title "<name> Releases Dark Energy from Their Weapon!"
 -desc "You gain the ability to place a baleful curse on someone. As a bonus action, choose one creature you can see within 30 feet of you. The target is cursed for 1 minute. The curse ends early if the target dies, you die, or you are incapacitated. Until the curse ends, you gain the following benefits:
@@ -16,6 +15,6 @@ You can't use this feature again until you finish a short or long rest."
 ```
 
 ## Hexblade's Curse Snippet
-```GN
+```python
 !servsnippet hexcurse -criton 19 -d {{proficiencyBonus}}[Hexblade]
 ```
