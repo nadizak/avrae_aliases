@@ -187,13 +187,13 @@
       "desc": "Rolls for your hp using the class you supply. Won't roll anything if you do not give it a class. Give it a number at the end to roll multiple levels.",
       "aliasEx": ["!hproll wiz", "!hproll barb 2"]
     },
-    "level": {
-      "desc": "Sets character variables for use in the CWM aliases. Multiclass characters will need to call the command once for each class. Upon level up be sure to update your level using this command. DiceCloud users should not need to use this command.",
-      "aliasEx": ["!level fighter 3", "!level Wizard 12"]
+    "sr": {
+      "desc": "Short cut for the  `!g sr` command that also recovers Warlock spell slots if you have any Warlock levels.\n\nYou can also utilize hit dice by giving the command the dice size and number you want to use.",
+      "aliasEx": ["!sr", "!sr d6 2", "!sr d12", "!sr d10 4"]
     },
-    "rhitdie": {
-      "desc": "This command restores your hit specified hit dice count by the amount given. Requires counters to be set up.",
-      "aliasEx": ["!rhitdice d6 2", "!rhitdie 12 4"]
+    "level": {
+      "desc": "This alias is used to set required cvars for other aliases. It will set your level for you and can optional also set your subclass as a cvar.\nIn addition, the alias will create custom counters for class abilities for both your clas and subclass. It will also create a hit dice counter for all your character levels.\nIn short this alias basically sets up all the setup stuff for other aliases and you should use it.",
+      "aliasEx": ["!level", "!level fighter 3", "!level Wizard 12", "!level lock 2 Hexblade", "!level barb 1 zealot"]
     },
     "money": {
       "desc": "Keeps track of currency. See `!money help` for more details. \nIf no coin is provided it will assume gp.",
@@ -373,10 +373,6 @@
       "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
       "aliasEx": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
     },
-    "convert": {
-      "desc": "A miscellaneous command to convert between mph and kph and Fahrenheit and Celsius.",
-      "aliasEx": ["!convert <number> <c/f/mph/kph>", "!convert 0 c", "!convert 12 mph", "!convert 70 f"]
-    },
     "newchar": {
       "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
       "aliasEx": ["!newchar"]
@@ -481,6 +477,16 @@
   "nope": {
     "type": "bare",
     "image": "https://media.tenor.com/images/5442002c8081300e02cdb610e70a5460/tenor.gif"
+  },
+  "press f": {
+    "type": "bare",
+    "image": "https://thumbs.gfycat.com/OddballLegitimateHusky-size_restricted.gif"
+  },
+  "Omae wa moe shindeiru": {
+    "type": "bare",
+    "desc": "お前はもう死んでいる.",
+    "image": "https://i0.kym-cdn.com/photos/images/original/000/594/687/59a.jpg",
+    "footer": "何?"
   }
 },
 "type": "list",
