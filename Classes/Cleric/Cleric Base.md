@@ -1,8 +1,7 @@
 ## Channel Divinity
 ```python
 !servalias channel embed
-{{cvars=get_raw().cvars}}
-{{useCleric="ClericLevel" in cvars}}
+{{useCleric=exists("ClericLevel")}}
 {{lvl=int(ClericLevel) if useCleric else int(PaladinLevel)}}
 {{counter="Channel Divinity"}}
 {{mod_cc(counter, -1, True) if lvl else 0}}

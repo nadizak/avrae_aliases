@@ -69,6 +69,11 @@
     "druid": {},
     "fighter": {
       "type": "list",
+      "fighter": {
+        "desc": "An all in one fighter alias that can be used for all Fighter features.\n\nRun the command with no arguments for details.",
+        "footer": "Credit to @silverbass#2407",
+        "aliasEx": ["!fighter", "!fighter bm disarm", "!fighter 2nd", "!fighter arc burst"]
+      },
       "action": {
         "desc": "Uses the Fighter action surge ability to gain an action. Creates and modifies counters for the ability.",
         "aliasEx": ["!action"]
@@ -91,6 +96,11 @@
     },
     "monk": {
       "type": "list",
+      "monk": {
+        "desc": "An all in one monk alias that can be used for all Monk features.\n\nRun the command with no arguments for details.",
+        "footer": "Credit to @silverbass#2407",
+        "aliasEx": ["!monk", "!monk deflect 10", "!monk slow 20", "!monk ki +2"]
+      },
       "ki": {
         "desc": "Modifies your ki point counter. Auto creates the counter for you. If no sign is given it assumes you are spending the ki.",
         "aliasEx": ["!ki", "!ki 1", "!ki -1", "!ki +2"]
@@ -118,6 +128,11 @@
     },
     "paladin": {
       "type": "list",
+      "paladin": {
+        "desc": "An all in one paladin alias that can be used for all Paladin features including Oaths and Channel Divinity.\n\nRun the command with no arguments for details.",
+        "footer": "Credit to @silverbass#2407",
+        "aliasEx": ["!paladin", "!paladin smite 4 crit undead", "!paladin lay 20", "!paladin lay poison"]
+      },
       "divinesense": {
         "desc": "Common commands used by Paladins that will auto create and update counters and roll dice for you.\nWill require `!level` to be set up correctly beforehand.",
         "aliasEx": ["!divinesense"]
@@ -134,7 +149,7 @@
         "desc": "Uses the Channel Divinity ability. Creates and modifies counters for the ability. Currently does not do anything specific to the paladin subclass. Will work with Cleric levels as well.",
         "aliasEx": ["!channel"]
       },
-      "pld_aura": {
+      "pldaura": {
         "desc": "Prints out the effects of your current paladin aura. Currently does not do anything for any paladin subclass auras.",
         "aliasEx": ["!pld_aura"]
       }
@@ -188,11 +203,15 @@
       "aliasEx": ["!hproll wiz", "!hproll barb 2"]
     },
     "sr": {
-      "desc": "Short cut for the  `!g sr` command that also recovers Warlock spell slots if you have any Warlock levels.\n\nYou can also utilize hit dice by giving the command the dice size and number you want to use.",
+      "desc": "Short cut for the `!g sr` command that also recovers Warlock spell slots if you have any Warlock levels.\n\nYou can also utilize hit dice by giving the command the dice size and number you want to use.",
       "aliasEx": ["!sr", "!sr d6 2", "!sr d12", "!sr d10 4"]
     },
+    "lr": {
+      "desc": "Short cut for the `!g lr` command that also recovers your hit dice counters according to the PHB rules. It will always recover the largest hit dice first.",
+      "aliasEx": ["!lr"]
+    },
     "level": {
-      "desc": "This alias is used to set required cvars for other aliases. It will set your level for you and can optional also set your subclass as a cvar.\nIn addition, the alias will create custom counters for class abilities for both your clas and subclass. It will also create a hit dice counter for all your character levels.\nIn short this alias basically sets up all the setup stuff for other aliases and you should use it.",
+      "desc": "This alias is used to set required cvars for other aliases. It will set your level for you and can optional also set your subclass as a cvar.\nIn addition, the alias will create custom counters for class abilities for both your class and subclass. It will also create a hit dice counter for all your character levels.\nIn short this alias basically sets up all the setup stuff for other aliases and you should use it.",
       "aliasEx": ["!level", "!level fighter 3", "!level Wizard 12", "!level lock 2 Hexblade", "!level barb 1 zealot"]
     },
     "money": {
@@ -251,6 +270,10 @@
   },
   "spell": {
     "type": "list",
+    "spelllist": {
+      "desc": "Lets you bring up a list of all spells of a certain class and spell level",
+      "aliasEx": ["!spelllist Wizard 2", "!spelllist bard 9", "!spelllist lock 6"]
+    },
     "cantrip": {
       "type": "list",
       "boom": {
@@ -419,6 +442,10 @@
   "aliaslist": {
     "title": "List of server aliases and snippets:",
     "desc": "https://github.com/nadizak/avrae_aliases"
+  },
+  "DM xp": {
+    "type": "bare",
+    "image": "https://cdn.discordapp.com/attachments/340300659343491083/381625903995813888/Capture.PNG"
   }
 },
 "meme": {

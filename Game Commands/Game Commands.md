@@ -58,10 +58,18 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 -footer "PHB 189"
 ```
 
+## Long Rest
+```python
+!servalias lr g lr{{set("n",max(1,level/2))}}
+{{r=get_raw().consumables.custom}}
+{{dList=[f" (d{x})" for x in [20,12,10,8,6,4]] + [""]}}
+{{[set("c",f"Hit Dice{x}") or set("d",min(n,get_cc_max(c)-get_cc(c))) or set_cc(c,get_cc(c)+d) or set("n",n-d) for x in dList if f"Hit Dice{x}" in r]}}
+```
+
 ## Short Rest
 ```python
 !servalias sr multiline
-!embed {{ds=" (%2%)" if "%2%" in "d4d6d8d10d12d20" else ""}}{{ds=" (d"+"%1%".split("d")[1]+")" if "d" in "%1%" else ds}}{{cc="Hit Dice"+ds}}{{du=0 if "%1%" == "%1"+"%" or not cc_exists(cc) else int("%1%".split("d")[0]) if "d" in "%1%" else int("%1%")}}{{du=min(get_cc(cc),du) if cc_exists(cc) else 0}}{{mod_cc(cc, -du) if cc_exists(cc) else ""}}{{roll=(str(du)+str(hd if exists("hd") and ds=="" else ds[2:-1]))+"+"+str(du*constitutionMod)}}{{vheal=vroll("0" if du == 0 else roll)}}{{set_hp(min(hp, vheal.total + currentHp))}}{{wlvl=int(WarlockLevel) if exists("WarlockLevel") else 0}}{{splvl=min(ceil(int(wlvl)/2),5)}}{{numSlots=0 if wlvl==0 else 1 if wlvl<= 1 else 2 if wlvl< 11 else 3 if wlvl< 17 else 4}}{{set_slots(splvl, min(numSlots + get_slots(splvl), get_slots_max(splvl))) if wlvl>0 else ""}} -title "<name> takes a Short Rest." -desc "<name> spends {{du}}{{"" if ds=="" else " "+ds[2:-1]}} hit die and recovers {{vheal.total}} hit points. {{"They also recover "+str(numSlots)+" Level "+str(splvl)+" spell slots." if wlvl>0 else ""}}" -f "Healing Recieved|{{str(vheal)}}" -f "Current HP: | {{min(hp, (vheal.total+ currentHp))}}/{{hp}}{{set_hp(min(hp, (vheal.total + currentHp)))}}" {{"-f \""+cc+("" if ds else " ("+str(hd)+")")+" | "+cc_str(cc)+"\"" if cc_exists(cc) else ""}} -color <color> -footer "Adventuring | PHB 186" {{"-f \"Spell Slots| "+slots_str(splvl)+"\"" if wlvl>0 else ""}}
+!embed {{ds=" (%2%)" if "%2%" in "d4d6d8d10d12d20" else ""}}{{ds=" (d"+"%1%".split("d")[1]+")" if "d" in "%1%" else ds}}{{cc="Hit Dice"+ds}}{{du=0 if "%1%" == "%1"+"%" or not cc_exists(cc) else int("%1%".split("d")[0]) if "d" in "%1%" else int("%1%")}}{{du=min(get_cc(cc),du) if cc_exists(cc) else 0}}{{mod_cc(cc, -du) if cc_exists(cc) else ""}}{{roll=(str(du)+str(hd if exists("hd") and ds=="" else ds[2:-1]))+"+"+str(du*constitutionMod)}}{{vheal=vroll("0" if du == 0 else roll)}}{{set_hp(min(hp, vheal.total + currentHp))}}{{wlvl=int(WarlockLevel) if exists("WarlockLevel") else 0}}{{splvl=min(ceil(int(wlvl)/2),5)}}{{numSlots=0 if wlvl==0 else 1 if wlvl<= 1 else 2 if wlvl< 11 else 3 if wlvl< 17 else 4}}{{set_slots(splvl, min(numSlots + get_slots(splvl), get_slots_max(splvl))) if wlvl>0 else ""}}{{blvl=int(BardLevel) if exists("BardLevel") else 0}}{{mod_cc("Bardic Inspiration", 10) if blvl>=5 and cc_exists("Bardic Inspiration") else 0}} -title "<name> takes a Short Rest." -desc "<name> spends {{du}}{{"" if ds=="" else " "+ds[2:-1]}} hit die and recovers {{vheal.total}} hit points. {{"They also recover "+str(numSlots)+" Level "+str(splvl)+" spell slots." if wlvl>0 else ""}}" -f "Healing Recieved|{{str(vheal)}}" -f "Current HP: | {{min(hp, (vheal.total+ currentHp))}}/{{hp}}{{set_hp(min(hp, (vheal.total + currentHp)))}}" {{"-f \""+cc+("" if ds else " ("+str(hd)+")")+" | "+cc_str(cc)+"\"" if cc_exists(cc) else ""}} -color <color> -footer "Adventuring | PHB 186" {{"-f \"Spell Slots| "+slots_str(splvl)+"\"" if wlvl>0 else ""}}
 !g sr -h
 ```
 
