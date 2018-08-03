@@ -1,5 +1,5 @@
 ## Heal
-```python
+```GN
 !servalias heal embed
 {{set("input", "%1%" if "%1"+"%"!="%1%" else "1")}}
 {{set("heal", vroll(input))}}
@@ -13,7 +13,7 @@
 ```
 
 ## Hit Dice
-```python
+```GN
 !servalias hitdice embed
 {{set('die', '' if "%1"+"%"=="%1%" else 'd%1%' if '%1%'[0] != 'd' else '%1%')}}
 {{set('used', '%2%' if '%2'+'%'!='%2%' else '1')}}
@@ -35,7 +35,7 @@
 ```
 
 ## HP Roll (For level up hp)
-```python
+```GN
 !servalias hproll embed
 {{set("dice", "%2%" if "%2"+"%"!="%2%" else "1")}}
 {{set("clas", "%1%".lower())}}
@@ -51,7 +51,7 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 ```
 
 ## Surprise Rounds
-```python
+```GN
 !servalias surprise embed
 -title "Surprise Rounds"
 -desc "If you’re surprised, you can’t move or take an action on your first turn of the combat, and you can’t take a reaction until that turn ends. A member of a group can be surprised even if the other members aren’t."
@@ -59,7 +59,7 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 ```
 
 ## Long Rest
-```python
+```GN
 !servalias lr g lr{{set("n",max(1,level/2))}}
 {{r=get_raw().consumables.custom}}
 {{dList=[f" (d{x})" for x in [20,12,10,8,6,4]] + [""]}}
@@ -67,15 +67,31 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 ```
 
 ## Short Rest
-```python
+```GN
 !servalias sr multiline
 !embed {{ds=" (%2%)" if "%2%" in "d4d6d8d10d12d20" else ""}}{{ds=" (d"+"%1%".split("d")[1]+")" if "d" in "%1%" else ds}}{{cc="Hit Dice"+ds}}{{du=0 if "%1%" == "%1"+"%" or not cc_exists(cc) else int("%1%".split("d")[0]) if "d" in "%1%" else int("%1%")}}{{du=min(get_cc(cc),du) if cc_exists(cc) else 0}}{{mod_cc(cc, -du) if cc_exists(cc) else ""}}{{roll=(str(du)+str(hd if exists("hd") and ds=="" else ds[2:-1]))+"+"+str(du*constitutionMod)}}{{vheal=vroll("0" if du == 0 else roll)}}{{set_hp(min(hp, vheal.total + currentHp))}}{{wlvl=int(WarlockLevel) if exists("WarlockLevel") else 0}}{{splvl=min(ceil(int(wlvl)/2),5)}}{{numSlots=0 if wlvl==0 else 1 if wlvl<= 1 else 2 if wlvl< 11 else 3 if wlvl< 17 else 4}}{{set_slots(splvl, min(numSlots + get_slots(splvl), get_slots_max(splvl))) if wlvl>0 else ""}}{{blvl=int(BardLevel) if exists("BardLevel") else 0}}{{mod_cc("Bardic Inspiration", 10) if blvl>=5 and cc_exists("Bardic Inspiration") else 0}} -title "<name> takes a Short Rest." -desc "<name> spends {{du}}{{"" if ds=="" else " "+ds[2:-1]}} hit die and recovers {{vheal.total}} hit points. {{"They also recover "+str(numSlots)+" Level "+str(splvl)+" spell slots." if wlvl>0 else ""}}" -f "Healing Recieved|{{str(vheal)}}" -f "Current HP: | {{min(hp, (vheal.total+ currentHp))}}/{{hp}}{{set_hp(min(hp, (vheal.total + currentHp)))}}" {{"-f \""+cc+("" if ds else " ("+str(hd)+")")+" | "+cc_str(cc)+"\"" if cc_exists(cc) else ""}} -color <color> -footer "Adventuring | PHB 186" {{"-f \"Spell Slots| "+slots_str(splvl)+"\"" if wlvl>0 else ""}}
 !g sr -h
 ```
 
+## Custom Skill Check
+**Credit to @silverbass#2407, @Croebh#5603 and @nadizak#5061**
+```GN
+!alias ch check {{raw,Mods,modStrs=get_raw(),[strengthMod, dexterityMod, constitutionMod, wisdomMod, intelligenceMod, charismaMod],['strengthMod', 'dexterityMod', 'constitutionMod', 'wisdomMod', 'intelligenceMod', 'charismaMod']}}
+{{bonusRefs=[['acrobatics',1], ['animalHandling',3], ['arcana',4], ['athletics',0], ['charisma',5], ['constitution',2], ['deception',5], ['dexterity',1], ['history',4], ['insight',3], ['intelligence',4], ['intimidation',5], ['investigation',4], ['medicine',3], ['nature',4], ['perception',3], ['performance',5], ['persuasion',5], ['religion',4], ['sleightOfHand',1], ['stealth',1], ['strength',0], ['survival',3], ['wisdom',3],['initiative',1]]}}
+{{BareBonuses=[[x[0],raw.skills[x[0]]-Mods[x[1]]] for x in bonusRefs]}}
+{{skill,stat='&1&' if '&1&'[0]!='&' else '','&2&' if '&2&'[0]!='&' else ''}}
+{{validSkill,validStat=[1 for x in bonusRefs if skill.lower() in x[0].lower()],[1 for x in modStrs if stat.lower() in x.lower()] if len(stat) else []}}
+{{skillMod=[x for x in BareBonuses if skill in x[0]][0] if validSkill else ['Derp',1]}}
+{{statMod=([[modStrs[x],Mods[x]] for x in range(6) if stat in modStrs[x]][0] if validStat else [[modStrs[x[1]],Mods[x[1]]] for x in bonusRefs if skill in x[0]][0]) if validSkill else ['Derp   ',1]}}
+{{bonus=''.join([raw.skill_effects[x] for x in raw.skill_effects if skill in x]) if "skill_effects" in raw else ''}}
+{{' '.join([statMod[0][:-3], bonus, '-b '+str(skillMod[1])] if skill else [])}}
+{{k='an' if statMod[0][:3]=='int' else 'a'}}
+-title "{{f'{name} makes {k} {statMod[0][:-3].title()} check!' if statMod[0][:-3]==skillMod[0] else f'{name} makes {k} {statMod[0][:-3].title()} ({skillMod[0].title()}) check!'}}" {{"&*&"}}
+```
+
 ## Money
 **Credit to @silverbass#2407**
-```python
+```GN
 !servalias money embed 
 {{set_cvar("money",0) if not exists("money") else ""}}
 {{set("value","reset" if "%1%" in "reset" else "help" if "%1%" in "help" else 0 if "%1%" == "%1"+"%" or not ("%1%".lstrip("-+").isdigit() or "%1%" in "+-") else int("%1%%2%") if "%1%" in "+-" and "%2%"!="%2"+"%" else int("%1%"))}}
@@ -91,7 +107,7 @@ E.g.: `!hproll barbarian` or `!hproll monk 2` for 2 levels"
 
 ## Inventory
 **Credit to @silverbass#2407**
-```python
+```GN
 !servalias inv embed {{set("x","&2&" if "%2%"!="%2"+"%" else "")}}{{set("m","%1%")}}{{set("m","h" if m in "help" else "r" if m in "delete" else "p" if x=="" else m if m=="+" or m=="-" or m=="?" else "p")}}{{set("n",int("%3%") if "%3%".isdigit() else 1)}}{{set("n",int(m+str(n)) if m in "+-" else 0)}}{{set_cvar("inv","") if m=="r" or not exists("inv") else ""}}{{set("m","p" if m=="r" else m)}}{{set("f",inv.lower().find(x.lower()) if x!="" else -1)}}{{set("f",-1 if f<0 else 0 if f==0 else f if inv[f]=="$" else inv.rfind("$",0,f) if f>0 else -1)}}{{set("l",inv.find("$",f+1))}}{{set("dl",inv[f:l] if f>=0 and l>=0 else inv[f::] if f>=0 and l==-1 else "")}}{{set("g",dl.split("|"))}}{{set("a",(g[0].replace("$","") if len(g)>1 and m!="p" else "") if dl!="" else x if m!="p" else "")}}{{set("d",int(g[1].replace(" (","").replace(")","")) if len(g)>1 else 0)}} -title "{{name if m!="h" else "How to Use"}}{{" adds "+str(n)+" " if m=="+" else " searches for a " if (m=="?" or (m=="-" and a.lower() not in inv.lower())) else " removes "+str(min(-n,d))+" " if m=="-" and dl!="" else ""}}{{a}}{{"" if n<2 and n>-2 else "s "}}{{"" if m=="h" else "'s" if m=="p" else " to their" if m=="+" else " from their" if (m=="-" and dl!="") else " in their"}} Inventory!" {{set("nl",("$"+a+"| ("+(str(n+d)+")")+"\n" if (n+d)>0 else ""))}}{{set_cvar("inv",(inv if inv[-1:]=="\n" else inv+"\n")+nl if dl=="" else inv.replace(dl,nl)) if m in "+-" and a!="" else ""}} -desc  "{{"__"+" "*200+"__\n"}}
 {{(str(inv.replace("$","").replace("|","").replace("(1)","")) if inv!="" else "*Empty*") if m=="p" else (nl.replace("$","").replace("|","") if n+d>0 else "*None*") if m in "?+-" else ""}}" {{"" if m!="h" else get_gvar("8b40e3a0-528c-4747-a4c2-a0b5022af36a")}} {{"-footer \"!inv help for more info\"" if m!="h" else ""}} -color <color> -thumb https://goo.gl/6Zowo5 %1% %2% %3%
 ```

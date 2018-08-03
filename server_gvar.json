@@ -1,526 +1,547 @@
 ~{
-"item": {
+"**Homebrew Items**": {
   "type": "list",
-  "Lizzard": {
-    "type": "list",
-    "Rune Luck of the Nichny": {
-      "title": "Lucky Gems",
-      "desc": "When you claim one of these stones, it begins leaving stains on you that cannot be removed by any means, magical or nonmagical, until you have used the following boon. The stains spread to everything you touch, although if something you touch does not belong to you it washes off. As a bonus action, you can grant yourself a +4 bonus to all saving throws or attack rolls or ability checks (choose one) for one minute. At the end of that minute, you lose the bonus and instead have a -2 on all saving throws, attack rolls and ability checks until you have washed all the stains off. This requires spending at least half an hour scrubbing yourself with soap.\n\n**Amber**: Leaves slightly sticky stains, as if coated in a thin layer of honey.\n**Amethyst**: Leaves faint purple stains that glow slightly in the dark\n**Garnet**: Leaves rusty stains that look like old blood\n**Jade**: Leaves mossy green stains\n**Black Tourmaline**: Leaves dark, ink-like stains",
-      "footer": "Homebrew Item. @Lizzard7328"
-    }
+  "Rune Luck of the Nichny": {
+    "title": "Lucky Gems",
+    "desc": "When you claim one of these stones, it begins leaving stains on you that cannot be removed by any means, magical or nonmagical, until you have used the following boon. The stains spread to everything you touch, although if something you touch does not belong to you it washes off. As a bonus action, you can grant yourself a +4 bonus to all saving throws or attack rolls or ability checks (choose one) for one minute. At the end of that minute, you lose the bonus and instead have a -2 on all saving throws, attack rolls and ability checks until you have washed all the stains off. This requires spending at least half an hour scrubbing yourself with soap.\n\n**Amber**: Leaves slightly sticky stains, as if coated in a thin layer of honey.\n**Amethyst**: Leaves faint purple stains that glow slightly in the dark\n**Garnet**: Leaves rusty stains that look like old blood\n**Jade**: Leaves mossy green stains\n**Black Tourmaline**: Leaves dark, ink-like stains",
+    "footer": "Homebrew Item. @Lizzard7328"
+  },
+  "Longstrider Tusk": {
+    "title": "Longstrider Tusk",
+    "desc": "*+1 Club or +1 Greatclub (You may choose which as part of the reward). Uncommon.*\n\nThis boar tusk is engraved with Sylvan markings which glow slightly if viewed at night under the stars. Attacks with this club count as magical. You have a +1 bonus to attack and damage rolls made with this weapon.\n\nIf the wielder moves 20 feet, on land, toward a creature and makes a melee attack using the point of the tusk the damage type changes to piercing and does an additional 2d4 damage. If this attack misses then the wielder falls prone.\n\nOnce per day the wielder can speak a command word and cause the runes to glow bright. For 1 minute the wielder is granted the effects of Longstrider and all opportunity attacks on them are at disadvantage. The effect ends if the weapon is dropped or stowed.",
+    "footer": "Homebrew Item. @nadizak#5061"
+  },
+  "Boar Armor": {
+    "title": "Boar Armor",
+    "desc": "*+1 Hide Armor. Requires Attunement. Uncommon.*\n\nThis Hide Armor has been crafted from the thick hide of a Giant Boar. You gain a +1 bonus to AC while you wear this armor. You are considered proficient with this armor even if you lack proficiency with medium armor.\n\nThere are several brandings on the pelt. One of them appears to hold some kind of magic within (Perhaps the other brands could be fixed somehow).\n\nThis brand on the armor has 3 charges, and it regains 1d3 expended charges daily at dawn. While wearing the armor, you can use an action to expend one of its charges to attack one creature you can see within 60 feet of you. The brand produces a spectral boar’s head and makes its attack roll with a +5 bonus. On a hit the target takes 1d8 force damage and is pushed 5 feet away from you.\n\nAlternatively, you can expend 1 to 3 of the ring's charges as an action to try to break an object you can see within 60 feet of you that isn't being worn or carried. The ring makes a Strength check with a +3 bonus for each charge you spend.",
+    "footer": "Homebrew Item. @nadizak#5061"
+  },
+  "Magic Moss": {
+    "title": "Magic Moss",
+    "desc": "*Uncommon consumable.*\n\nThis fine valley moss has been selected for vibrant green color. It has been imbued with magic. As an action, the moss can be burnt and dropped to the ground causing a light pall of smoke to fill a 5 ft radius circle around the spot. Allies who stand in the smoke may cast 1st spells (no upcasting) without expending spells slots. After 1 min the smoke dissipates.",
+    "footer": "Homebrew Item. @nadizak#5061"
+  },
+  "Green Boar Mind Stone": {
+    "title": "Green Boar Mind Stone",
+    "desc": "These green stones were found embedded in the faces of the Boars in the northeast valley. They don’t look valuable at all and the material crumbles like sand if you scrap at them or apply significant force. They seem to emanate some sort of enchantment magic that is unknown to you. Holding a gem creates a deep pulsing in the back of your mind and you are reminded of that day in the Valley.",
+    "footer": "Homebrew Item. @nadizak#5061"
   }
 },
-"map": {
+"**Maps**": {
   "type": "list",
-  "map1": {
+  "Map 2 Ofirthar": {
     "type": "bare",
+    "title": "Continent of Ofirthar",
     "image": "https://cdn.discordapp.com/attachments/333717465811124226/373993908507639808/Capture.PNG"
   },
-  "map2": {
+  "Map 1 Bay of Explorers": {
     "type": "bare",
+    "title": "The Bay of Explorers",
     "image": "https://cdn.discordapp.com/attachments/333717465811124226/374014991868624896/Farwaterandsurrounding.jpg"
   }
 },
-"alias": {
+"**Aliases**": {
   "type": "list",
-  "class": {
+  "**Class**": {
     "type": "list",
-    "barbarian": {
+    "**Barbarian**": {
       "type": "list",
       "rage": {
         "desc": "Creates a custom counter and uses your current Barbarian level (according to `!level`) to modify it accordingly. Will print the rage description and number of rages available. \nNote: If you view your Rage counter using !cc it is not the same as what is displayed when calling `!rage` due to the fact that counters can only scale linearly. \n\n You can use it as a snippet to add Rage damage to an attack.",
-        "snippetEx": ["!a Greataxe rage"],
-        "aliasEx": ["!rage"]
+        "f": ["Alias Usage | !rage", "Snippet Usage | !a Greataxe rage"]
       },
       "brutal": {
         "desc": "Rolls damage for a Brutal Critical. Auto scales the number of dice. Defaults to a d10 weapon die.",
-        "aliasEx": ["!brutal", "!brutal d12", "!brutal 10"]
+        "f": ["Alias Usage | !brutal\n!brutal d12\n!brutal 10"]
       }
     },
-    "bard": {
+    "**Bard**": {
       "type": "list",
       "jack": {
         "desc": "Adds half your proficiency to a check.",
-        "snippetEx": ["!c dex jack"]
+        "f": ["Snippet Usage | !c dex jack"]
       },
       "inspire": {
         "desc": "Expends a use of Bardic Inspiration. Auto scales the die used and creates counters as needed. Will need to delete the counter upon reaching Bard level five so that the short rest feature of Font of Inspiration is applied.",
-        "aliasEx": ["!inspire", "!inspire Person"]
+        "f": ["Alias Usage | !inspire\n!inspire Person"]
       },
       "songofrest": {
         "desc": "Prints out the Song of Rest ability and displays the die used.",
-        "aliasEx": ["!songofrest"]
+        "f": ["Alias Usage | !songofrest"]
       },
       "glamour": {
         "type": "list",
         "glaminspire": {
           "desc": "Expends a use of Glamour Bard Inspiration. Auto scales the temp hp given and creates counters as needed. Will need to delete the counter upon reaching Bard level five so that the short rest feature of Font of Inspiration is applied.",
-          "aliasEx": ["!glaminspire", "!glaminspire Person", "!glaminspire Me, You, That Other Guy"]
+          "f": ["Alias Usage | !glaminspire\n!glaminspire Person\n!glaminspire Me, You, That Other Guy"]
         }
       }
     },
-    "cleric": {
+    "**Cleric**": {
       "type": "list",
       "channel": {
         "desc": "Uses the Channel Divinity ability. Creates and modifies counters for the ability. Will check for both Cleric and Paladin levels and use the correct total uses. Doesn't display any specific effects for the Cleric or Paladin subtype.",
-        "aliasEx": ["!channel"]
+        "f": ["Alias Usage | !channel"]
       }
     },
-    "druid": {},
-    "fighter": {
+    "**Druid**": {},
+    "**Fighter**": {
       "type": "list",
       "fighter": {
         "desc": "An all in one fighter alias that can be used for all Fighter features.\n\nRun the command with no arguments for details.",
         "footer": "Credit to @silverbass#2407",
-        "aliasEx": ["!fighter", "!fighter bm disarm", "!fighter 2nd", "!fighter arc burst"]
+        "f": ["Alias Usage | !fighter\n!fighter bm disarm\n!fighter 2nd\n!fighter arc burst"]
       },
       "action": {
         "desc": "Uses the Fighter action surge ability to gain an action. Creates and modifies counters for the ability.",
-        "aliasEx": ["!action"]
+        "f": ["Alias Usage | !action"]
       },
       "secondwind": {
         "desc": "Uses the Fighter Second Wind ability and automatically rolls and applies healing. Creates and modifies counters for the ability.",
-        "aliasEx": ["!secondwind"]
+        "f": ["Alias Usage | !secondwind"]
       },
       "indom": {
         "desc": "Uses the Fighter Indomitable ability. Creates and modifies counters for the ability.",
-        "aliasEx": ["!indomitable"]
+        "f": ["Alias Usage | !indomitable"]
       },
       "samurai": {
         "type": "list",
         "spirit": {
           "desc": "Uses the Fighting Spirit ability. Creates and modifies counters for the ability.",
-          "aliasEx": ["!spirit"]
+          "f": ["Alias Usage | !spirit"]
         }
       }
     },
-    "monk": {
+    "**Monk**": {
       "type": "list",
       "monk": {
         "desc": "An all in one monk alias that can be used for all Monk features.\n\nRun the command with no arguments for details.",
         "footer": "Credit to @silverbass#2407",
-        "aliasEx": ["!monk", "!monk deflect 10", "!monk slow 20", "!monk ki +2"]
+        "f": ["Alias Usage | !monk\n!monk deflect 10\n!monk slow 20\n!monk ki +2"]
       },
       "ki": {
         "desc": "Modifies your ki point counter. Auto creates the counter for you. If no sign is given it assumes you are spending the ki.",
-        "aliasEx": ["!ki", "!ki 1", "!ki -1", "!ki +2"]
+        "f": ["Alias Usage | !ki\n!ki 1\n!ki -1\n!ki +2"]
       },
       "flurry": {
         "desc": "Expends a ki point to use Flurry of Blows. Does not actually perform the attacks.",
-        "aliasEx": ["!flurry"]
+        "f": ["Alias Usage | !flurry"]
       },
       "patient": {
         "desc": "Expends a ki point to use Patient Defense.",
-        "aliasEx": ["!patient"]
+        "f": ["Alias Usage | !patient"]
       },
       "windstep": {
         "desc": "Expends a ki point to use Step of the Wind.",
-        "aliasEx": ["!windstep"]
+        "f": ["Alias Usage | !windstep"]
       },
       "deflect": {
         "desc": "Uses the Deflect Missiles ability. If you give it any input it will expend a ki point to catch and throw the projectile.",
-        "aliasEx": ["!deflect", "!deflect catch", "!deflect 1"]
+        "f": ["Alias Usage | !deflect\n!deflect catch\n!deflect 1"]
       },
       "empty": {
         "desc": "Expends a ki point to use Empty Body.",
-        "aliasEx": ["!empty"]
+        "f": ["Alias Usage | !empty"]
       }
     },
-    "paladin": {
+    "**Paladin**": {
       "type": "list",
       "paladin": {
         "desc": "An all in one paladin alias that can be used for all Paladin features including Oaths and Channel Divinity.\n\nRun the command with no arguments for details.",
         "footer": "Credit to @silverbass#2407",
-        "aliasEx": ["!paladin", "!paladin smite 4 crit undead", "!paladin lay 20", "!paladin lay poison"]
+        "f": ["Alias Usage | !paladin\n!paladin smite 4 crit undead\n!paladin lay 20\n!paladin lay poison"]
       },
       "divinesense": {
         "desc": "Common commands used by Paladins that will auto create and update counters and roll dice for you.\nWill require `!level` to be set up correctly beforehand.",
-        "aliasEx": ["!divinesense"]
+        "f": ["Alias Usage | !divinesense"]
       },
       "layonhands": {
         "desc": "Uses the Lay on Hands ability to heal yourself or a target. If \"me\" or \"self\" is in the arguments it will restore your own HP automatically. Will create a self-updating counter if it doesn't already exist.",
-        "aliasEx": ["!layonhands me 20", "!layonhands 20 self", "!layonhands me 30"]
+        "f": ["Alias Usage | !layonhands me 20\n!layonhands 20 self\n!layonhands me 30"]
       },
       "smite": {
         "desc": "Uses the Divine Smite ability. Must pass a spell slot level or it will assume first level slot. If crit is passed it will double the dice rolled. Will decrement your spell slot as well.",
-        "aliasEx": ["!smite 1", "!smite crit 3", "!smite 2 critical"]
+        "f": ["Alias Usage | !smite 1\n!smite crit 3\n!smite 2 critical"]
       },
       "channel": {
         "desc": "Uses the Channel Divinity ability. Creates and modifies counters for the ability. Currently does not do anything specific to the paladin subclass. Will work with Cleric levels as well.",
-        "aliasEx": ["!channel"]
+        "f": ["Alias Usage | !channel"]
       },
       "pldaura": {
         "desc": "Prints out the effects of your current paladin aura. Currently does not do anything for any paladin subclass auras.",
-        "aliasEx": ["!pld_aura"]
+        "f": ["Alias Usage | !pld_aura"]
       }
     },
-    "ranger": {},
-    "rogue": {
+    "**Ranger**": {},
+    "**Rogue**": {
       "type": "list",
       "sneak": {
         "desc": "A snippet to add sneak attack damage to an attack. Uses the !level alias to work.",
-        "snippetEx": ["!a Dagger sneak"]
+        "f": ["Snippet Usage | !a Dagger sneak"]
       },
       "strokeofluck":{
         "desc": "Uses the Rogue Stroke of Luck ability to succeed on an attack or ability check. Creates and modifies counters for the ability.",
-        "aliasEx": ["!strokeofluck"]
+        "f": ["Alias Usage | !strokeofluck"]
       },
       "talent": {
         "desc": "A snippet to use the Rogue's Reliable Talent to set a minimum roll value on a check.",
-        "snippetEx": ["!c stealth talent"]
+        "f": ["Snippet Usage | !c stealth talent"]
       }
     },
-    "sorcerer": {},
-    "warlock": {
+    "**Sorcerer**": {},
+    "**Warlock**": {
       "type": "list",
       "eldritchmaster":{
         "desc": "Uses the Warlock Capstone to recover all of your spell slots. Creates and modifies counters for the ability.",
-        "aliasEx": ["!eldritchmaster"]
+        "f": ["Alias Usage | !eldritchmaster"]
       },
       "hexblade": {
         "type": "list",
         "hexcurse": {
           "desc": "Use as an alias to expend the use of your HexBlade's Curse.\n\nUse as a snippet to add the damage to an attack.",
-          "snippetEx": ["!a Dagger hexcurse"],
-          "aliasEx": ["!hexcurse"]
+          "f": ["Alias Usage | !hexcurse", "Snippet Usage | !a Dagger hexcurse"]
         }
       }
     },
-    "wizard": {}
+    "**Wizard**": {}
   },
-  "game": {
+  "**Game Commands**": {
     "type": "list",
     "heal": {
       "desc": "This command will heal your character by the amount provided. It is nearly the same as `!g hp +12` but will not allow overhealing. If no string is provided it will just heal 1 hp.",
-      "aliasEx": ["!heal 12", "!heal 2d8+2", "!heal"]
+      "f": ["Alias Usage | !heal 12\n!heal 2d8+2\n!heal"]
     },
     "hitdice": {
       "desc": "This command will roll the specified hit die and heal you for that amount plus your CON modifier per die. \nThis command does require you to set up your level using `!level` beforehand. Custom counters will automatically be generated.",
-      "aliasEx": ["!hitdice d6 1", "!hitdice 8 2", "!hitdice d12 4", "!hitdice"]
+      "f": ["Alias Usage | !hitdice d6 1\n!hitdice 8 2\n!hitdice d12 4\n!hitdice"]
     },
     "hproll": {
       "desc": "Rolls for your hp using the class you supply. Won't roll anything if you do not give it a class. Give it a number at the end to roll multiple levels.",
-      "aliasEx": ["!hproll wiz", "!hproll barb 2"]
+      "f": ["Alias Usage | !hproll wiz\n!hproll barb 2"]
     },
     "sr": {
       "desc": "Short cut for the `!g sr` command that also recovers Warlock spell slots if you have any Warlock levels.\n\nYou can also utilize hit dice by giving the command the dice size and number you want to use.",
-      "aliasEx": ["!sr", "!sr d6 2", "!sr d12", "!sr d10 4"]
+      "f": ["Alias Usage | !sr\n!sr d6 2\n!sr d12\n!sr d10 4"]
     },
     "lr": {
       "desc": "Short cut for the `!g lr` command that also recovers your hit dice counters according to the PHB rules. It will always recover the largest hit dice first.",
-      "aliasEx": ["!lr"]
+      "f": ["Alias Usage | !lr"]
+    },
+    "ch": {
+      "desc": "Make a check using a stat and/or skill combination. Let's you do custom check such as a strength intimidation. Accepts snippets as well.",
+      "f": ["Alias Usage | !ch persuasion\n!ch strength\n!ch str intim"]
     },
     "level": {
       "desc": "This alias is used to set required cvars for other aliases. It will set your level for you and can optional also set your subclass as a cvar.\nIn addition, the alias will create custom counters for class abilities for both your class and subclass. It will also create a hit dice counter for all your character levels.\nIn short this alias basically sets up all the setup stuff for other aliases and you should use it.",
-      "aliasEx": ["!level", "!level fighter 3", "!level Wizard 12", "!level lock 2 Hexblade", "!level barb 1 zealot"]
+      "f": ["Alias Usage | !level\n!level fighter 3\n!level Wizard 12\n!level lock 2 Hexblade\n!level barb 1 zealot"]
     },
     "money": {
       "desc": "Keeps track of currency. See `!money help` for more details. \nIf no coin is provided it will assume gp.",
-      "aliasEx": ["!money [+/-] [amount] [coin]"],
+      "f": ["Alias Usage | !money [+/-] [amount] [coin]"],
       "footer": "Credit to @silverbass#2407"
     },
     "inv": {
       "desc": "Keeps track of inventory for a character. See `!inv help` for more details.",
-      "aliasEx": ["!inv [+/-/?/help/delete] [item] [quantity]"],
+      "f": ["Alias Usage | !inv [+/-/?/help/delete] [item] [quantity]"],
       "footer": "Credit to @silverbass#2407"
     },
     "action": {
       "type": "list",
       "grapple": {
         "desc": "Performs an Athletics Grapple check.",
-        "aliasEx": ["!grapple", "!grapple adv"]
+        "f": ["Alias Usage | !grapple\n!grapple adv"]
       },
       "overrun": {
         "desc": "Performs an Athletics Overrun check.",
-        "aliasEx": ["!overrun", "!overrun adv"]
+        "f": ["Alias Usage | !overrun\n!overrun adv"]
       },
       "potion": {
         "desc": "Drinks a potion and restores hp. Valid potions options are: Supreme, Superior, and Greater, Lesser. Anything else will default to the lowest level potion.",
-        "aliasEx": ["!potion", "!potion greater", "!potion Supreme"]
+        "f": ["Alias Usage | !potion\n!potion greater\n!potion Supreme"]
       },
       "prone": {
         "desc": "Performs an Athletics check to knock a target Prone.",
-        "aliasEx": ["!prone", "!prone adv"]
+        "f": ["Alias Usage | !prone\n!prone adv"]
       },
       "push": {
         "desc": "Performs an Athletics check to shove a target.",
-        "aliasEx": ["!push", "!push adv"]
+        "f": ["Alias Usage | !push\n!push adv"]
       },
       "ram": {
         "desc": "Performs an Athletics check to break down a door with a portable battering ram. The +4 Strength bonus is already added.",
-        "aliasEx": ["!ram", "!ram adv"]
+        "f": ["Alias Usage | !ram\n!ram adv"]
       },
       "scroll": {
         "desc": "Performs a spell casting ability check to cast a spell from a scroll or to copy it as a Wizard. Add 'Copy' to the command to perform an arcana check instead of a spell casting check.",
-        "aliasEx": ["!scroll 6", "!scroll copy 7"]
+        "f": ["Alias Usage | !scroll 6\n!scroll copy 7"]
       },
       "shove": {
         "desc": "Performs an Athletics check to shove a target.",
-        "aliasEx": ["!shove", "!shove adv"]
+        "f": ["Alias Usage | !shove\n!shove adv"]
       },
       "tumble": {
         "desc": "Performs an Acrobatics Tumble check.",
-        "aliasEx": ["!tumble", "!tumble adv"]
+        "f": ["Alias Usage | !tumble\n!tumble adv"]
       },
       "jump": {
         "desc": "Prints the rules on jumping and calculates your jump distances. If you add high or long it will filter the output to the specified jump.",
-        "aliasEx": ["!jump", "!jump high", "!jump long"]
+        "f": ["Alias Usage | !jump\n!jump high\n!jump long"]
       }
     }
   },
-  "spell": {
+  "**Spells**": {
     "type": "list",
     "spelllist": {
-      "desc": "Lets you bring up a list of all spells of a certain class and spell level",
-      "aliasEx": ["!spelllist Wizard 2", "!spelllist bard 9", "!spelllist lock 6"]
+      "desc": "Lets you bring up a list of all spells of a certain class and spell level\n\nCurrently missing a lot of spells.",
+      "f": ["Alias Usage | !spelllist Wizard 2\n!spelllist bard 9\n!spelllist lock 6"]
     },
-    "cantrip": {
+    "**Cantrips**": {
       "type": "list",
       "boom": {
         "desc": "Adds the effect of Booming Blade to an attack and displays the additional damage. Will scale with your level.",
-        "snippetEx": ["!a Whip boom"]
+        "f": ["Snippet Usage | !a Whip boom"]
       },
       "gfb": {
         "desc": "Adds Green Flame Blade to an attack and displays the additional damage. Scales with your level and adds highest of int or chr for the spell casting mod.",
-        "snippetEx": ["!a Dagger gfb"],
+        "f": ["Snippet Usage | !a Dagger gfb"],
         "footer": "Credit to Toothless#7854"
       },
       "guidance": {
         "desc": "Add Guidance to a skill check.",
-        "snippetEx": ["!c dexterity guidance"]
+        "f": ["Snippet Usage | !c dexterity guidance"]
       },
       "resist": {
         "desc": "Adds the Resistance cantrip effect to a saving throw.",
-        "snippetEx": ["!s wis resist"]
+        "f": ["Snippet Usage | !s wis resist"]
       },
       "toll": {
         "desc": "Casts the Toll the Dead spell and rolls for damage for both cases. Will scale to your level and will use the your highest spell casting stat.",
-        "aliasEx": ["!toll"]
+        "f": ["Alias Usage | !toll"]
       }
     },
-    "level1": {
+    "**Level 1 Spells**": {
       "type": "list",
       "bless": {
         "desc": "Adds the Bless spell to your attacks rolls and saves.",
-        "snippetEx": ["!a Dagger bless", "!s wis bless"],
+        "f": ["Snippet Usage | !a Dagger bless\n!s wis bless"],
         "footer": "Credit to Toothless#7854"
       },
       "hex": {
         "desc": "Adds the Hex effect to an attack.",
-        "snippetEx": ["!a Eldritch Blast hex"]
+        "f": ["Snippet Usage | !a Eldritch Blast hex"]
       },
       "mark": {
         "desc": "Adds the Hunter's Mark effect to an attack.",
-        "snippetEx": ["!a Longbow mark"]
+        "f": ["Snippet Usage | !a Longbow mark"]
       }
     },
-    "level2": {
+    "**Level 2 Spells**": {
       "type": "list",
       "pwt": {
         "desc": "Adds the Pass Without Trace effect to a stealth check.",
-        "snippetEx": ["!c sneak pwt"]
+        "f": ["Snippet Usage | !c sneak pwt"]
       }
     },
-    "level3": {
+    "**Level 3 Spells**": {
       "type": "list",
       "counterspell":{
         "desc": "Performs a spell casting ability check to counter a spell of a certain level. If the spell slot used automatically cancels the other spell there is no need to run this alias. Does not subtract spell slots and only uses your spell mod for now (no adv or jack of all trades).",
-        "aliasEx": ["!counterspell <level>", "!counterspell 9"]
+        "f": ["Alias Usage | !counterspell <level>\n!counterspell 9"]
       }
     },
-    "level5": {
+    "**Level 5 Spells**": {
       "type": "list",
       "holy": {
         "desc": "Adds the damage from the Holy Weapon spell to an attack.",
-        "snippetEx": ["!a Longsword holy"]
+        "f": ["Snippet Usage | !a Longsword holy"]
       },
       "bigby": {
         "desc": "Makes an attack using the Bigby's Hand spell. Supply a spell level to attack with a higher level casting. Accepts crit, adv, and dis.",
-        "aliasEx": ["!bigby", "!bigby 8", "!bigby 6 adv", "!bigby crit"],
+        "f": ["Alias Usage | !bigby\n!bigby 8\n!bigby 6 adv\n!bigby crit"],
         "footer": "Credit to Hoff#0504"
       }
     }
   },
-  "feat": {
+  "**Feats**": {
     "type": "list",
     "gwm": {
       "desc": "Adds the Greater Weapon Master feat's effect to an attack.",
-      "snippetEx": ["!a Greatsword gwm"]
+      "f": ["Snippet Usage | !a Greatsword gwm"]
     },
     "sharp": {
       "desc": "Add the Sharpshooter feat's effect to an attack.",
-      "snippetEx": ["!a Shortbow sharp"]
+      "f": ["Snippet Usage | !a Shortbow sharp"]
     }
   },
-  "races": {
+  "**Races**": {
     "type": "list",
-    "eladrin": {
+    "**Eladrin**": {
       "type": "list",
       "feystep":{
         "desc": "Uses the Fey Step ability. Will create and modify the counter for it.",
-        "aliasEx": ["!feystep"]
+        "f": ["Alias Usage | !feystep"]
       }
     },
-    "aasimar": {
+    "**Aasimar**": {
       "type": "list",
       "soul": {
         "desc": "Snippet to add damage from the Aasimar Protector's Radiant Soul ability.",
-        "snippetEx": ["!a Longsword soul"]
+        "f": ["Snippet Usage | !a Longsword soul"]
       }
     }
   },
-  "dm": {
+  "**DM Commands**": {
     "type": "list",
     "gold":{
       "desc": "Totals up currency rewards as gp and splits it among a party. First parameter must be a currency string with no spaces and the second is the number of players.",
-      "aliasEx": ["!gold <money string, no spaces> <party size>", "!gold 100pp20gp 2", "!gold 200gp20sp 4"]
+      "f": ["Alias Usage | !gold <money string, no spaces> <party size>\n!gold 100pp20gp 2\n!gold 200gp20sp 4"]
     },
     "loot":{
       "desc": "Rolls for a random magic item of the specified rarity using the DMG and XGtE tables.",
-      "aliasEx": ["`!loot common", "!loot uncommon", "!loot rare", "!loot very rare", "!loot legendary`"],
+      "f": ["Alias Usage | `!loot common\n!loot uncommon\n!loot rare\n!loot very rare\n!loot legendary`"],
       "footer": "Credit to @silverbass#2407"
     },
     "weather":{
       "desc": "Prints out a randomly generated weather status. Run !weather help for more details.",
-      "aliasEx": ["!weather [biome] [season]", "!weather [list/biomes]"],
+      "f": ["Alias Usage | !weather [biome] [season]\n!weather [list/biomes]"],
       "footer": "Credit to @silverbass#2407 and @newtim#1227"
     }
   },
-  "server": {
+  "**Server Commands**": {
     "type": "list",
     "cwm": {
       "desc": "A search tool for displaying information on different facets of the server. You're probably using it right now.",
-      "aliasEx": ["!cwm [search terms]...", "!cwm alias server cwm", "!cwm meme doit"]
+      "f": ["Alias Usage | !cwm [search terms]...\n!cwm alias server cwm\n!cwm meme doit"]
     },
     "sgold": {
       "desc": "This command is used for rolling your character's starting gold in FarWater. Starting gold depends on what level tier you are rolling your character at but for new players it is always level 3 (tier 1). If you don't supply a starting level then the command will assume you are rolling at level 3.\n\nThe command can also roll starting gold for if you choose to take no starting equipment. Just call the command while including your level 1 class to do this.",
-      "aliasEx": ["!sgold [level] [class]", "!sgold Wizard", "!sgold 16", "!sgold 4 Monk"]
+      "f": ["Alias Usage | !sgold [level] [class]\n!sgold Wizard\n!sgold 16\n!sgold 4 Monk"]
     },
     "newchar": {
       "desc": "Rolls a new character just like the !randchar command. Prints out whether the stats rolled are valid under the current character creation rules.\n\nThe stat line is valid if you have at least 1 stat at 15 or higher and 1 other stat at 13 or higher. You can re-roll until you have 2 valid stat lines and may then choose a stat line from the prior rolls.",
-      "aliasEx": ["!newchar"]
+      "f": ["Alias Usage | !newchar"]
     }
   },
-  "silly": {
+  "**Silly Commands**": {
     "type": "list",
     "banhammer": {
       "desc": "Makes a truly destructive attack, may cause rocks to fall and you dieing.",
-      "aliasEx": ["!banhammer"]
+      "f": ["Alias Usage | !banhammer"]
     },
     "banhammer2": {
       "desc": "An even more destructive attack that could one shot a god, maybe.",
-      "aliasEx": ["!banhammer2"]
+      "f": ["Alias Usage | !banhammer2"]
     },
     "boop": {
       "desc": "Boops the target.",
-      "aliasEx": ["!boop"]
+      "f": ["Alias Usage | !boop"]
     },
     "bap": {
       "desc": "Baps the target. Completely different from a boop.",
-      "aliasEx": ["!bap"]
+      "f": ["Alias Usage | !bap"]
     }
   }
 },
-"help": {
+"**Help Topics**": {
   "type": "list",
-  "avrae": {
+  "Avrae Guide": {
     "title": "Avrae General Use Guide",
     "desc": "https://docs.google.com/document/d/1TWWL6Wy-jxQCLsqf_2ttFR6UuLDswWuL41zcX5MHhoE/mobilebasic"
   },
-  "feedback": {
+  "DM Feedback": {
     "title": "How did the DM do?",
     "desc": "Tell us here: https://docs.google.com/forms/d/e/1FAIpQLScpzi_CiLqG7hljj5NU3aIJ58N6SzGzfx8N0OVLe7ZLlJqNnw/viewform"
   },
-  "aliasform": {
+  "Alias Suggestion Form": {
     "title": "Suggestions for server alias?",
     "desc": "Tell us here: https://goo.gl/forms/tSsKgR8BbOpTbfMg2"
   },
-  "tiers": {
+  "Level Tiers": {
     "title": "CWM Starting Level Tiers",
     "desc": "Upon PC death, where Dead PC's level is X, a new PC may be made at the lowest level of the level tier X is in:\n`@Lvl 3-4`\n`@Lvl 5-7`\n`@Lvl 8-11`\n`@Lvl 12-15`\n`@Lvl 16-20`\n`@Lvl EPIC`\n\nNew PC can also be the lowest level of a lower tier.\nI.e.  Peggy dies at level 11, new character can be a maximum of level 8, but can start at level 3, 5, or 8."
   },
-  "aliaslist": {
+  "Alias GitHub": {
     "title": "List of server aliases and snippets:",
     "desc": "https://github.com/nadizak/avrae_aliases"
   },
-  "DM xp": {
+  "DM Rewards": {
     "type": "bare",
     "image": "https://cdn.discordapp.com/attachments/340300659343491083/381625903995813888/Capture.PNG"
   }
 },
-"meme": {
+"**Memes**": {
   "type": "list",
-  "nari": {
-    "type": "bare",
-    "title": "Why is Nari so mean?",
-    "desc": "No one knows but legend has it that when the CWM has died out and not a single player remains.... Nari will still be there... Berating and just generally being super mean.",
-    "thumb": "https://cdn.discordapp.com/attachments/407991677291200513/462298389497905152/3805b4c6deaa0837fb178593a8789c09.jpg",
-    "footer": "This message brought to you by Newt"
-  },
-  "arios": {
+  "Arios the Anime Paladin": {
     "type": "bare",
     "title": "Arios does some Ridiculous Homebrew Things Stacked on Top of Some Paladin Crap!",
     "desc": "And of course this is probably the only time he crit this whole game.",
     "image": "https://images-ext-2.discordapp.net/external/MeRsoYU7l0N1Mk5_GvxhqiKjkv0s4uVQbKkxoHQBGxo/https/thumbs.gfycat.com/FancyFamiliarBaldeagle-max-1mb.gif?width=1202&height=677"
   },
-  "doit": {
+  "Do It": {
     "type": "bare",
     "image": "https://media.tenor.co/images/03b1fb9c28a7e8de281700661e688f51/tenor.gif"
   },
-  "chump": {
+  "Chump": {
     "type": "bare",
     "title": "Shoulda been a Champion, Scrub",
     "desc": "Lizzard wants you to know that some unfortunate event befell you that could've been avoided if you were a Champion Fighter. Sucks to be you.",
     "image": "https://media.giphy.com/media/TdmTcdoN3egaQ/giphy.gif"
   },
-  "pussy": {
+  "Do It Pussy": {
     "type": "bare",
     "image": "https://cdn.discordapp.com/attachments/404368678683934731/420680206894891019/Crooq.png"
   },
-  "fine": {
+  "This is Fine": {
     "type": "bare",
     "image": "https://media.giphy.com/media/3o6UBpHgaXFDNAuttm/giphy.gif"
   },
-  "nod": {
+  "Nod": {
     "type": "bare",
     "image": "https://media.giphy.com/media/S3Ot3hZ5bcy8o/giphy.gif"
   },
-  "heal?": {
+  "Can I get a heal?": {
     "type": "bare",
     "title": "Can I get a heal?",
     "image": "https://cdn.discordapp.com/attachments/404368678683934731/464807293306011658/TF2_reaction_face_Medic_no_Heavy_yes_Spy_no.gif"
   },
-  "cant see me": {
+  "You Can't See Me": {
     "type": "bare",
     "footer": "Who needs stealth checks?",
     "image": "https://media.giphy.com/media/3o6ZtjDNG2UXy7B3xK/giphy.gif"
   },
-  "balanced": {
+  "Balanced": {
     "type": "bare",
     "title": "Perfectly Balanced...",
     "footer": "As all things should be...",
     "image": "http://data.punkee.com.au/wp-content/uploads/2018/05/thanos-memes.001.jpeg"
   },
-  "nope": {
+  "Nope": {
     "type": "bare",
     "image": "https://media.tenor.com/images/5442002c8081300e02cdb610e70a5460/tenor.gif"
   },
-  "press f": {
+  "Press F to Pay Your Respects": {
     "type": "bare",
     "image": "https://thumbs.gfycat.com/OddballLegitimateHusky-size_restricted.gif"
   },
-  "Omae wa moe shindeiru": {
+  "Omae Wa Moe Shindeiru": {
     "type": "bare",
     "desc": "お前はもう死んでいる.",
     "image": "https://i0.kym-cdn.com/photos/images/original/000/594/687/59a.jpg",
     "footer": "何?"
+  },
+  "It's 2 am Let's Do It": {
+    "type": "bare",
+    "title": "Eh, It's only 2 am. Let's do it.",
+    "image": "https://cdn.discordapp.com/attachments/334372841829040128/472566429745414145/tenor.gif",
+    "footer": "@Tera#6969"
   }
 },
 "type": "list",
 "data": {
   "t": "https://images-ext-1.discordapp.net/external/Xfd2k9-StjbIAyyk0t2Fgnm1EePA3ruwfftsuNpvjuo/%3Fsize%3D256/https/cdn.discordapp.com/icons/333715748994285569/05203aaed55fd66b747fd9ca1033adfe.png",
+  "n": "cwm",
+  "f": "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing.",
   "a": ["image", "color", "footer", "type", "desc", "title", "data", "t", "snippetEx", "aliasEx", "thumb"],
-  "s": "'<>': substitute '[]': optional '<x/y>': x or y '...': repeatable",
-  "f": "!cwm : Add to your query to view a different or deeper category. Add notimeout to prevent window from closing."
+  "b": "abcdefghijklmnopqrstuvwxyz1234567890"
 }
 }
