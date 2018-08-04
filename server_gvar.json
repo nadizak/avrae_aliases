@@ -228,8 +228,8 @@
       "f": ["Alias Usage | !lr"]
     },
     "ch": {
-      "desc": "Make a check using a stat and/or skill combination. Let's you do custom check such as a strength intimidation. Accepts snippets as well.",
-      "f": ["Alias Usage | !ch persuasion\n!ch strength\n!ch str intim"]
+      "desc": "Make a check using a stat and/or skill combination. Let's you do custom check such as a strength intimidation. Accepts snippets as well.\n\nAlways use skill first.",
+      "f": ["Alias Usage | !ch persuasion\n!ch strength\n!ch intim str"]
     },
     "level": {
       "desc": "This alias is used to set required cvars for other aliases. It will set your level for you and can optional also set your subclass as a cvar.\nIn addition, the alias will create custom counters for class abilities for both your class and subclass. It will also create a hit dice counter for all your character levels.\nIn short this alias basically sets up all the setup stuff for other aliases and you should use it.",
