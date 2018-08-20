@@ -25,7 +25,7 @@
     {"l":1,"n":"Rage","m":"ccMaxRage","r":"long","t":"bubble","c":{"1":2,"3":3,"6":4,"12":5,"17":6}}
   ],
   "BardLevel":[
-    {"l":1,"n":"Bardic Inspiration","m":"charismaMod","r":"long","t":"bubble"}
+    {"l":1,"n":"Bardic Inspiration","m":"charismaMod","r":"long-5-short","t":"bubble"}
   ],
   "ClericLevel":[
     {"l":2,"n":"Channel Divinity","m":"ccMaxChannel","r":"short","t":"bubble","c":{"2":1,"6":2,"18":3}},
@@ -60,7 +60,7 @@
   ],
   "WizardLevel":[
     {"l":1,"n":"Arcane Recovery","m":"(WizardLevel+1)*0.5","r":"long","t":"bubble"},
-    {"l":17,"n":"Signature Spells","m":"2","r":"short","t":"bubble"}
+    {"l":20,"n":"Signature Spells","m":"2","r":"short","t":"bubble"}
   ]
 },
 "SC":{
@@ -265,5 +265,6 @@
     "Bladesinger","Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation","War"
   ]
 },
-"B":{"BarbarianLevel":"","BardLevel":"","ClericLevel":"","DruidLevel":"","FighterLevel":"","MonkLevel":"","PaladinLevel":"","RangerLevel":"","RogueLevel":"","SorcererLevel":"","WarlockLevel":"","WizardLevel":""}
+"B":{"BarbarianLevel":"","BardLevel":"","ClericLevel":"","DruidLevel":"","FighterLevel":"","MonkLevel":"","PaladinLevel":"","RangerLevel":"","RogueLevel":"","SorcererLevel":"","WarlockLevel":"","WizardLevel":""},
+"f": "If Sum of class levels does not equal character level, you need to run `!level class # [Subclass]`"
 }
